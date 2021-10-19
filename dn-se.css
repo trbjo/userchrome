@@ -1,0 +1,8 @@
+@-moz-document regexp("^https://dn\\.se.*"),
+domain("dn.se") {
+
+body {
+    position: unset !important;
+}
+
+}

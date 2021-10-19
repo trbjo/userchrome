@@ -1,0 +1,18 @@
+@-moz-document regexp("^https://wiki.archlinux\\.org.*"),
+domain("wiki.archlinux.org") {
+    #mw-panel {
+        display: none !important;
+    }
+    #content {
+        width: 95% !important;
+        max-width: 1100px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    #mw-head {
+        right: 12% !important;
+        width: unset !important;
+        max-width: 1100px !important;
+    }
+}

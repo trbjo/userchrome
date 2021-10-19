@@ -1,0 +1,48 @@
+@-moz-document regexp("^https://betterexplained\\.com.*"),
+domain("betterexplained.com") {
+
+    #content {
+        margin-right: auto !important;
+        margin-left: auto !important;
+        float: unset !important;
+    }
+
+    .fusion-breadcrumbs,
+    h1 {
+        text-align: center !important;
+    }
+
+    .fusion-header,
+    div > .ck_form_container,
+    .fusion-footer,
+    #sidebar
+    {
+        display: none !important;
+    }
+
+    .fusion-header-wrapper {
+        border: unset !important;
+    }
+
+
+    @media (prefers-color-scheme: dark) {
+            #ubermenu-main-67-main_navigation a,
+        h1, p, li {
+            color: wheat !important;
+        }
+
+        .post-content iframe, pre, img
+            {
+                filter: invert(1) !important;
+            }
+
+
+        .fusion-secondary-main-menu,
+        html, body, #wrapper, #main {
+            background: black !important;
+            background-color: black !important;
+        }
+    }
+
+}
+

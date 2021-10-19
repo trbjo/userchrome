@@ -1,0 +1,36 @@
+@-moz-document regexp("^https?://readthedocs\\.io.*"),
+domain("readthedocs.io") {
+
+    .ethical-rtd,
+    .rst-versions {
+        display: none !important;
+    }
+
+    .wy-nav-content-wrap, .wy-nav-content {
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+    }
+
+    .wy-nav-side {
+        z-index: 999 !important;
+        padding-bottom: unset !important;
+        position: fixed !important;
+        overflow-y: scroll !important;
+        height: 100% !important;
+        opacity: 0 !important;
+        transition: opacity .3s ease-out;
+    }
+
+    .wy-nav-content-wrap {
+        background: #EFEFEF !important;
+    }
+
+    .wy-nav-side:hover
+    {
+        transition: opacity .3s ease-out;
+        opacity: 1 !important;
+    }
+
+}
+

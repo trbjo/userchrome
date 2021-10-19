@@ -1,0 +1,180 @@
+@-moz-document regexp("^https://duckduckgo\\.com.*")
+ {
+
+    body, input, select, textarea {
+        font-family: sans-serif !important;
+    }
+
+    @media (prefers-color-scheme: light) {
+
+        .module__link--blue, .module__link--blue:hover, .module__link--blue:active, .module__link--blue:focus, .result__a, .js-spelling-recourse-link, .js-spelling-suggestion-link {
+            color: #005CC5 !important;
+        }
+
+        .module__link--url, .module__link--url:hover, .module__link--url:active, .module__link--url:focus, .is-cssexp .module__link--url, .is-cssexp .module__link--url:hover, .is-cssexp .module__link--url:active, .is-cssexp .module__link--url:focus, .result__url, .result__url:active, .result__url:visited:focus {
+            color: #808080 !important;
+        }
+    }
+
+    #duckbar,
+    #zero_click_wrapper {
+        text-align: center !important;
+    }
+
+    /*contains "related searches"*/
+    .js-sidebar-ads,
+    .notification,
+    .badge-link,
+    .nav-menu--slideout,
+    .header-wrap--home,
+    .header--aside, .js-header-aside,
+    .attribution--link,
+    .dropdown--safe-search,
+    .dropdown--settings,
+    .search-filters-wrap::before,
+    .search-filters-wrap::after,
+    .onboarding-ed, .js-onboarding-ed,
+    .onboarding-ed__slide, .onboarding-ed__slide-1, .js-onboarding-ed-slide, .js-onboarding-ed-slide-1,
+    #search_button_homepage,
+    #search_form_input_clear,
+    #search_button,
+    .tag-home,
+    .footer,
+    .feedback-btn,
+    .about-profiles,
+    .feedback-prompt,
+    .header--aside__item {
+        display: none !important;
+    }
+
+    #search_form {
+        padding-right: 0em !important;
+    }
+
+    .header__search-wrap, .content__internal {
+     padding-right: 0px !important;
+ }
+ .body--serp .site-wrapper,
+ .is-not-mobile-device,
+ .is-not-mobile-device body,
+ .is-not-mobile-device .serp__results,
+ #header {
+    min-width: unset !important;
+}
+
+
+#links_wrapper
+{
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    min-width: unset !important;
+}
+
+.results--sidebar {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    min-width: 600px !important;
+     max-width: unset !important;
+}
+
+.module__toggle__chevron {
+    visibility: hidden !important;
+    top: 0px !important;
+}
+
+.zci__main {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.tile__expand::before,
+.frm__select::after {
+    content: '▼' !important;
+    top: 0px !important;
+}
+
+.module__toggle__chevron:before
+{
+    content: '▼' !important;
+    font-size: 17px !important;
+    visibility: visible !important;
+}
+
+#links {
+    /*margin-top: -10px !important;*/
+}
+
+.search-filters-wrap {
+    position: absolute !important;
+    top: -35px !important;
+    margin-right: auto !important;
+    margin-left: 340px !important;
+    z-index: 15 !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    transition: opacity .3s ease-out;
+    opacity: 0 !important;
+}
+
+.search-filters-wrap:hover {
+    transition: opacity .3s ease-out;
+    opacity: 1 !important;
+}
+
+.dropdown {
+ margin-right: unset !important;
+}
+
+
+.results {
+    margin-top: 2em !important;
+
+}
+
+.results--sidebar {
+    max-width: 590px !important;
+    /*margin-top: 10px !important;*/
+    margin-bottom: -30px !important;
+}
+
+/*realign ddg logo*/
+.header__logo-wrap {
+    margin-left: -45px !important;
+    -ms-flex-pack: unset !important;
+    -webkit-justify-content: unset !important;
+    -moz-justify-content: unset !important;
+    justify-content: unset !important;
+}
+
+.header__search-wrap, .content__internal,
+.metabar__in, .welcome, .zcm-wrap, .zci__main, .zci__detail, .serp__results, .footer, .footer--mobile {
+    padding-left: unset !important;
+    padding-right: unset !important;
+}
+.serp__results {
+    padding-top: 1.2em !important;
+}
+
+.cw, .cw--c {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.results--sidebar, .header__search-wrap, .zcm-wrap--header, .msg--result, .msg--serp, .welcome, .results--main {
+    float: none !important;
+    /*width: 100% !important;*/
+    margin-right: auto !important;
+    margin-left: auto !important;
+    height: auto !important;
+}
+
+
+#did_you_mean {
+    padding-bottom: 0 !important;
+    margin-bottom: -1em !important;
+    margin-top: 2em !important;
+    padding-top: 0 !important;
+}
+
+
+}

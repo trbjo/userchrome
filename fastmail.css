@@ -1,0 +1,532 @@
+@-moz-document regexp("^https://fastmail\\.com.*"),
+domain("fastmail.com") {
+
+   @media (prefers-color-scheme: light) {
+
+
+      /*nice indicator that follows us around on "n" and "p"*/
+      .v-MessageCard.is-focused::before, .v-CollapsedCard.is-focused::before {
+         background-color: #3584E3 !important;
+      }
+
+
+      .app-listItem.is-selected,
+      .app-listItem.is-focused {
+         color: #ffffff !important;
+         background-color: #3584E3 !important;
+      }
+
+
+      .v-MailboxItem-unreadbadge {
+         background: #3584E3 !important;
+      }
+
+      .u-bgcolor5 {
+         background-color: #3584E355 !important;
+      }
+
+   }
+
+  @media (prefers-color-scheme: dark) {
+
+
+   /*nice indicator that follows us around on "n" and "p"*/
+   .v-MessageCard.is-focused::before, .v-CollapsedCard.is-focused::before {
+      background-color: #15539E !important;
+   }
+
+
+
+   .app-listItem.is-selected,
+   .app-listItem.is-focused {
+      color: #ffffff !important;
+      background-color: #15539E !important;
+   }
+
+
+   .v-MailboxItem-unreadbadge {
+      background: #15539E !important;
+   }
+
+   .u-bgcolor5 {
+      background-color: #15539E55 !important;
+   }
+
+
+
+
+   /* selected menu point in dark mode*/
+   .app-source.is-selected {
+      background-color: #1A1A1A !important;
+   }
+
+   .v-Quota {
+      border: none !important;
+      background-color: unset !important;
+   }
+
+   /*hovedindhold*/
+   .v-Page-content,
+   .v-PageDialogFooter,
+   body {
+     color: #E9E9EA !important;
+     background-color: #232323 !important;
+     background: #232323 !important;
+  }
+
+
+  .v-Message-body .signature {
+   color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.v-StatusBar {
+   border: solid #353232 !important;
+   background: #232323 !important;
+}
+
+/*link color*/
+.u-article a {
+   color: #69b3e7 !important;
+}
+
+/*search bar text*/
+.v-Text-input::placeholder {
+   color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.v-MessageCard-preview,
+.u-unimportant {
+   color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.v-AutoCompleteOption {
+   border-bottom: 0.0625rem solid #44474b !important;
+   background: #2e2a28 !important;
+   color: rgba(255, 255, 255, 0.9) !important;
+   text-shadow: none !important;
+}
+
+.v-PageHeader {
+  color: unset !important;
+}
+
+.v-MessageAttachment {
+   border: 0.0625rem solid #393c40 !important;
+   background: #2b2b2b !important;
+}
+
+.v-PageHeader .v-Text {
+   border-color: rgba(0, 0, 0, 0.3) !important;
+   background-color: rgba(40, 42, 46, 0.9) !important;
+   color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.v-PageHeader .v-Button {
+   border: 0.0625rem solid rgba(0, 0, 0, 0.25) !important;
+   background: none padding-box !important;
+   box-shadow: 0 0.125rem 0.0625rem -0.0625rem rgba(0, 0, 0, 0.1) !important;
+   background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.075)) !important;
+   border-bottom-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.v-AutoComplete {
+   border: 0.0625rem solid #44474b !important;
+   box-shadow: 0 0.1875rem 0.75rem rgba(0, 0, 0, 0.3) !important;
+}
+
+.v-AutoCompleteOption > em {
+   background: none !important;
+   color: #69b3e7 !important;
+   border-bottom: none !important;
+   font-weight: bold !important;
+}
+
+.v-MailboxItem mark {
+   background: none !important;
+   color: #69b3e7 !important;
+   border-bottom: none !important;
+}
+
+
+.app-listItem::before, .app-listItem::after {
+   background: #353232 !important;
+}
+
+.v-Sidebar-footer, .v-Split--left > .v-HierarchyPane > .v-Page > .v-Page-content, .v-Split--left:not(.is-hidden) > .v-Page > .v-Page-content, .v-Split--left:not(.is-hidden) > .v-Page > .v-Page-viewOptions, .v-Split--left:not(.is-hidden) > .v-Page > .v-AutoDeleteWarning {
+   border-right: 0.0625rem solid #44474b !important;
+}
+
+.v-PageHeader {
+   border-bottom: 0.0625rem solid #1f1f1f !important;
+   background: #2b2b2b !important;
+}
+
+#mailbox .v-Page-content,
+.v-Page--contrast,
+.app-listItem,
+.v-PullToRefresh,
+.v-Mailbox,
+.v-Page,
+.v-Message-body,
+.app-contentCard {
+ background-color: #2b2b2b  !important;
+ background: #2b2b2b  !important;
+}
+
+.v-Text {
+   background-color: #2e3135 !important;
+}
+
+.v-Button--standard {
+   border: 0.0625rem solid #252728 !important;
+   background: linear-gradient(#5b5d5e, #414345) !important;
+   box-shadow: 0 0.125rem 0.0625rem -0.0625rem rgba(0, 0, 0, 0.1) !important;
+   color: #ebebeb !important;
+}
+
+.infobox,
+#firstHeading,
+h1, h2, h3, h4, h5, h6 {
+  color: #E9E9EA !important;
+}
+
+}
+
+.v-Message-body {
+   position: relative;
+   overflow: hidden;
+   cursor: auto;
+   margin: 0.9375rem 0rem !important;
+   border: 0.0rem solid #fff !important;
+   background: #fff;
+}
+/*top sorting mechanism*/
+.u-font-proxima {
+   visibility: hidden !important;
+}
+
+
+.v-Page-viewOptions {
+   display: none !important;
+}
+
+/*edit draft is the first one*/
+.v-MessageCard-header .v-MessageCard-edit,
+.v-Page-viewOptions, /*strange sort bar in mail when returning from settings*/
+#v107,
+#v108,
+#v20 {
+   /*display: none !important;*/
+}
+
+#v29 {
+   margin-right: 7px !important;
+   margin-left: 7px !important;
+}
+
+/* side bar */
+#v102 {
+  /*display: none !important;*/
+}
+
+#v164 {
+  /*position: relative !important;*/
+  /*left: 0 !important;*/
+}
+
+
+.u-bgcolor0, .u-bgcolor1, .u-bgcolor2, .u-bgcolor3, .u-bgcolor4, .u-bgcolor6 {
+   background-color: #00000022 !important;
+}
+
+/*top bar hide button and divider. can be accessed with 'g'*/
+#v29 .v-Toolbar-divider,
+#v32 {
+   /*display: none !important;*/
+}
+
+#v57 {
+   max-height: 0 !important;
+}
+
+#v57:focus-within {
+   max-height: unset !important;
+}
+
+.v-PageHeader {
+    border-bottom-width: 0 !important;
+}
+
+
+.app-listItem {
+   /*border: 0.0625rem solid transparent;*/
+   border-width: 0 !important;
+}
+
+
+.u-color0 { color: #B90048 !important; }
+.u-color1 { color: #C2D94C !important; }
+.u-color2 { color: #39BAE6 !important; }
+.u-color3 { color: #5CCFE6 !important; }
+/*me*/
+.u-color5 {color: #3584E3 !important; }
+
+.u-color4 { color: #FFA759 !important; }
+.u-color6 {
+  /*color: #1f1f1f !important;*/
+}
+
+.v-MessageCard.is-collapsed .v-MessageCard-preview {
+  /*display: block !important;*/
+}
+
+.v-MailboxItem-preview {
+   color: unset !important;
+}
+
+.v-Page-viewOptions::after {
+   border: none !important;
+}
+
+.v-Mailbox--short .v-MailboxItem-from--isVIP, .v-Mailbox--short .v-MailboxItem.is-unread .v-MailboxItem-from {
+   padding-left: 2rem;
+}
+/*we try to realign the maillist left margin*/
+.v-Mailbox--short .v-MailboxItem-unread,
+.v-MailboxItem-subject,
+.v-MailboxItem-preview,
+.v-MailboxItem-replied,
+.v-MailboxItem-from
+{
+   left: 0.8rem !important;
+   right: 0.5rem !important;
+}
+
+.v-Mailbox--short .v-MailboxItem-replied + .v-MailboxItem-subject {
+ left: 2rem !important;
+}
+
+.v-MessageCard-header
+{pointer-events: none !important;}
+
+.v-MessageCard-time, .v-MessageCard-draft, .v-MessageCard-showMore {
+   top: 0.0325rem;
+   font-size: 0.75rem !important;
+   right: 3.2rem !important;
+   padding-left: 0.625rem;
+   background: unset !important;
+}
+.v-MessageCard-header > .app-avatar {
+   position: absolute;
+   top: 0.3rem !important;
+   left: unset !important;
+   right: 0.1rem !important;
+}
+/*right align time*/
+.v-MailboxItem-time {
+   right: 0.375rem !important;
+}
+
+.app-listItem::before, .app-listItem::after {
+   left: 0rem !important;
+   right: 0rem !important;
+}
+
+/* hide refer a friend*/
+.v-ReferralsSource {
+   /*display: none;*/
+}
+
+/* footer per message */
+#v22,
+.u-quote-link,
+.u-quote-toggle,
+.u-quote,
+.v-MessageCard-toggleDetails,
+.v-MessageCard-header > .v-Icon,
+.v-PullToRefresh-header,
+.app-listItem-box,
+.v-MessageCard-pinButton,
+.s-message-actions,
+.v-MessageCard-folder,
+.icon-unread,
+.v-MessageCard-actions,
+.s-small-reply,
+.u-quote-topPostToggle,
+.v-MessageCard > .v-Toolbar {
+  display: none !important;
+}
+
+
+
+
+/*we make the header separator look nice by fading*/
+.v-Invitation-what,
+.v-MessageAttachments,
+.v-Message-details {
+  border-image:linear-gradient(to right, transparent, #90909050 2%, #90909050 98%, transparent) 1 !important;
+}
+
+.v-MessageCard {
+   margin: 0.3rem 0.9rem !important;
+   padding: 0.8rem 1.5rem !important;
+   max-width: none;
+   padding-right: 1.2rem !important;
+   transition: margin .2s;
+}
+
+.app-contentCard {
+   box-shadow: 0px 1px 12px 0px #00000080 !important;
+   border-width: 0px !important;
+   border-radius: 4px !important;
+}
+
+
+.app-listItem-pinButton {
+  display: none !important;
+}
+
+/*.v-Mailbox--short .v-MailboxItem-time,*/
+.v-Mailbox--short .v-MailboxItem-preview {
+  right: 1rem !important;
+}
+
+.v-Thread  {
+   margin-left: auto !important;
+   margin-right: auto !important;
+   max-width: unset !important;
+}
+
+
+.v-Thread > * {
+ display: flex !important;
+ flex-direction: column-reverse !important;
+}
+
+
+/*center align composer*/
+#compose .v-Compose {
+   margin-left: auto !important;
+   margin-right: auto !important;
+}
+
+/*Remove stupid 1px border in compose window*/
+body .v-Text:not(.v-SearchText) {
+   /*border-width: 0 !important;*/
+}
+
+body .v-Text:not(.v-EmailText) {
+   border-width: 0rem  !important;
+}
+
+
+/* avoid light background on dark theme */
+.v-SettingsPane {
+   background: unset !important;
+}
+
+
+/*calendar*/
+
+#bootstrap-page,
+.v-CalendarNavigation .v-Button,
+#calendar .v-PageHeader {
+   display: none !important;
+}
+
+.v-Button--size16 {
+   padding: 0.2375rem 1rem !important;
+   font-size: 115% !important;
+}
+
+
+@media (prefers-color-scheme: light) {
+
+   /*.v-GridCalWeek-days .v-GridCalDay:last-of-type {*/
+      .v-GridCalWeek-days .v-GridCalDay:nth-last-child(-n+2) {
+         background: #F5F5F5 !important;
+      }
+
+      .v-GridCalDay--odd {
+         background: unset !important;
+         /*border-color: #fff;*/
+      }
+
+
+      .v-GridCalDay {
+         border-right: 1px solid #e8e8e8 !important;
+      }
+
+      .v-GridCalDay--monthdivider {
+         border-left: 1px solid #b0b0b0 !important;
+      }
+      .v-GridCalDay--firstweek > .v-GridCalDay-topBorder {
+         background: #b0b0b0 !important;
+      }
+
+      .v-GridCalDay.is-today {
+         background: unset !important;
+      }
+
+      .v-GridCalDay-dateToday,
+      .v-GridCalDay.is-today > .v-GridCalDay-topBorder {
+         background: #FF3A30 !important;
+      }
+   }
+
+   @media (prefers-color-scheme: dark) {
+
+      .v-GridCalWeek-days .v-GridCalDay {
+         background: #1F2022 !important;
+      }
+      .v-GridCalWeek-days .v-GridCalDay:nth-last-child(-n+2) {
+         background: #28282A !important;
+      }
+
+      .v-GridCalDay--odd {
+         background: unset !important;
+         /*border-color: #fff;*/
+      }
+
+      /*only needed for black stuff*/
+      body,
+      .v-GridCal-dayNames,
+      .v-CalendarNavigation,
+      .v-GridCal {
+         background: #1F2022 !important;
+      }
+
+      .v-GridCal-dayNames {
+         border-bottom: 1px solid #404040 !important;
+      }
+
+
+      .v-GridCalDay {
+         border-right: 1px solid #4B4C4E !important;
+      }
+
+      .v-GridCalDay-topBorder {
+         background: #4B4C4E !important;
+
+      }
+
+      .v-GridCalDay--monthdivider {
+         border-left: 1px solid #606060 !important;
+      }
+      .v-GridCalDay--firstweek > .v-GridCalDay-topBorder {
+         background: #606060 !important;
+      }
+
+      .v-GridCalDay.is-today {
+         background: unset !important;
+      }
+
+      .v-GridCalDay-dateToday,
+      .v-GridCalDay.is-today > .v-GridCalDay-topBorder {
+         background: #FF4438 !important;
+      }
+   }
+
+
+
+}

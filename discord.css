@@ -1,0 +1,43 @@
+@-moz-document regexp("^https://discord\\.com.*")
+{
+    .newMessagesBar-265mhP {
+        display: none !important;
+
+    }
+
+    h2 span,
+    h2 span time {
+        width:  unset !important;
+    }
+
+    nav[aria-label="Servers sidebar"] {
+        /*background: #000000 !important;*/
+        max-width: 0;
+        left: 0px;
+        opacity: 0;
+        padding-right: 1px;
+        transition: 0.2s;
+    }
+
+
+    nav[aria-label="Servers sidebar"]:hover {
+        padding-right: 0px !important;
+        opacity: 1 !important;
+        max-width: 100px;
+        left: 0;
+    }
+
+
+    div[aria-label="Member list"],
+    div[aria-label="Inbox"],
+    div[aria-label="Notification settings"],
+    div[aria-label="Pinned messages"],
+    div[aria-label="Mute channel announcements"],
+    div[aria-label="Help"],
+    div[aria-label="Mute channel general"] {
+        display: none !important;
+    }
+
+
+
+}

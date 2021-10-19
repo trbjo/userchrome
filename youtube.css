@@ -1,0 +1,8 @@
+@-moz-document regexp("^https://www\\.youtube\\.com.*")
+{
+    div, span, a,
+    yt-formatted-string {
+        letter-spacing: -0.025em !important;
+    }
+
+}

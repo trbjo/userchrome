@@ -1,0 +1,52 @@
+@-moz-document regexp("^https://(askubuntu|superuser|[a-z]+\.stackexchange|serverfault|stackoverflow)\\.com.*")
+{
+    .site-footer--copyright {
+        visibility:  hidden !important;
+    }
+
+    #content {
+        border-width: 0 !important;
+    }
+
+    .privacy-policy-agreement,
+    .help-button-item,
+    .js-products-menu,
+    h2.bottom-notice,
+    .js-dismissable-hero,
+    #feed-link,
+    #hot-network-questions,
+    .s-sidebarwidget,
+    #left-sidebar,
+    .js-consent-banner,
+    #noscript-warning {
+        display: none !important;
+    }
+
+
+    header.top-bar {
+        position: absolute !important;
+    }
+
+
+    body, .top-bar {
+        margin-top: 0em !important;;
+    }
+
+    @media screen and (min-width: 480px) {
+        #content {
+            max-width: 100% !important;
+            width: unset !important;
+        }
+    }
+
+@media screen and (min-width: 1300px) {
+        #content {
+            max-width: 80% !important;
+        }
+    }
+
+    body > .container {
+        max-width:  unset !important;
+    }
+
+}

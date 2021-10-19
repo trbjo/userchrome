@@ -1,0 +1,179 @@
+@-moz-document regexp("^https://\w\w\\.wikipedia\\.org.*"),
+domain("wikipedia.org") {
+
+    /*hovedindhold*/
+    body {
+        font-family: serif !important;
+    }
+
+    @media screen and (min-width: 920px) {
+        .mediawiki {
+            padding-top: 60px !important;
+        }
+    }
+
+    #content {
+        padding-left: 80px !important;
+        padding-right: 80px !important;
+        padding-bottom: 80px !important;
+    }
+
+
+    @media (prefers-color-scheme: dark) {
+
+        a {
+            color: #458588 !important
+        }
+
+        /*hovedindhold*/
+        body {
+            color: #EBDBB2 !important;
+            background-color: #1D2021 !important;
+        }
+
+        #content {
+            background-color: #1D2021 !important;
+            color: #EBDBB2 !important;
+        }
+
+
+        .tocnumber, .infobox, #firstHeading,
+        h1, h2, h3, h4, h5, h6 {
+            color: #EBDBB2 !important;
+        }
+
+
+        /*reverts equations */
+       img.mwe-math-fallback-image-inline {
+            filter: invert(70%) sepia(100%) hue-rotate(10deg) saturate(70%);
+        }
+
+
+        div.thumbinner, .infobox, .vcard, .toc, .quotebox  {
+            background-color: #25292B  !important;
+        }
+
+    }
+
+
+    @media (prefers-color-scheme: light) {
+
+        #content {
+            box-shadow: 0px 10px 18px 0px #00000080 !important;
+        }
+
+        a {
+            color: hsl(212,100%,38.6%) !important
+        }
+
+        /*hovedindhold*/
+        #content, body {
+            color: hsl(210, 12.2%, 16.1%) !important;
+            /*background-color: #F6F6F6 !important;*/
+        }
+
+        .tocnumber, .infobox, #firstHeading,
+        h1, h2, h3, h4, h5, h6 {
+            color: #404C4F !important;
+        }
+
+        div.thumbinner, .infobox, .vcard, .toc, .quotebox  {
+            background-color: white  !important;
+        }
+
+    }
+
+
+
+    /*The top margin*/
+    #mw-page-base {
+        height: unset !important;
+    }
+
+    /*mw is Main Wiki*/
+    .mw-body {
+        border: unset !important;
+        margin: unset !important;
+    }
+
+
+    /* indhold tekst med brødtekst*/
+    #content {
+        margin: 0 auto !important;
+        max-width: 700px !important;
+        text-align: justify;
+        hyphens: auto;
+    }
+
+    p {
+        line-height: 1.5em !important;
+        font-size: 1.4em;
+    }
+
+    #firstHeading {
+        margin: 40px 0px !important;
+        text-align: center !important;
+        font-size: 3.4em !important;
+    }
+
+
+
+    h2 {
+        font-size: 2.1em !important;
+    }
+
+    .mw-body-content .toc h2 {
+        font-size: 1.0em !important;
+    }
+
+    h3 {
+        font-size: 1.8em !important;
+    }
+
+
+
+    div.thumbinner, .infobox, .vcard, .toc, .suggestions-result, .mw-searchSuggest-link {
+        font-family: sans-serif !important;
+    }
+
+    /*remove border from some infoboxes*/
+    .infobox.geography td, .infobox.geography th {
+        border: 0px solid #a2a9b1 !important;
+    }
+
+    div.thumbinner, .infobox, .vcard, .toc, .quotebox  {
+       box-shadow: 0px 2px 8px -1px #00000080 !important;
+       border: 0px solid #a2a9b1 !important;
+       border-radius: 5px !important;
+       padding: 9px 16px 5px !important;
+   }
+
+   /*let's hide a bunch of stuff*/
+   /*#p-navigation, #p-interaction, #p-tb, #p-wikibase-otherprojects*/
+   .mw-redirectedfrom,
+   .box-More_citations_needed,
+   #p-tb, #p-interaction,
+   #mw-page-base, #mw-head-base, #mw-head, #p-personal, #p-logo, .vectorTabs, #siteSub, #coordinates, #mw-indicator-pp-default, .mw-editsection {
+     display: none !important;
+ }
+
+ h1, h2, h3, h4, h5, h6 {
+    border-bottom: 0px solid #a2a9b1 !important;
+}
+
+#mw-navigation #mw-panel {
+    height: 100% !important;
+    z-index: 999 !important;
+    position: fixed !important;
+    overflow-y: scroll !important;
+    opacity: 0 !important;
+    background-color: #F6F6F6 !important;
+    transition: opacity .3s ease-out;
+}
+
+#mw-navigation #mw-panel:hover {
+    opacity: 1 !important;
+    transition: opacity .3s ease-out;
+}
+
+}
