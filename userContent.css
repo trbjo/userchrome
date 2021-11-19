@@ -396,9 +396,13 @@ code {
 
      .moz-reader-content figure,
      .moz-reader-content figure > img {
-        padding: 0 !important;
-        margin: 0 auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        justify-content: center;
+        align-items: center;
+        display: grid;
      }
+
 
     div.page > div > div > div  {
         margin-bottom: 35px !important;
