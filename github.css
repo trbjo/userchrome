@@ -1,13 +1,29 @@
-/*tro to bring back the selected tab style*/
+/*try to bring back the selected tab style*/
 .UnderlineNav-item.selected, .UnderlineNav-item[role="tab"][aria-selected="true"], .UnderlineNav-item[aria-current]:not([aria-current="false"]) {
     font-weight: unset !important;
-    background-color: white !important;
     border-radius: 3px 3px 0 0 !important;
     border-bottom-width: 0 !important;
-    border-top: 3px solid #E47840 !important;
     border-left: 1px solid var(--color-border-muted) !important;
     border-right: 1px solid var(--color-border-muted) !important;
     padding: 0px 15px 3px 15px !important;
+        border-top: 3px solid #E47840 !important;
+}
+
+@media (prefers-color-scheme: light) {
+    /*try to bring back the selected tab style*/
+    .UnderlineNav-item.selected, .UnderlineNav-item[role="tab"][aria-selected="true"], .UnderlineNav-item[aria-current]:not([aria-current="false"]) {
+        background-color: white !important;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .UnderlineNav-item.selected, .UnderlineNav-item[role="tab"][aria-selected="true"], .UnderlineNav-item[aria-current]:not([aria-current="false"]) {
+        background-color: #0D1117 !important;
+    }
+
+    #repository-container-header {
+        background: #090c10 !important;
+    }
 }
 
 .UnderlineNav-item:not(.selected) {
