@@ -180,8 +180,8 @@ tabbrowser#content {
 .tab-label[selected] { color: var(--selected-fg-active) !important; }
 
 tab {
-    min-height: 24px !important;
-    max-height: 24px !important;
+    min-height: 25px !important;
+    max-height: 25px !important;
 }
 
 
