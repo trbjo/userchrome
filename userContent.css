@@ -27,11 +27,11 @@ html,
 input,
 a,
 body {
-    letter-spacing: -0.028em !important;
+    /*letter-spacing: -0.028em !important;*/
 }
 
 code {
-    letter-spacing: 0em !important;
+    /*letter-spacing: 0em !important;*/
 }
 
 

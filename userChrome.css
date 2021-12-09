@@ -478,7 +478,7 @@ input,
 html,
 #main-window,
 body {
-    letter-spacing: -0.028rem !important;
+    /*letter-spacing: -0.028rem !important;*/
 }
 
 tree#bookmarks-view {
