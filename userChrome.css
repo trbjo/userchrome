@@ -101,10 +101,10 @@ tabbrowser#content {
         --selected-entry: #444547;
         --accent: #15539E !important;
         --box-shadow-color: #00000080 !important;
-        --border-color: #292929 !important;
+        --border-color: #202428 !important;
         --tab-separator-color: #606064 !important;
-        --selected-bg-start: #333333 !important;
-        --selected-bg-end: #383838 !important;
+        --selected-bg-start: #0D1014 !important;
+        --selected-bg-end: #161B22 !important;
         --findbar-start: #282828 !important;
         --unselected-bg-start: #282828 !important;
         --unselected-bg-end: #303030 !important;
@@ -386,6 +386,24 @@ padding: 2px 0px 0px 0px !important;
 
 .findbar-textbox:not(:focus) {
     border-color: var(--border-color) !important;
+}
+
+
+
+findbar {
+    -moz-transition-property: none !important;
+    transition-property: none !important;
+    -moz-transform: none !important;
+    transform: none !important;
+    -moz-animation: none !important;
+    animation: none !important;
+}
+
+
+findbar:not(:focus-within) {
+    min-height: 0px !important;
+    margin-bottom: 0px !important;
+    max-height: 0px !important;
 }
 
 findbar {
