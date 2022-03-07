@@ -399,6 +399,11 @@ findbar {
     animation: none !important;
 }
 
+findbar:not(:focus-within) .findbar-find-status {
+    position: unset !important;
+
+}
+
 
 findbar:not(:focus-within) {
     min-height: 0px !important;
