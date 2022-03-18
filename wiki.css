@@ -22,7 +22,7 @@ domain("wikipedia.org") {
     @media (prefers-color-scheme: dark) {
 
         a {
-            color: #458588 !important
+            color: #779f95 !important
         }
 
         /*hovedindhold*/
@@ -32,7 +32,8 @@ domain("wikipedia.org") {
         }
 
         #content {
-            background-color: #1D2021 !important;
+            box-shadow: 0px 10px 18px 0px #00000080 !important;
+            background-color: #303030 !important;
             color: #EBDBB2 !important;
         }
 
