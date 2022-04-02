@@ -23,26 +23,6 @@ a[href$=".pdf"]:after {
 }
 
 
-button,
-textarea,
-blockquote,
-span,
-div,
-p,
-html,
-input,
-a,
-body {
-    /*letter-spacing: -0.028em !important;*/
-}
-
-code {
-    /*letter-spacing: 0em !important;*/
-}
-
-
-
-
 @-moz-document url-prefix('about:preferences'), url-prefix('about:addons') {
     * {
         user-select: none !important;
