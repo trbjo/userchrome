@@ -27,7 +27,7 @@
         position: absolute !important;
     }
 
-
+    .s-topbar,
     body, .top-bar {
         margin-top: 0em !important;;
     }
