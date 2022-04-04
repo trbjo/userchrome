@@ -1,6 +1,12 @@
-.urlbarView-row[label="Firefox Suggest"], #pageActionButton, #urlbar-anon-search-settings-compact, #urlbar-engine-one-off-item-DuckDuckGo, #urlbar-engine-one-off-item-DuckDuckGo-HTML, #urlbar-engine-one-off-item-bookmarks, #urlbar-engine-one-off-item-tabs, #urlbar-engine-one-off-item-history, spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator], .findbar-highlight, .tab-line, .tab-close-button, findbar[hidden], #toolbar-menubar, #minimize-button, #restore-button, #close-button, #nav-bar-overflow-button, tab:only-of-type, #back-button, #forward-button, #tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"], #navigator-toolbox::before, #navigator-toolbox::after, #urlbar > .urlbarView > .search-one-offs, toolbarbutton, toolbarspring, toolbartabstop, #stop-reload-button, #fullscreen-warning, #PanelUI-button, #urlbar-go-button, .tab-close-button, #pageActionSeparator, .textbox-search-clear, #viewButton, #sidebar-header, tab:only-of-type, .titlebar-spacer, #alltabs-button, #wrapper-alltabs-button, .titlebar-button, .titlebar-buttonbox-container, .titlebar-buttonbox, .private-browsing-indicator, .urlbar-history-dropmarker, #navigator-toolbox .search-one-offs, #tracking-protection-icon-container, #PersonalToolbar
+.urlbarView-row[label]::before, #pageActionButton, #urlbar-anon-search-settings-compact, #urlbar-engine-one-off-item-DuckDuckGo, #urlbar-engine-one-off-item-DuckDuckGo-HTML, #urlbar-engine-one-off-item-bookmarks, #urlbar-engine-one-off-item-tabs, #urlbar-engine-one-off-item-history, spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator], .findbar-highlight, .tab-line, .tab-close-button, findbar[hidden], #toolbar-menubar, #minimize-button, #restore-button, #close-button, #nav-bar-overflow-button, tab:only-of-type, #back-button, #forward-button, #tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"], #navigator-toolbox::before, #navigator-toolbox::after, #urlbar > .urlbarView > .search-one-offs, toolbarbutton, toolbarspring, toolbartabstop, #stop-reload-button, #fullscreen-warning, #PanelUI-button, #urlbar-go-button, .tab-close-button, #pageActionSeparator, .textbox-search-clear, #viewButton, #sidebar-header, tab:only-of-type, .titlebar-spacer, #alltabs-button, #wrapper-alltabs-button, .titlebar-button, .titlebar-buttonbox-container, .titlebar-buttonbox, .private-browsing-indicator, .urlbar-history-dropmarker, #navigator-toolbox .search-one-offs, #tracking-protection-icon-container, #PersonalToolbar
 {
     display: none !important;
+}
+
+
+/*together with .urlbarView-row[label]::before unsets the firefx suggest label*/
+.urlbarView-row[label] {
+  margin-block-start: unset !important;
 }
 
 
