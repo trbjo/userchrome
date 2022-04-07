@@ -3,6 +3,58 @@
     display: none !important;
 }
 
+#downloadsFooter {
+    display: none !important;
+}
+
+.toolbarbutton-badge-stack {
+    visibility: shown !important;
+    /*position: fixed !important;*/
+    /*right: 80px !important;*/
+    /*margin-left: 1000px !important;*/
+}
+
+panel[type="arrow"][side="top"], panel[type="arrow"][side="bottom"] {
+ /*margin-inline: 0px !important;*/
+}
+
+#downloadsPanel-multiView richlistitem {
+    max-width: 375px  !important;
+}
+
+#downloadsPanel {
+    /*display: -moz-inline-grid !important;*/
+    /*position:  !important;*/
+    margin-right: -1200px !important;
+    margin-top: -1200px !important;
+    max-width: 400px  !important;
+    /*max-width: 400px !important;*/
+    /*z-index: 10000 !important;*/
+    /*float: right !important;*/
+    /*margin-left: 1000px !important;*/
+    /*left: 800px !important;*/
+    /*bottom: 4000px;*/
+    /*visibility: visible !important;*/
+    display: flexbox !important;
+}
+/*toolbarbutton *, toolbarbutton, .toolbarbutton-badge-stack, .toolbarbutton-badge-stack * {*/
+/*}*/
+
+/*#downloadsPanel-multiView {*/
+    /*position: fixed !important;*/
+    /*z-index: 10000 !important;*/
+    /*float: right !important;*/
+    /*margin-left: 1000px !important;*/
+    /*left: 800px !important;*/
+    /*bottom: 4000px;*/
+    /*visibility: visible !important;*/
+    /*display: block !important;*/
+/*}*/
+/*toolbarbutton *, toolbarbutton, .toolbarbutton-badge-stack, .toolbarbutton-badge-stack * {*/
+/*}*/
+
+
+
 
 /*together with .urlbarView-row[label]::before unsets the firefx suggest label*/
 .urlbarView-row[label] {

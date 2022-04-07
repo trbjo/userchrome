@@ -306,11 +306,9 @@ a[href$=".pdf"]:after {
         font-weight: 400 !important;
         letter-spacing: -3px !important;
         margin-bottom: 0 !important;
-
-        /*margin-top: 100px !important;*/
         text-align: center !important;
-    width: 120% !important;
-    margin-left: -10% !important;
+        width: 120% !important;
+        margin-left: -10% !important;
     }
 
 
@@ -392,12 +390,11 @@ a[href$=".pdf"]:after {
 
 
     div.page > div > div > div  {
-        margin-bottom: 35px !important;
-        margin-left: 35px !important;
-        margin-right: 35px !important;
-        margin-top: 3px !important;
-        font-size: 0.8em !important;
-        line-height: 1.2em !important;
+        /*margin-bottom: 35px !important;*/
+        /*margin-left: 35px !important;*/
+        /*margin-right: 35px !important;*/
+        /*margin-top: 3px !important;*/
+        /*line-height: 1.2em !important;*/
     }
 
 }
