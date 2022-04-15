@@ -44,7 +44,7 @@ domain("www.weekendavisen.dk") {
     .header-logo,
     .dre-item__alt-title--lg,
     .article-body p {
-        font-family: WEA Tekst,serif !important;
+        font-family: serif !important;
         font-size: 1.05em !important;
 
     }
