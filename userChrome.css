@@ -9,13 +9,6 @@
 
 .toolbarbutton-badge-stack {
     visibility: shown !important;
-    /*position: fixed !important;*/
-    /*right: 80px !important;*/
-    /*margin-left: 1000px !important;*/
-}
-
-panel[type="arrow"][side="top"], panel[type="arrow"][side="bottom"] {
- /*margin-inline: 0px !important;*/
 }
 
 #downloadsPanel-multiView richlistitem {
@@ -23,38 +16,11 @@ panel[type="arrow"][side="top"], panel[type="arrow"][side="bottom"] {
 }
 
 #downloadsPanel {
-    /*display: -moz-inline-grid !important;*/
-    /*position:  !important;*/
     margin-right: -1200px !important;
     margin-top: -1200px !important;
     max-width: 400px  !important;
-    /*max-width: 400px !important;*/
-    /*z-index: 10000 !important;*/
-    /*float: right !important;*/
-    /*margin-left: 1000px !important;*/
-    /*left: 800px !important;*/
-    /*bottom: 4000px;*/
-    /*visibility: visible !important;*/
     display: flexbox !important;
 }
-/*toolbarbutton *, toolbarbutton, .toolbarbutton-badge-stack, .toolbarbutton-badge-stack * {*/
-/*}*/
-
-/*#downloadsPanel-multiView {*/
-    /*position: fixed !important;*/
-    /*z-index: 10000 !important;*/
-    /*float: right !important;*/
-    /*margin-left: 1000px !important;*/
-    /*left: 800px !important;*/
-    /*bottom: 4000px;*/
-    /*visibility: visible !important;*/
-    /*display: block !important;*/
-/*}*/
-/*toolbarbutton *, toolbarbutton, .toolbarbutton-badge-stack, .toolbarbutton-badge-stack * {*/
-/*}*/
-
-
-
 
 /*together with .urlbarView-row[label]::before unsets the firefx suggest label*/
 .urlbarView-row[label] {
@@ -276,12 +242,6 @@ tab {
 .tabbrowser-tab {
     padding-inline: 0px !important;
 }
-
-/*#tabbrowser-tabs[movingtab] > #tabbrowser-arrowscrollbox > .tabbrowser-tab:active::after,*/
-/*#tabbrowser-tabs[movingtab] > #tabbrowser-arrowscrollbox > .tabbrowser-tab:active::before {*/
-/*border-left: 1px solid var(--active-tab-color) !important;*/
-/*box-shadow: none !important;*/
-/*}*/
 
 #tabbrowser-tabs > #tabbrowser-arrowscrollbox > .tabbrowser-tab[selected="true"]::after,
 #tabbrowser-tabs > #tabbrowser-arrowscrollbox > .tabbrowser-tab[selected="true"]::before {
@@ -624,25 +584,6 @@ vbox#sidebar-box {
     background-color: var(--sidebar-color) !important;
 }
 
-#sidebar-splitter {
-    max-width: 1px;
-    border-width: 1px !important;
-    border-left-color: var(--sidebar-color)  !important;
-    border-right-color: transparent;  !important;
-    background-color: transparent; !important;
-}
-
-#sidebar-box {
-    position: relative !important;
-    overflow-x: hidden !important;
-    margin-right: calc(var(--sidebar-visible-width) * -1) !important;
-    left: var(--sidebar-visible-width) !important;
-    min-width: var(--sidebar-visible-width) !important;
-    max-width: var(--sidebar-visible-width) !important;
-    border-right: 1px solid var(--sidebar-border-color);
-    z-index: 1;
-}
-
 :root {
     --sidebar-hover-width: 7px;
     --sidebar-visible-width: 250px;
@@ -653,12 +594,9 @@ vbox#sidebar-box {
     opacity: 1 !important;
 }
 
-/* #sidebar-header is hidden by default, change "none" to "inherit" to restore it. */
-#sidebar-header {
-    display: none !important;
-}
-
 /* #sidebar-splitter styles the divider between the sidebar and the rest of the browser. */
 #sidebar-splitter {
-    display: none;
+    max-width: 1px !important;
+    border-left: 1px solid #00ff0000 !important;
+    border-right: 1px solid var(--sidebar-border-color)  !important;
 }
