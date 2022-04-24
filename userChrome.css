@@ -459,56 +459,28 @@ i.e. hides ublock origin
     visibility: visible;
 }
 
-
-/* Style menus */
-menupopup {
-    padding: 4px 0 !important;
+menupopup > menuitem > label  {
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
 }
 
-menupopup menupopup {
-    margin: -5px 0 0 -4px;
-}
-
-#contentAreaContextMenu > menuseparator:nth-child(92),
-#context-sep-viewbgimage,
-#context-sep-copylink,
-#context-sep-sendpagetodevice,
-#context-navigation,
-#context-sep-sendlinktodevice,
-#context-sep-navigation,
 #context-back,
 #context-reload,
 #context-forward,
+#context-navigation,
+#context-sep-navigation,
+#context-savelinktopocket,
+#context-stop,
+#context-copy,
+#context-sep-sendpagetodevice,
+#context-sep-sendlinktodevice,
 #context-sep-selectall,
 #context-selectall,
-#context-bookmarklink,
-#context-bookmarkpage,
-#context-copy,
-#context-inspect,
+#contentAreaContextMenu > menuseparator:nth-child(92),
 #context-inspect-a11y,
-#context-openlink,
-#context-openlinkintab,
-#context-openlinkinusercontext-menu,
-#context-openlinkprivate,
-#context-pocket,
-#context-savelink,
-#context-savelinktopocket,
-#context-searchselect,
-#context-sep-open,
-#context-stop,
-#inspect-separator
-{display: none !important;}
-
-
-
-#statuspanel-label {
-    background-color: var(--active-tab-color) !important;
-    border-color: var(--border-color) !important;
-    font-weight: 500 !important;
-}
-
-tree#bookmarks-view {
-    z-index: -1;
+#context-pocket
+{
+    display: none !important;
 }
 
 /*** Sidebar Color / Font Size Formatting ***/
