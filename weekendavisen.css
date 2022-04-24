@@ -45,15 +45,8 @@ domain("www.weekendavisen.dk") {
     .dre-item__alt-title--lg,
     .article-body p {
         font-family: serif !important;
-        font-size: 1.05em !important;
+        font-size: 1.1em !important;
 
     }
-
-
-/*
-    .icon-section::before {
-        content: '▼' !important;
-}
-*/
 
 }
