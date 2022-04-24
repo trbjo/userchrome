@@ -483,6 +483,12 @@ menupopup > menuitem > label  {
     display: none !important;
 }
 
+#statuspanel-label {
+    background-color: var(--active-tab-color) !important;
+    border-color: var(--border-color) !important;
+    font-weight: 500 !important;
+}
+
 /*** Sidebar Color / Font Size Formatting ***/
 /* 14px black text */
 .sidebar-placesTree treechildren::-moz-tree-cell-text {
