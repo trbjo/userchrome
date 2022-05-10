@@ -1,6 +1,4 @@
 /*@import url("dn-se.css");*/
-/*@import url("fastmail.css");*/
-/*@import url("nyt.css");*/
 /*@import url("transmission.css");*/
 @import url("html.duckduckgo.css");
 @import url("discord.css");
@@ -13,7 +11,6 @@
 @import url("betterexplained.css");
 @import url("archwiki.css");
 @import url("aws.css");
-@import url("github.css");
 
 /* add '[pdf]' next to links to PDF files */
 a[href$=".pdf"]:after {
