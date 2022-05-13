@@ -1,13 +1,13 @@
-@-moz-document regexp("^https://(askubuntu|superuser|[a-z]+\.stackexchange|serverfault|stackoverflow)\\.com.*")
-{
+@-moz-document regexp("^https://(askubuntu|superuser|[a-z]+\.stackexchange|serverfault|stackoverflow)\\.com.*") {
     .site-footer--copyright {
-        visibility:  hidden !important;
+        visibility: hidden !important;
     }
 
     #content {
         border-width: 0 !important;
     }
 
+    #announcement-banner,
     .privacy-policy-agreement,
     .help-button-item,
     .js-products-menu,
@@ -23,13 +23,16 @@
     }
 
 
+    header.ps-fixed,
     header.top-bar {
         position: absolute !important;
     }
 
     .s-topbar,
-    body, .top-bar {
-        margin-top: 0em !important;;
+    body,
+    .top-bar {
+        margin-top: 0em !important;
+        ;
     }
 
     @media screen and (min-width: 480px) {
@@ -39,14 +42,14 @@
         }
     }
 
-@media screen and (min-width: 1300px) {
+    @media screen and (min-width: 1300px) {
         #content {
             max-width: 80% !important;
         }
     }
 
-    body > .container {
-        max-width:  unset !important;
+    body>.container {
+        max-width: unset !important;
     }
 
 }
