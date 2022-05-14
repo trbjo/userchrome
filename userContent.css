@@ -7,6 +7,7 @@
 @import url("read-the-docs.css");
 @import url("stack.css");
 @import url("weekendavisen.css");
+@import url("dr.css");
 @import url("wiki.css");
 @import url("betterexplained.css");
 @import url("archwiki.css");
@@ -19,7 +20,8 @@ a[href$=".pdf"]:after {
 }
 
 
-@-moz-document url-prefix('about:preferences'), url-prefix('about:addons') {
+@-moz-document url-prefix('about:preferences'),
+url-prefix('about:addons') {
     * {
         user-select: none !important;
     }
@@ -37,46 +39,54 @@ a[href$=".pdf"]:after {
     }
 
 }
-@-moz-document url-prefix('about:newtab'), url-prefix('about:home'), url-prefix('about:blank'), url-prefix('about:support'), url-prefix('about:config') {
+
+@-moz-document url-prefix('about:newtab'),
+url-prefix('about:home'),
+url-prefix('about:blank'),
+url-prefix('about:support'),
+url-prefix('about:config') {
 
     * {
         user-select: none !important;
     }
 
     @media (prefers-color-scheme: light) {
-        body, html
-        {
+
+        body,
+        html {
             background-color: #F8F8F8 !important;
         }
     }
 
     @media (prefers-color-scheme: dark) {
-        body, html
-        {
+
+        body,
+        html {
             background-color: #1C1C1C !important;
         }
     }
 }
 
 @-moz-document url-prefix('about:addons') {
+
     #help-button,
     .sticky-container,
     recommended-extensions-section,
     .category[name="theme"] {
-      display: none !important;
+        display: none !important;
     }
 }
 
 @-moz-document url-prefix('about:preferences') {
 
     .sidebar-footer-list,
-    #categories > .category {
+    #categories>.category {
         margin-inline: 0 !important;
         padding-inline-end: 10px !important;
     }
 
     #categories {
-         width: unset !important;
+        width: unset !important;
     }
 
     #isDefaultPane {
@@ -132,14 +142,14 @@ a[href$=".pdf"]:after {
     }
 
     #trackingProtectionShield,
-    #trackingGroup hbox > vbox > description.description-with-side-element,
-    #oneClickSearchProvidersGroup > description,
-    #defaultEngineGroup > description,
-    #searchSuggestionsGroup > description,
-    #homepageGroup > description,
-    #trackingGroup > hbox > vbox > description,
+    #trackingGroup hbox>vbox>description.description-with-side-element,
+    #oneClickSearchProvidersGroup>description,
+    #defaultEngineGroup>description,
+    #searchSuggestionsGroup>description,
+    #homepageGroup>description,
+    #trackingGroup>hbox>vbox>description,
     #removeEngineButton,
-    vbox.navigation > spacer,
+    vbox.navigation>spacer,
     #passwordsGroup,
     #updatesCategory,
     #updateApp,
@@ -155,9 +165,8 @@ a[href$=".pdf"]:after {
     #addEnginesBox,
     #restoreDefaultSearchEngines,
     #restoreDefaultHomePageBtn,
-    #helpButton
-    {
-      display: none !important;
+    #helpButton {
+        display: none !important;
     }
 }
 
@@ -169,39 +178,40 @@ a[href$=".pdf"]:after {
 
     b,
     ul,
-    h1, h2,
+    h1,
+    h2,
     #learn-more-container,
     #explanation-continue,
     #goBack {
-        display:  none;
+        display: none;
     }
 
-    body
-    {
+    body {
         user-select: none;
         -moz-user-select: none;
         -webkit-user-select: none;
     }
 
     @media (prefers-color-scheme: light) {
-        body, html
-        {
+
+        body,
+        html {
             color: #858587 !important;
             background-color: #F6F6F6 !important;
         }
     }
 
     @media (prefers-color-scheme: dark) {
-        body, html
-        {
+
+        body,
+        html {
             color: #a0a0a0 !important;
             background-color: #1b1b1b !important;
         }
     }
 
 
-    #insecure-explanation-unavailable
-    {
+    #insecure-explanation-unavailable {
         text-align: center;
         font-size: 20px !important;
     }
@@ -218,49 +228,51 @@ a[href$=".pdf"]:after {
 @-moz-document url-prefix('about:neterror') {
 
     #goBack {
-        display:  none;
+        display: none;
     }
 
-    body
-    {
+    body {
         user-select: none;
         -moz-user-select: none;
         -webkit-user-select: none;
     }
 
     @media (prefers-color-scheme: light) {
-        body, html
-        {
+
+        body,
+        html {
             color: #858587 !important;
             background-color: #F6F6F6 !important;
         }
     }
 
     @media (prefers-color-scheme: dark) {
-        body, html
-        {
+
+        body,
+        html {
             color: #a0a0a0 !important;
             background-color: #1b1b1b !important;
         }
     }
 
-    .dnsNotFound #errorPageContainer, .connectionFailure #errorPageContainer, .netInterrupt #errorPageContainer, .netTimeout #errorPageContainer, .netReset #errorPageContainer, .netOffline #errorPageContainer
-    {
+    .dnsNotFound #errorPageContainer,
+    .connectionFailure #errorPageContainer,
+    .netInterrupt #errorPageContainer,
+    .netTimeout #errorPageContainer,
+    .netReset #errorPageContainer,
+    .netOffline #errorPageContainer {
         background-image: none !important;
     }
 
-    .illustrated #text-container
-    {
+    .illustrated #text-container {
         padding-inline-start: unset !important;
     }
 
-    #errorShortDescText
-    {
+    #errorShortDescText {
         font-size: 20px !important;
     }
 
-    .illustrated #errorPageContainer
-    {
+    .illustrated #errorPageContainer {
         min-height: unset !important;
         display: unset !important;
     }
@@ -269,8 +281,8 @@ a[href$=".pdf"]:after {
         opacity: 0 !important;
     }
 
-    #errorLongDesc, h1
-    {
+    #errorLongDesc,
+    h1 {
         display: none !important;
     }
 
@@ -296,7 +308,7 @@ a[href$=".pdf"]:after {
     }
 
 
-    .header > h1 {
+    .header>h1 {
         font-size: 4.5em !important;
         /*line-height: 3.0em !important;*/
         font-weight: 400 !important;
@@ -332,11 +344,13 @@ a[href$=".pdf"]:after {
         font-family: serif !important;
     }
 
-    body a {color: #3584E3 !important; }
+    body a {
+        color: #3584E3 !important;
+    }
 
     @media (prefers-color-scheme: dark) {
         body {
-/*            background-color: #191C20 !important;
+            /*            background-color: #191C20 !important;
             color: #fafbfc !important;*/
 
             background-color: #E4DCC9 !important;
@@ -347,8 +361,8 @@ a[href$=".pdf"]:after {
     @media (prefers-color-scheme: light) {
 
         ::selection {
-          /*color: white !important;*/
-          background: #0366D625 !important;
+            /*color: white !important;*/
+            background: #0366D625 !important;
         }
 
 
@@ -362,30 +376,33 @@ a[href$=".pdf"]:after {
         font-size: 0.7em;
     }
 
-    hr, div > a > div > div, .domain, .close-button, .toolbar-container
-    {
+    hr,
+    div>a>div>div,
+    .domain,
+    .close-button,
+    .toolbar-container {
         display: none !important;
     }
 
-    div.page > div > div > div > p {
+    div.page>div>div>div>p {
         padding-top: 0 !important;
         padding-bottom: 0 !important;
         padding-right: 0 !important;
         padding-left: 3px !important;
         margin: 0 !important;
-     }
+    }
 
-     .moz-reader-content figure,
-     .moz-reader-content figure > img {
+    .moz-reader-content figure,
+    .moz-reader-content figure>img {
         margin-left: auto !important;
         margin-right: auto !important;
         justify-content: center;
         align-items: center;
         display: grid;
-     }
+    }
 
 
-    div.page > div > div > div  {
+    div.page>div>div>div {
         /*margin-bottom: 35px !important;*/
         /*margin-left: 35px !important;*/
         /*margin-right: 35px !important;*/
@@ -394,4 +411,3 @@ a[href$=".pdf"]:after {
     }
 
 }
-

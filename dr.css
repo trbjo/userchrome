@@ -1,0 +1,11 @@
+@-moz-document regexp("^https://dr\\.dk.*"),
+domain("www.dr.dk") {
+    .hydra-frontpage__latest-news {
+        margin-top: 0 !important;
+    }
+
+    .hydra-front-page-speed-dial,
+    .dre-sticky-share-band {
+        display: none !important;
+    }
+}
