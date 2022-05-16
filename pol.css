@@ -1,0 +1,9 @@
+@-moz-document regexp("^https://politiken\\.dk*"),
+domain("politiken.dk") {
+
+    .ad--horseshoe,
+    .ad,
+    .ad--megaboard {
+        display: none !important;
+    }
+}

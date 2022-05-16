@@ -1,0 +1,13 @@
+@-moz-document regexp("^https://berlingske\\.dk*"),
+domain("berlingske.dk") {
+
+    .topbanner-desktop,
+    .d-none,
+    .d-md-block {
+        display: none !important;
+    }
+
+    #articleHeader {
+        padding-top: 0 !important;
+    }
+}

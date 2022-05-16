@@ -1,16 +1,29 @@
 @-moz-document regexp("^https://nytimes\\.com.*"),
 domain("www.nytimes.com") {
 
+    iframe,
+    #app,
+    #3pCheckIframeId {
+        display: none !important;
+    }
+
     .css-xv1bll,
+    #app:first-child,
     .css-4xjgmj,
     .css-i29ckm,
-     .css-g9z777,
-    .MAG_web_anon_coronavirus-dock, .expanded-dock,
+    .css-g9z777,
+    .MAG_web_anon_coronavirus-dock,
+    .expanded-dock,
     .MAG_web_anon_new-journey-rollout {
         display: none !important;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         font-family: serif !important;
     }
 

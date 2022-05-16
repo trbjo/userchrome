@@ -11,6 +11,11 @@
 @import url("wiki.css");
 @import url("betterexplained.css");
 @import url("archwiki.css");
+@import url("nyt.css");
+@import url("tv2.css");
+@import url("pol.css");
+@import url("berlingske.css");
+@import url("jp.css");
 @import url("aws.css");
 
 /* add '[pdf]' next to links to PDF files */

@@ -1,0 +1,10 @@
+@-moz-document regexp("^https://jyllands-posten\\.dk*"),
+domain("jyllands-posten.dk") {
+
+    .c-article-megaboard-top,
+    .jp-banner--h180_placeholder,
+    .jp-banner--placeholder_active {
+        display: none !important;
+    }
+
+}
