@@ -1,4 +1,4 @@
-@-moz-document regexp("^https://discord\\.com.*")
+@-moz-document regexp("^https://discord\\.com")
 {
     .newMessagesBar-265mhP {
         display: none !important;

@@ -1,4 +1,4 @@
-@-moz-document regexp("^https://realpython\\.com.*"),
+@-moz-document regexp("^https://realpython\\.com"),
 domain("realpython.com") {
 
     a[href="/account/join/"],

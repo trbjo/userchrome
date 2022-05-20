@@ -1,4 +1,4 @@
-@-moz-document regexp("^https://(askubuntu|superuser|[a-z]+\.stackexchange|serverfault|stackoverflow)\\.com.*") {
+@-moz-document regexp("^https://(askubuntu|superuser|[a-z]+\.stackexchange|serverfault|stackoverflow)\\.com") {
     .site-footer--copyright {
         visibility: hidden !important;
     }

@@ -1,4 +1,4 @@
-@-moz-document regexp("^https://duckduckgo\\.com.*")
+@-moz-document regexp("^https://duckduckgo\\.com")
  {
 
     body, input, select, textarea {

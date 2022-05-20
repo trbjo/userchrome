@@ -1,5 +1,5 @@
 /*@document url("docs.microsoft.com") {*/
-@-moz-document regexp("^https?://docs\\.microsoft\\.com.*"),
+@-moz-document regexp("^https?://docs\\.microsoft\\.com"),
 domain("docs.microsoft.com")
 {
     #headerAreaHolder, #openFeedbackContainer, .feedback-verbatim, .feedback-section, .metadata, .action-list > li > *:not(div), #affixed-right-container, .right-container, #footer

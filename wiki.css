@@ -1,4 +1,4 @@
-@-moz-document regexp("^https://\w\w\\.wikipedia\\.org.*"),
+@-moz-document regexp("^https://\w\w\\.wikipedia\\.org"),
 domain("wikipedia.org") {
 
     /*hovedindhold*/

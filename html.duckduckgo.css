@@ -1,4 +1,4 @@
-@-moz-document regexp("^https://html.duckduckgo\\.com.*")
+@-moz-document regexp("^https://html.duckduckgo\\.com")
 {
 
     body > div > div:not(:first-child) {

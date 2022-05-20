@@ -1,4 +1,4 @@
-@-moz-document regexp("^https?://readthedocs\\.io.*"),
+@-moz-document regexp("^https?://readthedocs\\.io"),
 domain("readthedocs.io") {
 
     .ethical-rtd,

@@ -1,4 +1,4 @@
-@-moz-document regexp("^https://betterexplained\\.com.*"),
+@-moz-document regexp("^https://betterexplained\\.com"),
 domain("betterexplained.com") {
 
     #content {

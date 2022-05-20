@@ -1,4 +1,4 @@
-@-moz-document regexp("^https://wiki.archlinux\\.org.*"),
+@-moz-document regexp("^https://wiki.archlinux\\.org"),
 domain("wiki.archlinux.org") {
     #mw-panel {
         display: none !important;

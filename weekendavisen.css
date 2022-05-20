@@ -1,4 +1,4 @@
-@-moz-document regexp("^https://weekendavisen\\.dk.*"),
+@-moz-document regexp("^https://weekendavisen\\.dk"),
 domain("www.weekendavisen.dk") {
 
     .article-share-item,

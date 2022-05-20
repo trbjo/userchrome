@@ -1,4 +1,4 @@
-@-moz-document regexp("^https://fastmail\\.com.*"),
+@-moz-document regexp("^https://fastmail\\.com"),
 domain("fastmail.com") {
 
    @media (prefers-color-scheme: light) {
