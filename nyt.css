@@ -8,7 +8,7 @@ domain("www.nytimes.com") {
     }
 
     .css-xv1bll,
-    #app:first-child,
+    #app>div:first-child,
     .css-4xjgmj,
     .css-i29ckm,
     .css-g9z777,
