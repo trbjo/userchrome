@@ -1,15 +1,19 @@
 @-moz-document regexp("^https://weekendavisen\\.dk.*"),
 domain("www.weekendavisen.dk") {
 
+    .article-share-item,
     .javascriptCacheBlock,
-    .article-embedded-audio-control
-     {
+    .article-embedded-audio-control {
         display: none !important;
     }
 
+    .article-top {
+        font-weight: 300 !important;
+    }
 
-    .article-body .article-content > p:first-of-type::first-letter, .article-body .article-content > span:first-child > p:first-of-type::first-letter {
-        font-family: WEA New Display,serif !important;
+    .article-body .article-content>p:first-of-type::first-letter,
+    .article-body .article-content>span:first-child>p:first-of-type::first-letter {
+        font-family: serif !important;
         font-style: normal;
         font-weight: 400;
         line-height: 110px;
@@ -26,8 +30,7 @@ domain("www.weekendavisen.dk") {
         font-size: 20px !important;
     }
 
-    .article-title {
-        font-size: 120px !important;
+    h1.article-title {
         font-family: serif !important;
     }
 
@@ -38,11 +41,6 @@ domain("www.weekendavisen.dk") {
 
     }
 
-    .section-explorer-section-header__category-name,
-    .header-section__section-title,
-    .header-breadcrumb-name,
-    .header-logo,
-    .dre-item__alt-title--lg,
     .article-body p {
         font-family: serif !important;
         font-size: 1.1em !important;
