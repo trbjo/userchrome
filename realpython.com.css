@@ -1,0 +1,21 @@
+@-moz-document regexp("^https://realpython\\.com.*"),
+domain("realpython.com") {
+
+    a[href="/account/join/"],
+    aside,
+    .modal-backdrop,
+    #rprw {
+        display: none !important;
+    }
+
+    .modal-open {
+        overflow: auto !important;
+    }
+
+    .fixed-top {
+        position: relative !important;
+    }
+
+
+
+}

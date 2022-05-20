@@ -17,6 +17,7 @@
 @import url("berlingske.css");
 @import url("jp.css");
 @import url("aws.css");
+@import url("realpython.com.css");
 
 /* add '[pdf]' next to links to PDF files */
 a[href$=".pdf"]:after {

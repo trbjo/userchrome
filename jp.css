@@ -2,9 +2,15 @@
 domain("jyllands-posten.dk") {
 
     .c-article-megaboard-top,
+    .c-page-zone-banners__content,
+    .c-page-zone-teasers--shared_content_marketing,
+    .jp-banner,
     .jp-banner--h180_placeholder,
+    .jp-banner--h660_placeholder,
+    .jp-banner-halfpage,
+    .jp-banner-monster-topscroll,
+    .m--article-banner,
     .jp-banner--placeholder_active {
         display: none !important;
     }
-
 }
