@@ -1,4 +1,4 @@
-@-moz-document regexp("^https://(askubuntu|superuser|[a-z]+\.stackexchange|serverfault|stackoverflow)\\.com") {
+@-moz-document regexp("^https://(askubuntu|superuser|[a-z]+\.stackexchange|serverfault|stackoverflow)\\.com.*") {
     .site-footer--copyright {
         visibility: hidden !important;
     }
@@ -32,7 +32,6 @@
     body,
     .top-bar {
         margin-top: 0em !important;
-        ;
     }
 
     @media screen and (min-width: 480px) {

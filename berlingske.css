@@ -1,4 +1,4 @@
-@-moz-document regexp("^https://berlingske\\.dk*"),
+@-moz-document regexp("^https://berlingske\\.dk.*"),
 domain("berlingske.dk") {
 
     .topbanner-desktop,
