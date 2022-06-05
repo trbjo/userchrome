@@ -20,6 +20,38 @@
 @import url("aws.css");
 @import url("realpython.com.css");
 
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+code,
+p {
+    letter-spacing: 0rem !important;
+}
+
+@media (prefers-color-scheme: light) {
+
+    stack h1,
+    stack h2,
+    stack h3,
+    stack h4,
+    stack h5,
+    stack h6,
+    stack span,
+    stack code,
+    stack p {
+        color: rgb(0, 0, 0) !important;
+    }
+
+}
+
+@media (prefers-color-scheme: dark) {}
+
 /* add '[pdf]' next to links to PDF files */
 a[href$=".pdf"]:after {
     font-size: smaller;
@@ -320,7 +352,8 @@ url-prefix('about:config') {
         /*line-height: 3.0em !important;*/
         font-weight: 400 !important;
         letter-spacing: -3px !important;
-        margin-bottom: 0 !important;
+        margin-bottom: 30px !important;
+        margin-top: 80px !important;
         text-align: center !important;
         width: 120% !important;
         margin-left: -10% !important;
@@ -330,6 +363,22 @@ url-prefix('about:config') {
     blockquote {
         border-inline-start: none !important;
     }
+
+
+    p:first-of-type::first-letter {
+        font-family: serif !important;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110px;
+        letter-spacing: -2px;
+        float: left;
+        padding-top: 5px !important;
+        padding-right: 2px !important;
+        margin-bottom: -10px !important;
+        font-size: 86px !important;
+
+    }
+
 
     blockquote p {
         font-size: 1.1em !important;
