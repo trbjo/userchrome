@@ -22,18 +22,6 @@
 
 
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-span,
-code,
-p {
-    letter-spacing: 0rem !important;
-}
-
 @media (prefers-color-scheme: light) {
 
     stack h1,
