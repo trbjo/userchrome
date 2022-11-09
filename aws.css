@@ -1,4 +1,5 @@
-@-moz-document regexp("^https://.*\\.aws\\.amazon\\.com") {
+@-moz-document regexp("^https://.*\\.aws\\.amazon\\.com.*") {
+    #console-nav-footer-inner,
     #console-nav-footer {
         display: none !important;
     }
