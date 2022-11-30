@@ -1,12 +1,30 @@
 @-moz-document regexp("^https://app\\.slack\\.com.*") {
 
-    .p-channel_sidebar__presence_icon:not(.p-channel_sidebar__svg_presence_icon--on-avatar-border).c-presence    {
+    .c-channel_entity__name--bold,
+    .c-message_attachment__author_name,
+    .p-channel_sidebar__channel--unread:not(.p-channel_sidebar__channel--muted):not(.p-channel_sidebar__channel--suggested) .p-channel_sidebar__name,
+    .p-view_header__title,
+    .c-message__sender {
+        font-weight: 600 !important;
+    }
+
+    .c-search_modal {
+        font-size: 15px !important;
+    }
+
+    .p-channel_sidebar--classic_nav,
+    .p-rich_text_block {
+        font-size: 14px !important;
+    }
+
+    .p-channel_sidebar__presence_icon:not(.p-channel_sidebar__svg_presence_icon--on-avatar-border).c-presence {
         color: #FF0000 !important;
     }
 
 
-    .p-channel_sidebar__presence_icon.c-presence--active:not(.p-channel_sidebar__svg_presence_icon--on-avatar-border), .p-channel_sidebar__svg_presence_icon:not(.p-channel_sidebar__svg_presence_icon--on-avatar-border).c-presence--active {
-     color: #60D156 !important;
+    .p-channel_sidebar__presence_icon.c-presence--active:not(.p-channel_sidebar__svg_presence_icon--on-avatar-border),
+    .p-channel_sidebar__svg_presence_icon:not(.p-channel_sidebar__svg_presence_icon--on-avatar-border).c-presence--active {
+        color: #60D156 !important;
     }
 
 
