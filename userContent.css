@@ -393,14 +393,23 @@ url-prefix('about:config') {
         color: #3584E3 !important;
     }
 
+    body {
+        color: #000000 !important;
+    }
+    .container {
+            padding: 80px;
+            margin: 0;
+        }
+
     @media (prefers-color-scheme: dark) {
         body {
-            /*            background-color: #191C20 !important;
-            color: #fafbfc !important;*/
-
-            background-color: #E4DCC9 !important;
-            color: #000000 !important;
+            background-color: #2A2A2A !important;
         }
+
+        .container {
+            background-color: #F4ECD9 !important;
+        }
+
     }
 
     @media (prefers-color-scheme: light) {
@@ -411,9 +420,13 @@ url-prefix('about:config') {
         }
 
 
-        body {
+        .container {
             background-color: #FFFFFF !important;
-            color: black !important;
+        }
+
+
+        body {
+            background-color: #E8E8E8 !important;
         }
     }
 
