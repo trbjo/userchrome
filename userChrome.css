@@ -3,13 +3,13 @@
         --sidebar-color: #12161B;
         --sidebar-hover: #1C2025;
         --avoid-white-flash: #1C1C1C;
-        --active-tab-color: #202426;
-        --inactive-tab-color: #1C1C1C;
+        --active-tab-color: #2D2D2D;
+        --inactive-tab-color: #111314;
         --urlbar-bg: #242424;
         --selected-entry: #444547;
         --accent: #15539E !important;
         --box-shadow-color: #00000080 !important;
-        --border-color: #202428 !important;
+        --border-color: #24282B !important;
         --tab-separator-color: #606064 !important;
         --selected-bg-start: #202426 !important;
         --selected-bg-end: #202426 !important;
@@ -102,7 +102,12 @@ tab:only-of-type,
     padding: 0 !important;
 }
 
+.tab-background:is([selected], [multiselected]) {
+    background: var(--active-tab-color)  !important;
+}
+
 .tab-background {
+    background: var(--inactive-tab-color)  !important;
     border-radius: unset !important;
     margin-block: unset !important;
 }
@@ -136,7 +141,7 @@ tab {
 
 tab:not([first-visible-tab="true"][last-visible-tab="true"]) {
 /*    box-shadow: none  !important;*/
-    border-bottom: 1px solid var(--tab-separator-color) !important;
+    border-bottom: 1px solid var(--border-color) !important;
 }
 
 
