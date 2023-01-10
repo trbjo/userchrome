@@ -114,6 +114,7 @@ tab:only-of-type,
 .tab-background {
     background: var(--inactive-tab-color) !important;
     border-radius: unset !important;
+    border-bottom: 1px solid var(--border-color) !important;
     margin-block: unset !important;
 }
 
@@ -143,13 +144,6 @@ tab {
     padding: 0 !important;
     max-height: 24px !important;
 }
-
-tab:not([first-visible-tab="true"][last-visible-tab="true"]) {
-    border-bottom: 1px solid var(--border-color) !important;
-}
-
-
-
 
 #urlbar-input-container {
     height: 38px !important;
