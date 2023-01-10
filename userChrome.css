@@ -279,3 +279,226 @@ tabbrowser#content {
 .urlbarView-results[wrap]>.urlbarView-row[type="bestmatch"]>.urlbarView-row-inner>.urlbarView-row-body>.urlbarView-row-body-top>.urlbarView-url {
     margin-top: 0px !important;
 }
+
+hbox [anonid="findbar-textbox-wrapper"] {
+    max-height: 21px;
+    min-height: 21px;
+    margin-top: 2px
+}
+
+/*.findbar-label*/
+.findbar-case-sensitive,
+.findbar-match-diacritics,
+.findbar-entire-word {
+    margin-top: 2px !important;
+    margin-bottom: 0px !important;
+    margin-right: 8px !important;
+    margin-left: 8px !important;
+}
+
+.findbar-container .findbar-button {
+    padding: 0px 6px !important;
+}
+
+.findbar-container {
+    height: unset !important;
+    /*margin-right: auto !important;*/
+    margin-left: 10px !important;
+    padding: 2px 0px 0px 0px !important;
+    /*width: 300px !important;*/
+}
+
+.findbar-find-status {
+    position: fixed;
+    right: 0;
+    margin-top: -9px !important;
+    max-width: 21%;
+    overflow: hidden;
+    max-height: 1.3em;
+    z-index: -20;
+}
+
+.findbar-textbox {
+    width: 12em !important;
+}
+
+.findbar-textbox:not(:focus) {
+    border-color: var(--border-color) !important;
+}
+
+
+
+findbar {
+    -moz-transition-property: none !important;
+    transition-property: none !important;
+    -moz-transform: none !important;
+    transform: none !important;
+    -moz-animation: none !important;
+    animation: none !important;
+}
+
+findbar:not(:focus-within) .findbar-find-status {
+    position: unset !important;
+}
+
+
+findbar:not(:focus-within) {
+    border-width: 0 !important;
+    min-height: 0px !important;
+    margin-bottom: 0px !important;
+    max-height: 0px !important;
+}
+
+findbar {
+    min-height: 30px !important;
+    max-height: 30px !important;
+    margin-bottom: -30px !important;
+    padding-block: 0 !important;
+    -moz-box-ordinal-group: 0;
+    border: 0 !important;
+    background: unset !important;
+    background-image: linear-gradient(to top, var(--selected-bg-start), var(--selected-bg-end)) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    display: block;
+    position: sticky;
+    z-index: 666;
+    width: 100%;
+    box-shadow: 0 3px 10px -7px #00000080 !important;
+}
+
+.findbar-button {
+    /*-moz-appearance: button !important;*/
+    display: none !important;
+}
+
+
+/* Remove icons from the main context menu
+i.e. hides ublock origin
+*/
+#contentAreaContextMenu menuitem image,
+#contentAreaContextMenu menu image {
+    visibility: hidden;
+}
+
+#contentAreaContextMenu menugroup menuitem image,
+#contentAreaContextMenu .menu-right image {
+    visibility: visible;
+}
+
+menupopup>menuitem>label {
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+}
+
+#context-back,
+#context-reload,
+#context-forward,
+#context-navigation,
+#context-sep-navigation,
+#context-savelinktopocket,
+#context-stop,
+#context-copy,
+#context-sep-sendpagetodevice,
+#context-sep-sendlinktodevice,
+#context-sep-selectall,
+#context-selectall,
+#contentAreaContextMenu>menuseparator:nth-child(92),
+#context-inspect-a11y,
+#context-pocket {
+    display: none !important;
+}
+
+#statuspanel-label {
+    background-color: var(--active-tab-color) !important;
+    border-color: var(--border-color) !important;
+    font-weight: 500 !important;
+}
+
+/*** Sidebar Color / Font Size Formatting ***/
+/* 14px black text */
+.sidebar-placesTree treechildren::-moz-tree-cell-text {
+    font-weight: 400 !important;
+    font-size: 12.5px !important;
+    /*color: #404040 !important;*/
+}
+
+treechildren:* {
+    background-color: red !important;
+}
+
+.sidebar-placesTree treechildren::-moz-tree-row(selected) {
+    border: 0px solid red !important;
+    color: black;
+}
+
+.sidebar-placesTree treechildren::-moz-tree-cell-text(selected) {
+    color: black !important;
+}
+
+/* Pale blue background on hover or selected */
+.sidebar-placesTree treechildren::-moz-tree-twisty(selected) {
+    color: black !important;
+}
+
+.sidebar-placesTree treechildren::-moz-tree-row(hover),
+.sidebar-placesTree treechildren::-moz-tree-row(selected) {
+    background-color: var(--sidebar-hover) !important;
+}
+
+image.textbox-search-sign {
+    display: none;
+}
+
+#sidebar-search-container {
+    min-height: 34px !important;
+    max-height: 34px !important;
+    position: relative;
+    padding: 6px 6px 0px 6px !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-image {
+    list-style-image: none !important;
+    margin-left: -20px !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-cell-text(container, queryFolder_menu________),
+.sidebar-placesTreechildren::-moz-tree-cell-text(container, queryFolder_toolbar_____),
+.sidebar-placesTreechildren::-moz-tree-cell-text(container, queryFolder_unfiled_____) {
+    color: transparent !important;
+    list-style-image: none !important;
+}
+
+treechildren::-moz-tree-twisty(container, queryFolder_toolbar_____) {
+    color: transparent;
+}
+
+scrollbar {
+    display: none !important;
+}
+
+hbox#sidebar-search-container {
+    position: absolute !important;
+    z-index: 10000 !important;
+    background-color: var(--sidebar-color) !important;
+}
+
+vbox#sidebar-box {
+    background-color: var(--sidebar-color) !important;
+}
+
+:root {
+    --sidebar-hover-width: 7px;
+    --sidebar-visible-width: 250px;
+}
+
+#sidebar-box:hover,
+#sidebar-box:hover #sidebar {
+    opacity: 1 !important;
+}
+
+/* #sidebar-splitter styles the divider between the sidebar and the rest of the browser. */
+#sidebar-splitter {
+    max-width: 1px !important;
+    border-left: 1px solid #00ff0000 !important;
+    border-right: 1px solid var(--sidebar-border-color) !important;
+}
