@@ -50,6 +50,26 @@
     }
 }
 
+#toolbar-menubar,
+#urlbar-go-button,
+.urlbarView-row[label]::before,
+.titlebar-buttonbox.titlebar-color,
+.tab-close-button,
+.findbar-closebutton,
+.findbar-container > hbox >toolbarbutton,
+tab:only-of-type,
+#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"] .tab-close-button,
+#PanelUI-button,
+#PanelUI-menu-button,
+#back-button,
+#forward-button,
+.titlebar-button.titlebar-close,
+.titlebar-spacer,
+box#sidebar-header,
+#alltabs-button {
+    display: none !important;
+}
+
 /* Remove icons from the main context menu
 i.e. hides ublock origin
 */
@@ -63,13 +83,58 @@ i.e. hides ublock origin
     visibility: visible;
 }
 
-
-
-
 #nav-bar {
     min-height: 0 !important;
     max-height: 0 !important;
 }
+
+#TabsToolbar {
+    border-right: 1px solid var(--border-color) !important;
+    margin-right: 75px !important;
+}
+
+toolbarbutton {
+    margin-top: -20px !important;
+    position: fixed;
+    top: 22px;
+    right: 0;
+}
+
+toolbarbutton#ublock0_raymondhill_net-BAP {
+    margin-top: -22px !important;
+    right: -2px  !important;
+    padding-right: 5px  !important;
+}
+
+.toolbarbutton-badge {
+    background-color: #800000 !important;
+    font-size: 9px  !important;
+    padding: 0;
+    color: #fff;
+    border-radius: 27px !important;
+    box-shadow: unset !important;
+    margin-right: 1px !important;
+    margin-top: 2px !important;
+}
+
+
+
+toolbarbutton#_c2c003ee-bd69-42a2-b0e9-6f34222cb046_-BAP {
+    margin-top: -22px !important;
+    right: 27px !important;
+}
+
+toolbarbutton#downloads-button {
+    right: 50px !important;
+}
+
+
+toolbar .toolbarbutton-1>.toolbarbutton-badge-stack {
+    padding: 2px !important;
+    border-radius: 2px !important;
+}
+
+
 
 .tabbrowser-tab[fadein] {
     max-width: 100vw !important
@@ -81,22 +146,6 @@ i.e. hides ublock origin
 }
 
 
-
-
-#urlbar-go-button,
-.urlbarView-row[label]::before,
-.titlebar-buttonbox.titlebar-color,
-.tab-close-button,
-tab:only-of-type,
-#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"] .tab-close-button,
-#PanelUI-menu-button,
-#back-button,
-#forward-button,
-.titlebar-button.titlebar-close,
-.titlebar-spacer,
-#alltabs-button {
-    display: none !important;
-}
 
 .tabbrowser-tab {
     padding: 0 !important;
@@ -143,6 +192,12 @@ tab {
     /*    margin: 0 !important;*/
     padding: 0 !important;
     max-height: 24px !important;
+}
+
+#urlbar-container {
+    max-width: 800px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
 }
 
 #urlbar-input-container {

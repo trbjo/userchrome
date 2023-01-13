@@ -25,7 +25,6 @@
 
 
 @media (prefers-color-scheme: light) {
-
     stack h1,
     stack h2,
     stack h3,
@@ -47,6 +46,11 @@ a[href$=".pdf"]:after {
     font-size: smaller;
     content: " [pdf]";
 }
+
+a[href$="share"] {
+  display: none !important;
+}
+
 
 
 @-moz-document url-prefix('about:preferences'),
@@ -338,7 +342,7 @@ url-prefix('about:config') {
 
 
     .header>h1 {
-        font-size: 4.5em !important;
+        font-size: 3.5em !important;
         /*line-height: 3.0em !important;*/
         font-weight: 400 !important;
         letter-spacing: -3px !important;
@@ -399,8 +403,16 @@ url-prefix('about:config') {
     }
 
     .container {
+        box-shadow: 0px 4px 18px 0px #00000040 !important;
         padding: 80px;
         margin: 0;
+    }
+
+    @media print {
+    .container {
+        box-shadow: none  !important;
+        padding: 0px  !important;
+        }
     }
 
     @media (prefers-color-scheme: dark) {
