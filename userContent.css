@@ -47,9 +47,14 @@ a[href$=".pdf"]:after {
     content: " [pdf]";
 }
 
-a[href$="share"] {
+p[data-attrs] {
   display: none !important;
 }
+
+
+/*a[href$="share"] {*/
+/*  display: none !important;*/
+/*}*/
 
 
 
@@ -342,15 +347,9 @@ url-prefix('about:config') {
 
 
     .header>h1 {
-        font-size: 3.5em !important;
-        /*line-height: 3.0em !important;*/
+        font-size: 3em !important;
         font-weight: 400 !important;
-        letter-spacing: -3px !important;
-        margin-bottom: 30px !important;
-        margin-top: 80px !important;
-        text-align: center !important;
-        width: 120% !important;
-        margin-left: -10% !important;
+        letter-spacing: -0.03em  !important;
     }
 
 
@@ -404,7 +403,7 @@ url-prefix('about:config') {
 
     .container {
         box-shadow: 0px 4px 18px 0px #00000040 !important;
-        padding: 80px;
+        padding: 80px !important;
         margin: 0;
     }
 
@@ -473,13 +472,5 @@ url-prefix('about:config') {
         display: grid;
     }
 
-
-    div.page>div>div>div {
-        /*margin-bottom: 35px !important;*/
-        /*margin-left: 35px !important;*/
-        /*margin-right: 35px !important;*/
-        /*margin-top: 3px !important;*/
-        /*line-height: 1.2em !important;*/
-    }
 
 }
