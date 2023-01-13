@@ -20,6 +20,7 @@
 @import url("jp.css");
 @import url("aws.css");
 @import url("realpython.com.css");
+@import url("github.com.css");
 
 
 
@@ -396,10 +397,11 @@ url-prefix('about:config') {
     body {
         color: #000000 !important;
     }
+
     .container {
-            padding: 80px;
-            margin: 0;
-        }
+        padding: 80px;
+        margin: 0;
+    }
 
     @media (prefers-color-scheme: dark) {
         body {

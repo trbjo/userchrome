@@ -1,0 +1,23 @@
+@-moz-document regexp("^https://github\\.com"),
+domain("github.com") {
+
+  .Layout {
+    --Layout-sidebar-width: 10px !important;
+  }
+
+  .Layout-sidebar {
+    opacity: 0;
+    background: white;
+    margin-left: -30px !important;
+    z-index: 50000;
+  }
+
+  .Layout-sidebar:hover {
+    --Layout-sidebar-width: 400px !important;
+    opacity: 1;
+    overflow-y: scroll !important;
+    padding-right: 10px;
+    border-right: 1px solid #DDDDDD;
+  }
+
+}
