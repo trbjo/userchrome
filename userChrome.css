@@ -90,13 +90,15 @@ i.e. hides ublock origin
     visibility: visible;
 }
 
+/*must have positive height to allow downloads panel to be shown*/
 #nav-bar {
-    min-height: 0 !important;
-    max-height: 0 !important;
+    min-height: 1px !important;
+    max-height: 1px !important;
+    margin-bottom: -1px !important;
+    box-shadow: none !important;
 }
 
 #TabsToolbar {
-/*    border-right: 1px solid var(--border-color) !important;*/
     margin-right: 75px !important;
 }
 
@@ -108,7 +110,6 @@ toolbarbutton {
 }
 
 toolbarbutton#ublock0_raymondhill_net-BAP {
-    position: fixed !important;
     margin-top: -22px !important;
     right: -2px  !important;
     padding-right: 5px  !important;
@@ -474,6 +475,7 @@ menupopup>menuitem>label {
 #context-selectall,
 #contentAreaContextMenu>menuseparator:nth-child(92),
 #context-inspect-a11y,
+.urlbarView-row[type="tip"],
 #context-pocket {
     display: none !important;
 }
