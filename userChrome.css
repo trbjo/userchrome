@@ -116,16 +116,24 @@ toolbarbutton#ublock0_raymondhill_net-BAP {
 }
 
 .toolbarbutton-badge {
-    background-color: #800000 !important;
+    background-color: transparent !important;
     font-size: 9px  !important;
     padding: 0;
     color: #fff;
-    border-radius: 27px !important;
     box-shadow: unset !important;
     margin-right: 1px !important;
     margin-top: 2px !important;
 }
 
+.toolbarbutton-badge::after {
+    position: fixed !important;
+    right: 0 !important;
+    font-size: 14px !important;
+    color: #800000 !important;
+    content: "●" !important;
+    z-index: -1 !important;
+    margin-right: 6px !important;
+}
 
 toolbaritem#ublock0_raymondhill_net-browser-action,
 toolbaritem#_c2c003ee-bd69-42a2-b0e9-6f34222cb046_-browser-action {
