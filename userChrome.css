@@ -315,6 +315,8 @@ tab {
     box-shadow: inset 0px -1px var(--border-color) !important;
 }
 
+/*remember to set this key in about:config:*/
+/*browser.display.background_color.dark*/
 #browser vbox#appcontent tabbrowser,
 #content,
 #main-window,

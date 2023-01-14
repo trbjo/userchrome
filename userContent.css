@@ -63,13 +63,15 @@ p[data-attrs] {
 /*  display: none !important;*/
 /*}*/
 
+@-moz-document url("about:home"),url("about:downloads"),url("about:blank"),url("about:newtab"),url("about:privatebrowsing"),url('about:support'),url('about:preferences') {
+    * {
+        user-select: none !important;
+    }
+}
 
 
 @-moz-document url("about:home"),url("about:downloads"),url("about:blank"),url("about:newtab"),url("about:privatebrowsing"),url('about:support'),url('about:preferences'), url('about:config'), url('about:addons')
 {
-    * {
-        user-select: none !important;
-    }
 
     @media (prefers-color-scheme: light) {
         :root {
