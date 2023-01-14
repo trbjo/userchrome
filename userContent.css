@@ -22,16 +22,8 @@
 @import url("realpython.com.css");
 @import url("github.com.css");
 
-::selection {
-/*    color: black;*/
-    background: #0366D625 !important;
-}
-
-
-
-
-
 @media (prefers-color-scheme: light) {
+    ::selection { background: #0366D625 !important; }
     stack h1,
     stack h2,
     stack h3,
@@ -46,7 +38,9 @@
 
 }
 
-@media (prefers-color-scheme: dark) {}
+@media (prefers-color-scheme: dark) {
+    ::selection {background: rgba(134,121,100,0.4) !important; }
+}
 
 /* add '[pdf]' next to links to PDF files */
 a[href$=".pdf"]:after {
@@ -72,7 +66,6 @@ p[data-attrs] {
 
 @-moz-document url("about:home"),url("about:downloads"),url("about:blank"),url("about:newtab"),url("about:privatebrowsing"),url('about:support'),url('about:preferences'), url('about:config'), url('about:addons')
 {
-
     @media (prefers-color-scheme: light) {
         :root {
             --in-content-page-background: #F8F8F8 !important;
@@ -84,11 +77,10 @@ p[data-attrs] {
             --in-content-box-background: rgb(32,36,38) !important;
             --in-content-box-background-odd: rgb(37,41,43) !important;
             --in-content-page-background: rgb(29,32,33) !important;
-            --in-content-primary-button-background: rgb(131,165,152) !important;
+            --in-content-primary-button-background: rgb(21,83,158) !important;
 
         }
     }
-
 }
 
 @-moz-document url-prefix('about:addons') {
@@ -401,13 +393,6 @@ p[data-attrs] {
 
     @media (prefers-color-scheme: dark) {
 
-        ::selection {
-            color: black;
-            background: #0366D625 !important;
-        }
-
-
-
         body {
             background-color: #2A2A2A !important;
         }
@@ -419,12 +404,6 @@ p[data-attrs] {
     }
 
     @media (prefers-color-scheme: light) {
-
-        ::selection {
-            /*color: white !important;*/
-            background: #0366D625 !important;
-        }
-
 
         .container {
             background-color: #FFFFFF !important;
