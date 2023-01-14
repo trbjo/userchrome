@@ -102,7 +102,7 @@ i.e. hides ublock origin
 }
 
 #TabsToolbar {
-    margin-right: 75px !important;
+    margin-right: 47px !important;
 }
 
 toolbarbutton#ublock0_raymondhill_net-BAP {
@@ -115,8 +115,9 @@ toolbarbutton#ublock0_raymondhill_net-BAP {
 
 .toolbarbutton-badge {
     background-color: transparent !important;
-    font-size: 9px  !important;
-    padding: 0;
+    font-size: 10px  !important;
+    font-weight: 500 !important;
+    padding: 0 !important;
     color: #fff;
     box-shadow: unset !important;
     margin-right: 1px !important;
@@ -137,18 +138,19 @@ toolbaritem#_c2c003ee-bd69-42a2-b0e9-6f34222cb046_-browser-action {
     position: fixed !important;
 }
 
-toolbarbutton#_c2c003ee-bd69-42a2-b0e9-6f34222cb046_-BAP {
-    position: fixed;
-    margin-top: -22px !important;
-    right: 27px !important;
-    top: 22px;
-}
+/*tab discard*/
+/*toolbarbutton#_c2c003ee-bd69-42a2-b0e9-6f34222cb046_-BAP {*/
+/*    position: fixed;*/
+/*    margin-top: -22px !important;*/
+/*    right: 27px !important;*/
+/*    top: 22px;*/
+/*}*/
 
 toolbarbutton#downloads-button {
     top: 22px;
     position: fixed;
     margin-top: -20px !important;
-    right: 50px !important;
+    right: 21px !important;
 }
 
 
