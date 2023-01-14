@@ -1,21 +1,29 @@
+:root {
+    --tab-shadow-max-size: 0 !important;
+    --tab-min-height: 0px !important;
+    --inline-tab-padding: 5px;
+    --tab-border-radius: 0px !important;
+    --tab-block-margin: 0px;
+    --tabpanel-background-color: #F9F9FB;
+    --tab-attention-icon-color: var(--lwt-tab-attention-icon-color, rgb(42, 195, 162));
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
         --sidebar-color: #12161B;
         --sidebar-hover: #1C2025;
-        --avoid-white-flash: #1C1C1C;
-        --active-tab-color: #2D2D2D;
+        --avoid-white-flash: #1D2021;
+        --active-tab-color: #1D2021;
         --inactive-tab-color: #111314;
         --urlbar-bg: #242424;
         --selected-entry: #444547;
         --accent: #15539E !important;
         --box-shadow-color: #00000080 !important;
-        --border-color: #24282B !important;
+        --border-color: #000000 !important;
         --tab-separator-color: #606064 !important;
         --selected-bg-start: #202426 !important;
         --selected-bg-end: #202426 !important;
         --findbar-start: #282828 !important;
-        --unselected-bg-start: #1C1C1C !important;
-        --unselected-bg-end: #1C1C1C !important;
         --search-bar-input: #47494B;
         --selected-fg-inactive: #818184 !important;
         --selected-fg-active: #FEFEF6 !important;
@@ -36,13 +44,11 @@
         --selected-entry: #DBDBDC;
         --accent: #3584E4 !important;
         --box-shadow-color: #00000040 !important;
-        --border-color: #d8d8d8;
+        --border-color: #d5d5d5;
         --tab-separator-color: #B1B1B1;
         --findbar-start: #EDEDED !important;
         --selected-bg-start: #FAFAFA !important;
         --selected-bg-end: #FFFFFF !important;
-        --unselected-bg-start: #EEEEEE !important;
-        --unselected-bg-end: #F0F0F0 !important;
         --search-bar-input: #E8E8E8;
         --selected-fg-active: #323232;
         --selected-fg-inactive: #6C737E;
@@ -58,7 +64,8 @@
 .findbar-closebutton,
 .findbar-container > hbox >toolbarbutton,
 tab:only-of-type,
-#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"] .tab-close-button,
+#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"],
+.tab-close-button,
 #PanelUI-button,
 #PanelUI-menu-button,
 #back-button,
@@ -89,7 +96,7 @@ i.e. hides ublock origin
 }
 
 #TabsToolbar {
-    border-right: 1px solid var(--border-color) !important;
+/*    border-right: 1px solid var(--border-color) !important;*/
     margin-right: 75px !important;
 }
 
@@ -101,6 +108,7 @@ toolbarbutton {
 }
 
 toolbarbutton#ublock0_raymondhill_net-BAP {
+    position: fixed !important;
     margin-top: -22px !important;
     right: -2px  !important;
     padding-right: 5px  !important;
@@ -118,6 +126,10 @@ toolbarbutton#ublock0_raymondhill_net-BAP {
 }
 
 
+toolbaritem#ublock0_raymondhill_net-browser-action,
+toolbaritem#_c2c003ee-bd69-42a2-b0e9-6f34222cb046_-browser-action {
+    position: fixed !important;
+}
 
 toolbarbutton#_c2c003ee-bd69-42a2-b0e9-6f34222cb046_-BAP {
     margin-top: -22px !important;
@@ -161,6 +173,7 @@ toolbar .toolbarbutton-1>.toolbarbutton-badge-stack {
 
 
 .tab-background {
+    box-shadow: inset -1px 0 var(--border-color) !important;;
     background: var(--inactive-tab-color) !important;
     border-radius: unset !important;
     border-bottom: 1px solid var(--border-color) !important;
@@ -168,17 +181,8 @@ toolbar .toolbarbutton-1>.toolbarbutton-badge-stack {
 }
 
 .tab-background[selected="true"] {
+    border-right: 1px solid var(--border-color)  !important;
     box-shadow: none !important;
-}
-
-:root {
-    --tab-shadow-max-size: 0 !important;
-    --tab-min-height: 0px !important;
-    --inline-tab-padding: 5px;
-    --tab-border-radius: 0px !important;
-    --tab-block-margin: 0px;
-    --tabpanel-background-color: #F9F9FB;
-    --tab-attention-icon-color: var(--lwt-tab-attention-icon-color, rgb(42, 195, 162));
 }
 
 .tab-content {
@@ -189,15 +193,25 @@ toolbar .toolbarbutton-1>.toolbarbutton-badge-stack {
 tab {
     font-size: 12px;
     font-weight: 500 !important;
-    /*    margin: 0 !important;*/
     padding: 0 !important;
     max-height: 24px !important;
 }
 
+
 #urlbar-container {
-    max-width: 800px !important;
     margin-right: auto !important;
     margin-left: auto !important;
+}
+
+@media only screen and (max-width: 800px) {
+    #urlbar-container {
+        max-width: 90% !important;
+    }
+}
+@media only screen and (min-width: 800px) {
+    #urlbar-container {
+        max-width: 800px !important;
+    }
 }
 
 #urlbar-input-container {
@@ -279,8 +293,15 @@ tab {
     }
 }
 
+
+
 #navigator-toolbox {
+    background: var(--inactive-tab-color)  !important;
     border-width: 0 !important;
+}
+
+#titlebar {
+    box-shadow: inset 0px -1px var(--border-color) !important;
 }
 
 #browser vbox#appcontent tabbrowser,
