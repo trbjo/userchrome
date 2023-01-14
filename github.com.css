@@ -1,22 +1,26 @@
 @-moz-document regexp("^https://github\\.com"),
 domain("github.com") {
 
-  .Layout {
-    --Layout-sidebar-width: 10px !important;
+html.skip-scroll-target-into-view.js-skip-scroll-target-into-view body.logged-in.env-production.page-responsive.full-width div.logged-in.env-production.page-responsive.full-width div.application-main div main#js-repo-pjax-container turbo-frame#repo-content-turbo-frame div#repo-content-pjax-container.repository-content div.clearfix.mt-4.px-3.px-md-4.px-lg-5 div.position-relative.js-review-state-classes.js-suggested-changes-files-tab div#files_bucket.files-bucket.files-next-bucket.clearfix.pull-request-tab-content.is-visible.js-multi-line-comments-enabled diff-file-filter diff-layout .Layout {
+    --Layout-sidebar-width: 5px !important;
+    --Layout-gutter: 0 !important;
   }
 
-  .Layout-sidebar {
-    opacity: 0;
-    margin-left: -30px !important;
-    z-index: 50000;
-  }
-
-  .Layout-sidebar:hover {
-    --Layout-sidebar-width: 400px !important;
-    opacity: 1;
+html.skip-scroll-target-into-view.js-skip-scroll-target-into-view body.logged-in.env-production.page-responsive.full-width div.logged-in.env-production.page-responsive.full-width div.application-main div main#js-repo-pjax-container turbo-frame#repo-content-turbo-frame div#repo-content-pjax-container.repository-content div.clearfix.mt-4.px-3.px-md-4.px-lg-5 div.position-relative.js-review-state-classes.js-suggested-changes-files-tab div#files_bucket.files-bucket.files-next-bucket.clearfix.pull-request-tab-content.is-visible.js-multi-line-comments-enabled diff-file-filter diff-layout div.Layout.Layout--flowRow-until-lg.Layout--gutter-condensed.hx_Layout.wants-full-width-container.Layout--sidebarPosition-start.Layout--sidebarPosition-flowRow-none div.Layout-sidebar.overflow-y-auto.hx_Layout--sidebar.js-notification-shelf-offset-top.position-sticky{
+    z-index: 999 !important;
+    margin-left: -32px !important;
     overflow-y: scroll !important;
-    padding-right: 10px;
-    border-right: 1px solid #DDDDDD;
+    transition: opacity .2s ease-out;
+    padding-left: 31px !important;
+    opacity: 0;
   }
+
+html.skip-scroll-target-into-view.js-skip-scroll-target-into-view body.logged-in.env-production.page-responsive.full-width div.logged-in.env-production.page-responsive.full-width div.application-main div main#js-repo-pjax-container turbo-frame#repo-content-turbo-frame div#repo-content-pjax-container.repository-content div.clearfix.mt-4.px-3.px-md-4.px-lg-5 div.position-relative.js-review-state-classes.js-suggested-changes-files-tab div#files_bucket.files-bucket.files-next-bucket.clearfix.pull-request-tab-content.is-visible.js-multi-line-comments-enabled diff-file-filter diff-layout .Layout-sidebar:hover {
+    --Layout-sidebar-width: 300px !important;
+    opacity: 1 !important;
+    margin-right: 16px  !important;
+    transition: opacity .2s ease-out;
+  }
+
 
 }
