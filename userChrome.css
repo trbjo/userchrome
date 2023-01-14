@@ -16,7 +16,7 @@
         --active-tab-color: #1D2021;
         --inactive-tab-color: #111314;
         --urlbar-bg: #242424;
-        --selected-entry: #444547;
+        --selected-entry: #1D2021;
         --accent: #15539E !important;
         --box-shadow-color: #00000080 !important;
         --border-color: #000000 !important;
@@ -73,6 +73,7 @@ tab:only-of-type,
 .titlebar-button.titlebar-close,
 .titlebar-spacer,
 box#sidebar-header,
+#private-browsing-indicator-with-label,
 #alltabs-button {
     display: none !important;
 }
@@ -262,6 +263,7 @@ tab {
 @media (prefers-color-scheme: dark) {
     #urlbar>#urlbar-background {
         box-shadow: 0 2px 18px rgba(0, 0, 0, 0.73) !important;
+        background: #25292B !important;
     }
 }
 

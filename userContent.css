@@ -65,8 +65,8 @@ p[data-attrs] {
 
 
 
-@-moz-document url-prefix('about:preferences'),
-url-prefix('about:addons') {
+@-moz-document url("about:home"),url("about:downloads"),url("about:blank"),url("about:newtab"),url("about:privatebrowsing"),url('about:support'),url('about:preferences'), url('about:config'), url('about:addons')
+{
     * {
         user-select: none !important;
     }
@@ -79,41 +79,17 @@ url-prefix('about:addons') {
 
     @media (prefers-color-scheme: dark) {
         :root {
-            --in-content-page-background: #1D2021 !important;
+            --in-content-box-background: rgb(32,36,38) !important;
+            --in-content-box-background-odd: rgb(37,41,43) !important;
+            --in-content-page-background: rgb(29,32,33) !important;
+            --in-content-primary-button-background: rgb(131,165,152) !important;
+
         }
     }
 
-}
-
-@-moz-document url-prefix('about:newtab'),
-url-prefix('about:home'),
-url-prefix('about:blank'),
-url-prefix('about:support'),
-url-prefix('about:config') {
-
-    * {
-        user-select: none !important;
-    }
-
-    @media (prefers-color-scheme: light) {
-
-        body,
-        html {
-            background-color: #F8F8F8 !important;
-        }
-    }
-
-    @media (prefers-color-scheme: dark) {
-
-        body,
-        html {
-            background-color: #1D2021 !important;
-        }
-    }
 }
 
 @-moz-document url-prefix('about:addons') {
-
     #help-button,
     .sticky-container,
     recommended-extensions-section,
