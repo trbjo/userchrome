@@ -105,14 +105,9 @@ i.e. hides ublock origin
     margin-right: 75px !important;
 }
 
-toolbarbutton {
-    margin-top: -20px !important;
-    position: fixed;
-    top: 22px;
-    right: 0;
-}
-
 toolbarbutton#ublock0_raymondhill_net-BAP {
+    top: 22px;
+    position: fixed;
     margin-top: -22px !important;
     right: -2px  !important;
     padding-right: 5px  !important;
@@ -144,11 +139,16 @@ toolbaritem#_c2c003ee-bd69-42a2-b0e9-6f34222cb046_-browser-action {
 }
 
 toolbarbutton#_c2c003ee-bd69-42a2-b0e9-6f34222cb046_-BAP {
+    position: fixed;
     margin-top: -22px !important;
     right: 27px !important;
+    top: 22px;
 }
 
 toolbarbutton#downloads-button {
+    top: 22px;
+    position: fixed;
+    margin-top: -20px !important;
     right: 50px !important;
 }
 
