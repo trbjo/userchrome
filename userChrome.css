@@ -21,13 +21,13 @@
         --accent: #15539E !important;
         --box-shadow-color: #00000080 !important;
         --border-color: #000000 !important;
-        --tab-separator-color: #606064 !important;
+        --tab-separator-color: #58595A !important;
         --selected-bg-start: #202426 !important;
         --selected-bg-end: #202426 !important;
         --findbar-start: #282828 !important;
         --search-bar-input: #47494B;
-        --selected-fg-inactive: #818184 !important;
-        --selected-fg-active: #FEFEF6 !important;
+        --selected-fg-inactive: #938A72 !important;
+        --selected-fg-active: #fffbd8 !important;
         --toolbar-bg: #454545 !important;
     }
 
@@ -186,7 +186,6 @@ toolbar .toolbarbutton-1>.toolbarbutton-badge-stack {
 
 
 .tab-background {
-    box-shadow: inset -1px 0 var(--border-color) !important;;
     background: var(--inactive-tab-color) !important;
     border-radius: unset !important;
     border-bottom: 1px solid var(--border-color) !important;
@@ -194,21 +193,39 @@ toolbar .toolbarbutton-1>.toolbarbutton-badge-stack {
 }
 
 .tab-background[selected="true"] {
-    border-right: 1px solid var(--border-color)  !important;
     box-shadow: none !important;
 }
 
-.tab-content {
+tab {
     max-height: 24px !important;
     min-height: 24px !important;
 }
 
-tab {
+.tab-background:not([selected="true"])::after {
+    content: '';
+    border-right: 1px solid var(--tab-separator-color) !important;
+    height: 14px !important;
+    margin-bottom: 4px
+}
+
+tab[selected="true"]::before {
+    content: '';
+    outline: 1px solid var(--active-tab-color);
+    height: 22px !important;
+}
+
+
+.tab-label {
     font-size: 12px;
     font-weight: 500 !important;
-    padding: 0 !important;
-    max-height: 24px !important;
+    line-height: unset !important;
+    color: var(--selected-fg-inactive);
 }
+
+.tabbrowser-tab[selected="true"] .tab-label {
+    color: var(--selected-fg-active);
+}
+
 
 
 #urlbar-container {
