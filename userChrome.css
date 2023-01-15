@@ -196,6 +196,7 @@ toolbar .toolbarbutton-1>.toolbarbutton-badge-stack {
     box-shadow: none !important;
 }
 
+.tab-content,
 tab {
     max-height: 24px !important;
     min-height: 24px !important;
