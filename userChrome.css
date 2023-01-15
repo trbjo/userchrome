@@ -76,6 +76,8 @@ tab:only-of-type,
 .titlebar-spacer,
 box#sidebar-header,
 #private-browsing-indicator-with-label,
+#scrollbutton-up,
+#scrollbutton-down,
 #alltabs-button {
     display: none !important;
 }
