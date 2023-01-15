@@ -46,7 +46,7 @@
         --selected-entry: #DBDBDC;
         --accent: #3584E4 !important;
         --box-shadow-color: #00000040 !important;
-        --border-color: #c0c0c0;
+        --border-color: #D8D8D8;
         --tab-separator-color: #B1B1B1;
         --findbar-start: #EDEDED !important;
         --selected-bg-start: #FAFAFA !important;
@@ -218,13 +218,18 @@ tab[selected="true"]::before {
 .tab-label {
     font-size: 12px;
     font-weight: 500 !important;
-    line-height: unset !important;
     color: var(--selected-fg-inactive);
 }
 
 .tabbrowser-tab[selected="true"] .tab-label {
     color: var(--selected-fg-active);
 }
+
+.tab-secondary-label {
+  font-size: 9px !important;
+  margin-top: -6px  !important;;
+}
+
 
 
 
