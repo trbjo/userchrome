@@ -1,12 +1,12 @@
 @-moz-document regexp("^https://nytimes\\.com"),
 domain("www.nytimes.com") {
 
-    iframe,
-    #app,
     #3pCheckIframeId {
         display: none !important;
     }
 
+    iframe,
+    #3pCheckIframeId,
     .MAG_web_anon_coronavirus-dock,
     .expanded-dock,
     .MAG_web_anon_new-journey-rollout {

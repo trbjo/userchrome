@@ -1,4 +1,4 @@
-@-moz-document regexp("^https://tv2\\.dk*"),
+@-moz-document regexp("^https://tv2\\.dk"),
 domain("tv2.dk") {
     .tc_ad {
         display: none !important;
