@@ -302,10 +302,6 @@ url('about:addons') {
         padding-inline-start: unset !important;
     }
 
-    #errorShortDescText {
-        font-size: 20px !important;
-    }
-
     .illustrated #errorPageContainer {
         min-height: unset !important;
         display: unset !important;
