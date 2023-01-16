@@ -23,7 +23,10 @@
 @import url("github.com.css");
 
 @media (prefers-color-scheme: light) {
-    ::selection { background: #0366D625 !important; }
+    ::selection {
+        background: #0366D625 !important;
+    }
+
     stack h1,
     stack h2,
     stack h3,
@@ -39,7 +42,9 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    ::selection {background: rgba(134,121,100,0.4) !important; }
+    ::selection {
+        background: rgba(134, 121, 100, 0.4) !important;
+    }
 }
 
 /* add '[pdf]' next to links to PDF files */
@@ -49,7 +54,7 @@ a[href$=".pdf"]:after {
 }
 
 p[data-attrs] {
-  display: none !important;
+    display: none !important;
 }
 
 
@@ -57,15 +62,28 @@ p[data-attrs] {
 /*  display: none !important;*/
 /*}*/
 
-@-moz-document url("about:home"),url("about:downloads"),url("about:blank"),url("about:newtab"),url("about:privatebrowsing"),url('about:support'),url('about:preferences') {
+@-moz-document url("about:home"),
+url("about:downloads"),
+url("about:blank"),
+url("about:newtab"),
+url("about:privatebrowsing"),
+url('about:support'),
+url('about:preferences') {
     * {
         user-select: none !important;
     }
 }
 
 
-@-moz-document url("about:home"),url("about:downloads"),url("about:blank"),url("about:newtab"),url("about:privatebrowsing"),url('about:support'),url('about:preferences'), url('about:config'), url('about:addons')
-{
+@-moz-document url("about:home"),
+url("about:downloads"),
+url("about:blank"),
+url("about:newtab"),
+url("about:privatebrowsing"),
+url('about:support'),
+url('about:preferences'),
+url('about:config'),
+url('about:addons') {
     @media (prefers-color-scheme: light) {
         :root {
             --in-content-page-background: #F8F8F8 !important;
@@ -74,16 +92,17 @@ p[data-attrs] {
 
     @media (prefers-color-scheme: dark) {
         :root {
-            --in-content-box-background: rgb(32,36,38) !important;
-            --in-content-box-background-odd: rgb(37,41,43) !important;
-            --in-content-page-background: rgb(29,32,33) !important;
-            --in-content-primary-button-background: rgb(21,83,158) !important;
+            --in-content-box-background: rgb(32, 36, 38) !important;
+            --in-content-box-background-odd: rgb(37, 41, 43) !important;
+            --in-content-page-background: rgb(29, 32, 33) !important;
+            --in-content-primary-button-background: rgb(21, 83, 158) !important;
 
         }
     }
 }
 
 @-moz-document url-prefix('about:addons') {
+
     #help-button,
     .sticky-container,
     recommended-extensions-section,
@@ -324,9 +343,9 @@ p[data-attrs] {
 
 
     .header>h1 {
-        font-size: 3em !important;
+        font-size: 3.6em !important;
         font-weight: 400 !important;
-        letter-spacing: -0.03em  !important;
+        letter-spacing: -0.03em !important;
     }
 
 
@@ -337,18 +356,15 @@ p[data-attrs] {
 
     p:first-of-type::first-letter {
         font-family: serif !important;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 110px;
-        letter-spacing: -2px;
         float: left;
-        padding-top: 5px !important;
-        padding-right: 2px !important;
-        margin-bottom: -10px !important;
-        font-size: 86px !important;
-
+        margin-top: 8px;
+        margin-right: 3px;
+        font-size: 3.6em !important;
     }
 
+    p {
+        line-height: 1.7em !important;
+    }
 
     blockquote p {
         font-size: 1.1em !important;
@@ -385,9 +401,9 @@ p[data-attrs] {
     }
 
     @media print {
-    .container {
-        box-shadow: none  !important;
-        padding: 30px  !important;
+        .container {
+            box-shadow: none !important;
+            padding: 30px !important;
         }
     }
 
