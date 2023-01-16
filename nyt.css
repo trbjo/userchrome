@@ -20,6 +20,10 @@ domain("www.nytimes.com") {
     h5,
     h6 {
         font-family: serif !important;
+        letter-spacing: 0 !important;
     }
 
+    p {
+        letter-spacing: 0 !important;
+    }
 }

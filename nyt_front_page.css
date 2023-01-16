@@ -1,4 +1,5 @@
-@-moz-document regexp("^https://www\\.nytimes\\.com/?$") {
+@-moz-document regexp("^https://nytimes\\.com"),
+domain("www.nytimes.com") {
 
     #app>div:first-child {
         display: none !important;
