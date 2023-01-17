@@ -1,0 +1,7 @@
+@-moz-document regexp("^https://philosophy\\.stackexchange\\.com.*") {
+
+    .comment-copy,
+    p {
+        font-size: 1.2em !important;
+    }
+}
