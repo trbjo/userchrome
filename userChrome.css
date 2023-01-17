@@ -235,22 +235,19 @@ tab[selected="true"]::before {
   margin-top: -6px  !important;;
 }
 
-
-
-
 #urlbar-container {
     margin-right: auto !important;
     margin-left: auto !important;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 890px) {
     #urlbar-container {
         max-width: 90% !important;
     }
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 890px) {
     #urlbar-container {
-        max-width: 800px !important;
+        max-width: 802px !important;
     }
 }
 
