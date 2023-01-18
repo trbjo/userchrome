@@ -1,4 +1,5 @@
 :root {
+    --default-focusring-width: 0px !important;
     --tab-shadow-max-size: 0 !important;
     --tab-min-height: 0px !important;
     --inline-tab-padding: 5px;
@@ -64,6 +65,7 @@
     }
 }
 
+#unified-extensions-button,
 #toolbar-menubar,
 #urlbar-go-button,
 .urlbarView-row[label]::before,
@@ -144,8 +146,13 @@ toolbarbutton#ublock0_raymondhill_net-BAP {
 }
 
 
-.toolbarbutton-badge::before {right: 9px !important; }
-.toolbarbutton-badge::after {right: 7px !important; }
+.toolbarbutton-badge::before {
+    right: 9px !important;
+}
+
+.toolbarbutton-badge::after {
+    right: 7px !important;
+}
 
 toolbaritem#ublock0_raymondhill_net-browser-action,
 toolbaritem#_c2c003ee-bd69-42a2-b0e9-6f34222cb046_-browser-action {
