@@ -9,7 +9,10 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    ::selection {background: rgba(134,121,100,0.4) !important; }
+    ::selection {
+        background: rgba(134, 121, 100, 0.4) !important;
+    }
+
     :root {
         --sidebar-color: #12161B;
         --sidebar-hover: #1C2025;
@@ -35,7 +38,10 @@
 }
 
 @media (prefers-color-scheme: light) {
-    ::selection { background: #0366D625 !important; }
+    ::selection {
+        background: #0366D625 !important;
+    }
+
     :root {
         --sidebar-hover: #E8E9E9;
         --sidebar-color: #F3F3F3;
@@ -64,7 +70,7 @@
 .titlebar-buttonbox.titlebar-color,
 .tab-close-button,
 .findbar-closebutton,
-.findbar-container > hbox >toolbarbutton,
+.findbar-container>hbox>toolbarbutton,
 tab:only-of-type,
 #tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"],
 .tab-close-button,
@@ -111,14 +117,14 @@ toolbarbutton#ublock0_raymondhill_net-BAP {
     top: 22px;
     position: fixed;
     margin-top: -22px !important;
-    right: -2px  !important;
-    padding-right: 5px  !important;
+    right: -2px !important;
+    padding-right: 5px !important;
 }
 
 .toolbarbutton-badge {
     text-shadow: 1px 1px 2px black !important;
     background-color: transparent !important;
-    font-size: 10px  !important;
+    font-size: 10px !important;
     font-weight: 500 !important;
     padding: 0 !important;
     color: #fff;
@@ -127,15 +133,19 @@ toolbarbutton#ublock0_raymondhill_net-BAP {
     margin-top: 2px !important;
 }
 
+.toolbarbutton-badge::before,
 .toolbarbutton-badge::after {
-    position: fixed !important;
+    position: fixed;
     text-shadow: none !important;
-    right: 6px !important;
-    font-size: 15px !important;
+    font-size: 12px !important;
     color: #800000 !important;
     content: "●" !important;
     z-index: -1 !important;
 }
+
+
+.toolbarbutton-badge::before {right: 9px !important; }
+.toolbarbutton-badge::after {right: 7px !important; }
 
 toolbaritem#ublock0_raymondhill_net-browser-action,
 toolbaritem#_c2c003ee-bd69-42a2-b0e9-6f34222cb046_-browser-action {
@@ -231,8 +241,9 @@ tab[selected="true"]::before {
 }
 
 .tab-secondary-label {
-  font-size: 9px !important;
-  margin-top: -6px  !important;;
+    font-size: 9px !important;
+    margin-top: -6px !important;
+    ;
 }
 
 #urlbar-container {
@@ -245,6 +256,7 @@ tab[selected="true"]::before {
         max-width: 90% !important;
     }
 }
+
 @media only screen and (min-width: 890px) {
     #urlbar-container {
         max-width: 802px !important;
@@ -283,8 +295,14 @@ tab[selected="true"]::before {
 
 
 /*needs to be aligned to navbar always, otherwise we can see the jump when we open it*/
-#urlbar[breakout][breakout-extend] > #urlbar-background {animation-duration: 0s !important; }
-#urlbar[breakout], #urlbar {top: 0 !important; }
+#urlbar[breakout][breakout-extend]>#urlbar-background {
+    animation-duration: 0s !important;
+}
+
+#urlbar[breakout],
+#urlbar {
+    top: 0 !important;
+}
 
 
 #urlbar>#urlbar-background {
@@ -341,7 +359,7 @@ tab[selected="true"]::before {
 
 
 #navigator-toolbox {
-    background: var(--inactive-tab-color)  !important;
+    background: var(--inactive-tab-color) !important;
     border-width: 0 !important;
 }
 
@@ -590,10 +608,6 @@ image.textbox-search-sign {
 
 treechildren::-moz-tree-twisty(container, queryFolder_toolbar_____) {
     color: transparent;
-}
-
-scrollbar {
-    display: none !important;
 }
 
 hbox#sidebar-search-container {
