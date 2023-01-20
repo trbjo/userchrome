@@ -7,6 +7,15 @@
         font-family: sans-serif !important;
     }
 
+    @media (prefers-color-scheme: dark) {
+
+        .body--home,
+        body {
+            background: #1C1C1C !important;
+        }
+    }
+
+
     @media (prefers-color-scheme: light) {
 
         .module__link--blue,
