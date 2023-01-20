@@ -136,17 +136,11 @@
         position: absolute !important;
         top: -35px !important;
         margin-right: auto !important;
-        margin-left: 340px !important;
+        margin-left: 400px !important;
         z-index: 15 !important;
         font-size: 13px !important;
         font-weight: 600 !important;
         transition: opacity .3s ease-out;
-        opacity: 0 !important;
-    }
-
-    .search-filters-wrap:hover {
-        transition: opacity .3s ease-out;
-        opacity: 1 !important;
     }
 
     .dropdown {
