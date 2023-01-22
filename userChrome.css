@@ -280,10 +280,8 @@ tab[selected="true"]::before {
 }
 
 
-.urlbarView-row:not([type="tip"], [type="dynamic"])>.urlbarView-row-inner>.urlbarView-no-wrap>.urlbarView-title[overflow],
-.urlbarView-tags[overflow],
-.urlbarView-url[overflow] {
-    line-height: 1.2 !important;
+.urlbarView-title {
+    line-height: unset !important;
 }
 
 .urlbarView {
@@ -338,6 +336,17 @@ tab[selected="true"]::before {
 
 .urlbarView-results {
     padding-block: 0px !important;
+}
+
+.urlbarView-row-inner {
+    white-space: nowrap !important;
+    display: inline-block !important;
+    mask-image: linear-gradient(to left, transparent, black 3ch) !important;
+}
+
+.urlbarView-url {
+    display: inline-block !important;
+    line-height: unset !important;
 }
 
 .urlbarView-row-inner {
