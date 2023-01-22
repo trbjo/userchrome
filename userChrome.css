@@ -1,5 +1,6 @@
 :root {
     --default-focusring-width: 0px !important;
+    --focus-outline-width: 0px !important;
     --tab-shadow-max-size: 0 !important;
     --tab-min-height: 0px !important;
     --inline-tab-padding: 5px;
@@ -250,7 +251,6 @@ tab[selected="true"]::before {
 .tab-secondary-label {
     font-size: 9px !important;
     margin-top: -6px !important;
-    ;
 }
 
 #urlbar-container {
@@ -275,27 +275,16 @@ tab[selected="true"]::before {
 }
 
 
-.urlbarView-row-inner {
-    max-height: 20px !important;
-}
-
-
-.urlbarView-title {
-    line-height: unset !important;
-}
-
 .urlbarView {
     margin-inline: unset !important;
-    width: 100% !important;
+    width: unset !important;
     border-inline: unset !important;
-
 }
-
 
 /*# separator between urlbar input and results*/
 #urlbar[open]>.urlbarView>.urlbarView-body-outer>.urlbarView-body-inner {
     border-top-width: 0 !important;
-    /* border-top: 0px solid var(--autocomplete-popup-separator-color);*/
+    border-top: 0px solid var(--autocomplete-popup-separator-color);
 }
 
 
@@ -328,25 +317,6 @@ tab[selected="true"]::before {
         clip-path: inset(0px -30px -30px -30px);
         box-shadow: 0 2px 16px rgba(0, 0, 0, 0.33) !important;
     }
-}
-
-#urlbar-results {
-    margin-bottom: 6px !important;
-}
-
-.urlbarView-results {
-    padding-block: 0px !important;
-}
-
-.urlbarView-row-inner {
-    white-space: nowrap !important;
-    display: inline-block !important;
-    mask-image: linear-gradient(to left, transparent, black 3ch) !important;
-}
-
-.urlbarView-url {
-    display: inline-block !important;
-    line-height: unset !important;
 }
 
 .urlbarView-row-inner {
@@ -399,31 +369,8 @@ tabbrowser#content {
 }
 
 
-/*wip*/
-.urlbarView-results[wrap]>.urlbarView-row>.urlbarView-row-inner>.urlbarView-no-wrap {
-    max-width: unset !important;
-}
-
-
-
-/*@media screen and (min-height: 600px) {*/
-.urlbarView-results[wrap]>.urlbarView-row>.urlbarView-row-inner>.urlbarView-no-wrap {
-    max-width: unset !important;
-    flex-basis: unset !important;
-    padding-left: unset !important;
-    margin-top: 0 !important;
-}
-
-/*}*/
-
-.urlbarView-title-separator {
-    display: block !important;
-}
-
-
 .urlbarView-results[wrap]>.urlbarView-row[has-url]>.urlbarView-row-inner>.urlbarView-url:-moz-locale-dir(ltr) {
     padding-left: unset !important;
-    ;
 }
 
 .urlbarView-results[wrap]>.urlbarView-row[has-url]>.urlbarView-row-inner>.urlbarView-url,
