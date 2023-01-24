@@ -1,6 +1,5 @@
 :root {
     --default-focusring-width: 0px !important;
-    --focus-outline-width: 0px !important;
     --tab-shadow-max-size: 0 !important;
     --tab-min-height: 0px !important;
     --inline-tab-padding: 5px;
