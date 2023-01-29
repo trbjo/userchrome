@@ -1,4 +1,4 @@
-@-moz-document regexp("^https://philosophy\\.stackexchange\\.com.*") {
+@-moz-document regexp("^https://(math|philosophy)\\.stackexchange\\.com.*") {
 
     .comment-copy,
     p {
