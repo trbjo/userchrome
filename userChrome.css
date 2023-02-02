@@ -600,3 +600,12 @@ vbox#sidebar-box {
     border-left: 1px solid #00ff0000 !important;
     border-right: 1px solid var(--sidebar-border-color) !important;
 }
+
+/*login modal*/
+:not(.content-prompt-dialog) > .dialogOverlay > .dialogBox:not(.spotlightBox) {
+ margin-top: 0px  !important;
+}
+
+.dialogBox:not(.spotlightBox) {
+ border-radius: 0 0px 8px 8px !important;
+}
