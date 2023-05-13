@@ -24,9 +24,6 @@
 @import url("github.com.css");
 
 @media (prefers-color-scheme: light) {
-    ::selection {
-        background: #0366D625 !important;
-    }
 
     stack h1,
     stack h2,
@@ -42,11 +39,6 @@
 
 }
 
-@media (prefers-color-scheme: dark) {
-    ::selection {
-        background: rgba(134, 121, 100, 0.4) !important;
-    }
-}
 
 /* add '[pdf]' next to links to PDF files */
 a[href$=".pdf"]:after {
@@ -328,6 +320,17 @@ url('about:addons') {
 
 /* Reader mode */
 @-moz-document url-prefix("about:reader") {
+
+
+    ::selection {
+        background: #0366D625 !important;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        ::selection {
+            background: rgba(134, 121, 100, 0.4) !important;
+        }
+    }
 
 
     body {

@@ -401,14 +401,6 @@ hbox [anonid="findbar-textbox-wrapper"] {
     padding: 0px 6px !important;
 }
 
-.findbar-container {
-    height: unset !important;
-    /*margin-right: auto !important;*/
-    margin-left: 10px !important;
-    padding: 2px 0px 0px 0px !important;
-    /*width: 300px !important;*/
-}
-
 .findbar-find-status {
     position: fixed;
     right: 0;
@@ -435,6 +427,9 @@ findbar:not(:focus-within) .findbar-find-status {
 }
 
 
+findbar:not(:focus-within) {
+  z-index: -1;
+}
 
 findbar {
     -moz-transition-property: none !important;
@@ -443,30 +438,16 @@ findbar {
     transform: none !important;
     -moz-animation: none !important;
     animation: none !important;
-}
-
-findbar:not(:focus-within) {
-    border-width: 0 !important;
-    min-height: 0px !important;
-    margin-bottom: 0px !important;
-    max-height: 0px !important;
-}
-
-findbar {
-    min-height: 30px !important;
-    max-height: 30px !important;
-    margin-bottom: -30px !important;
-    padding-block: 0 !important;
-    -moz-box-ordinal-group: 0;
-    border: 0 !important;
+    padding: 0 !important;
+    position: absolute;
+    width: 100%;
+    border-top: 0 !important;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 3px 10px -7px #00000080 !important;
     background: unset !important;
     background-image: linear-gradient(to top, var(--selected-bg-start), var(--selected-bg-end)) !important;
-    border-bottom: 1px solid var(--border-color) !important;
-    display: block;
-    position: sticky;
-    z-index: 666;
-    width: 100%;
-    box-shadow: 0 3px 10px -7px #00000080 !important;
+    min-height: 30px !important;
+    max-height: 30px !important;
 }
 
 .findbar-button {
@@ -604,10 +585,52 @@ vbox#sidebar-box {
 }
 
 /*login modal*/
-:not(.content-prompt-dialog) > .dialogOverlay > .dialogBox:not(.spotlightBox) {
- margin-top: 0px  !important;
+:not(.content-prompt-dialog)>.dialogOverlay>.dialogBox:not(.spotlightBox) {
+    margin-top: 0px !important;
 }
 
 .dialogBox:not(.spotlightBox) {
- border-radius: 0 0px 8px 8px !important;
+    border-radius: 0 0px 8px 8px !important;
+}
+
+#search-box {
+    appearance: none !important;
+    background-color: Field;
+    border-radius: 4px !important;
+    border: 2px solid Field !important;
+    max-height: 26px !important;
+}
+
+
+
+#search-box:focus-within {
+    border-color: var(--accent) !important;
+}
+
+vbox#sidebar-box[hidden="true"] {
+    display: block !important;
+    position: fixed;
+    height: 100% !important;
+    left: -300px;
+    animation: slide 0.5s forwards;
+    transition: top 1s linear;
+    animation-delay: 2s;
+}
+
+#sidebar-splitter {
+    display: none !important;
+    /*display: block !important;*/
+}
+
+vbox#sidebar-box {
+    width: 300px !important;
+    border-right: 1px solid var(--border-color);
+    position: fixed !important;
+    height: 100% !important;
+    left: 0px;
+    transition: top 1s linear;
+    animation: slide 0.5s backwards;
+    ;
+    animation-delay: 2s;
+    z-index: 10 !important;
 }
