@@ -67,6 +67,7 @@
     }
 }
 
+.urlbarView-button.urlbarView-button-menu,
 #unified-extensions-button,
 #toolbar-menubar,
 #urlbar-go-button,
@@ -322,6 +323,10 @@ tab[selected="true"]::before {
     }
 }
 
+.urlbarView-row {
+    border-radius: 0 !important;
+}
+
 .urlbarView-row-inner {
     border-radius: 0 !important;
     padding: 7px 14px !important;
@@ -428,7 +433,7 @@ findbar:not(:focus-within) .findbar-find-status {
 
 
 findbar:not(:focus-within) {
-  z-index: -1;
+    z-index: -1;
 }
 
 findbar {
