@@ -639,3 +639,18 @@ vbox#sidebar-box {
     animation-delay: 2s;
     z-index: 10 !important;
 }
+
+
+:root[inFullscreen] .global-notificationbox {
+    visibility: visible !important;
+}
+
+.notificationbox-stack.global-notificationbox {
+    position: relative;
+    top: 0;
+    max-height: 0 !important;
+}
+
+.notificationbox-stack {
+    overflow: unset !important;
+}
