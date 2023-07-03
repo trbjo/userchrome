@@ -9,7 +9,7 @@
 @import url("philosophy-stack.css");
 @import url("weekendavisen.css");
 @import url("dr.css");
-@import url("wiki.css");
+/*@import url("wiki.css");*/
 @import url("slack.css");
 @import url("betterexplained.css");
 @import url("archwiki.css");
@@ -300,13 +300,23 @@ url('about:addons') {
         display: unset !important;
     }
 
-    button {
-        opacity: 0 !important;
-    }
-
     #errorLongDesc,
     h1 {
         display: none !important;
+    }
+
+    #netErrorButtonContainer {
+        opacity: 0 !important;
+    }
+
+    button {
+        position: fixed !important;
+        border-radius: 0 !important;
+        top: 0 !important;
+        left: 0 !important;
+        margin-top: 0em !important;
+        min-width: 100% !important;
+        min-height: 100% !important;
     }
 
 
@@ -349,38 +359,37 @@ url('about:addons') {
     }
 
 
-    blockquote {
-        border-inline-start: none !important;
-    }
 
 
-    p:first-of-type::first-letter {
-        font-family: serif !important;
-        float: left;
-        margin-top: 8px;
-        margin-right: 3px;
-        font-size: 3.6em !important;
-    }
+    /*    section p:first-of-type::first-letter {*/
+    /*        font-family: serif !important;*/
+    /*        float: left;*/
+    /*        margin-top: 8px;*/
+    /*        margin-right: 3px;*/
+    /*        font-size: 3.6em !important;*/
+    /*    }*/
 
     p {
         line-height: 1.7em !important;
     }
 
-    blockquote p {
-        font-size: 1.1em !important;
-        padding: 15px 40px !important;
+    blockquote {
+        border-radius: 0 !important;
+        margin: 0 !important;
+        font-size: 1.05em !important;
+        padding: 0px 40px !important;
         line-height: 1.35em !important;
     }
 
-    blockquote p::before {
-        font-size: 1.4em !important;
-        content: "» " !important;
-    }
+    /*    blockquote::before {*/
+    /*        font-size: 1.4em !important;*/
+    /*        content: "» " !important;*/
+    /*    }*/
 
-    blockquote p::after {
-        font-size: 1.4em !important;
-        content: " «" !important;
-    }
+    /*    blockquote::after {*/
+    /*        font-size: 1.4em !important;*/
+    /*        content: " «" !important;*/
+    /*    }*/
 
     body.serif {
         font-family: serif !important;
@@ -395,9 +404,20 @@ url('about:addons') {
     }
 
     .container {
-        box-shadow: 0px 4px 18px 0px #00000040 !important;
         padding: 80px !important;
         margin: 0;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .container {
+            box-shadow: 0px 4px 18px 0px #00000080 !important;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        .container {
+            box-shadow: 0px 4px 18px 0px #00000040 !important;
+        }
     }
 
     @media print {
@@ -453,6 +473,8 @@ url('about:addons') {
 
     .moz-reader-content figure,
     .moz-reader-content figure>img {
+        font-size: 0.75em !important;
+        line-height: 1.0em !important;
         margin-left: auto !important;
         margin-right: auto !important;
         justify-content: center;
@@ -460,5 +482,23 @@ url('about:addons') {
         display: grid;
     }
 
+
+    header>div {
+        display: none !important;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header>figure {
+        order: 12
+    }
+
+    header>p {
+        order: 1;
+        font-size: 1.1em !important;
+    }
 
 }

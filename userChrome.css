@@ -67,6 +67,9 @@
     }
 }
 
+
+tab:only-of-type,
+#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"],
 #unified-extensions-button,
 #toolbar-menubar,
 #urlbar-go-button,
@@ -75,8 +78,6 @@
 .tab-close-button,
 .findbar-closebutton,
 .findbar-container>hbox>toolbarbutton,
-tab:only-of-type,
-#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"],
 .tab-close-button,
 #PanelUI-button,
 #PanelUI-menu-button,
@@ -120,7 +121,7 @@ i.e. hides ublock origin
 toolbarbutton#ublock0_raymondhill_net-BAP {
     top: 22px;
     position: fixed;
-    margin-top: -22px !important;
+    margin-top: -21px !important;
     right: -2px !important;
     padding-right: 5px !important;
 }
@@ -478,6 +479,9 @@ menupopup>menuitem>label {
     padding-bottom: 1px !important;
 }
 
+/*#context-sep-sendpagetodevice,*/
+/*#context-sep-sendlinktodevice,*/
+
 #context-back,
 #context-reload,
 #context-forward,
@@ -486,8 +490,6 @@ menupopup>menuitem>label {
 #context-savelinktopocket,
 #context-stop,
 #context-copy,
-#context-sep-sendpagetodevice,
-#context-sep-sendlinktodevice,
 #context-sep-selectall,
 #context-selectall,
 #contentAreaContextMenu>menuseparator:nth-child(92),
@@ -634,7 +636,6 @@ vbox#sidebar-box {
     left: 0px;
     transition: top 1s linear;
     animation: slide 0.5s backwards;
-    ;
     animation-delay: 2s;
     z-index: 10 !important;
 }
@@ -650,6 +651,24 @@ vbox#sidebar-box {
     max-height: 0 !important;
 }
 
+vbox.notificationbox-stack {
+    min-height: 0;
+    max-height: 0;
+}
+
 .notificationbox-stack {
     overflow: unset !important;
+}
+
+notification-message {
+    margin: auto !important;
+    box-shadow: 0px 3px 10px 0px #00000080;
+}
+
+div.container.infobar::before {
+    display: none !important;
+}
+
+.container {
+    border-radius: 0 0 5px 5px !important;
 }
