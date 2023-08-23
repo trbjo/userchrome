@@ -404,6 +404,7 @@ url('about:addons') {
     }
 
     .container {
+        max-width: 37em !important;
         padding: 80px !important;
         margin: 0;
     }

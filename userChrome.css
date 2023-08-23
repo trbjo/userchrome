@@ -641,8 +641,9 @@ vbox#sidebar-box {
 }
 
 
+/*capture portal popup, among other things*/
 :root[inFullscreen] .global-notificationbox {
-    visibility: visible !important;
+    visibility: inherit !important;
 }
 
 .notificationbox-stack.global-notificationbox {
