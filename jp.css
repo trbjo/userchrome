@@ -1,6 +1,7 @@
 @-moz-document regexp("^https://jyllands-posten\\.dk*"),
 domain("jyllands-posten.dk") {
 
+    .banner-container--topscroll,
     .c-article-megaboard-top,
     .c-page-zone-banners__content,
     .c-page-zone-teasers--shared_content_marketing,

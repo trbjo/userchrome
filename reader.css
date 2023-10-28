@@ -1,0 +1,241 @@
+@-moz-document url-prefix("about:reader") {
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --findbar-not-found: #7A2000;
+            --sidebar-color: #12161B;
+            --sidebar-hover: #1C2025;
+            --avoid-white-flash: #1D2021;
+            --active-tab-color: #1D2021;
+            --inactive-tab-color: #111314;
+            --urlbar-bg: #242424;
+            --selected-entry: #1D2021;
+            --accent: #15539E;
+            --box-shadow-color: #00000080;
+            --border-color: #000000;
+            --tab-separator-color: #58595A;
+            --selected-bg-start: #202426;
+            --selected-bg-end: #202426;
+            --findbar-start: #282828;
+            --search-bar-input: #47494B;
+            --selected-fg-inactive: #938A82;
+            --selected-fg-active: #fffbd8;
+            --toolbar-bg: #454545;
+            --reader-paper-color: #F4ECD9;
+            --reader-bg-color: #2A2A2A;
+            --reader-icon-color: #FFFFFF;
+            --page-not-found-bg: #1D2021;
+            --page-not-found-fg: #a0a0a0;
+            --text-selected-background: rgba(134, 121, 100, 0.4);
+            --text-selected-foreground: #000000;
+
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --findbar-not-found: #FF8888;
+            --sidebar-hover: #E8E9E9;
+            --sidebar-color: #F3F3F3;
+            --avoid-white-flash: #F8F8F8;
+            --active-tab-color: #FFFFFF;
+            --inactive-tab-color: #E6E6E6;
+            --urlbar-bg: #FFFFFF;
+            --selected-entry: #DBDBDC;
+            --accent: #3584E4;
+            --box-shadow-color: #00000040;
+            --border-color: #D8D8D8;
+            --tab-separator-color: #B1B1B1;
+            --findbar-start: #EDEDED;
+            --selected-bg-start: #FAFAFA;
+            --selected-bg-end: #FFFFFF;
+            --search-bar-input: #E8E8E8;
+            --selected-fg-active: #000000;
+            --selected-fg-inactive: #4E4E4E;
+            --toolbar-bg: #d2d2d2;
+            --reader-paper-color: #FFFFFF;
+            --reader-bg-color: #E8E8E8;
+            --reader-icon-color: #000000;
+            --page-not-found-bg: #F6F6F6;
+            --page-not-found-fg: #858587;
+            --text-selected-background: #0366D625;
+            --text-selected-foreground: #000000;
+        }
+    }
+
+
+    body {
+        padding: unset !important;
+    }
+
+    .header {
+        text-align: center !important;
+    }
+
+
+    blockquote {
+        border-radius: 0 !important;
+        margin: 0 !important;
+        padding: 0px 40px !important;
+        background: #00000007 !important;
+    }
+
+    body.serif {
+        font-family: serif !important;
+    }
+
+    body.sans-serif {
+        font-family: monospace !important;
+    }
+
+    h1 {
+        font-size: 2.5em !important;
+        line-height: 1.5 !important;
+    }
+
+    h2 {
+        font-size: 1.4em !important;
+    }
+
+    body.serif p {
+        font-size: 20px !important;
+    }
+
+    body.sans-serif p {
+        font-size: 1rem !important;
+    }
+
+    body {
+        hyphens: auto;
+        overflow-wrap: break-word;
+        text-rendering: optimizeLegibility;
+        font-kerning: normal;
+    }
+
+
+    body a {
+        color: #3584E3 !important;
+    }
+
+    body {
+        color: #000000 !important;
+    }
+
+    .container {
+        max-width: 45rem !important;
+        padding: 80px !important;
+        margin: 0;
+        line-height: 1.5 !important;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .container {
+            box-shadow: 0px 4px 18px 0px #00000080 !important;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        .container {
+            box-shadow: 0px 4px 18px 0px #00000040 !important;
+        }
+    }
+
+    @media print {
+        .container {
+            box-shadow: none !important;
+            padding: 30px !important;
+        }
+    }
+
+    body {
+        background-color: var(--reader-bg-color) !important;
+    }
+
+    .container {
+        background-color: var(--reader-paper-color) !important;
+    }
+
+    code {
+        font-size: 0.7em;
+    }
+
+    #toolbar .toolbar-button {
+        fill: var(--reader-icon-color) !important;
+    }
+
+    #toolbar {
+        margin-inline-start: 0 !important;
+        position: fixed !important;
+        top: 0 !important;
+        opacity: 0 !important;
+        transition: opacity .1s ease-out;
+    }
+
+    #toolbar>div.reader-toolbar {
+        background-image: linear-gradient(to top, var(--selected-bg-start), var(--selected-bg-end)) !important;
+        position: fixed !important;
+        box-shadow: 0 3px 10px -7px #00000080 !important;
+        margin-inline-start: 0 !important;
+        border: none !important;
+        border-radius: 0 !important;
+        width: 100% !important;
+        padding-inline: 0 !important;
+        padding-block: 0 !important;
+    }
+
+    #toolbar:hover {
+        opacity: 1 !important;
+        transition: opacity .1s ease-out;
+    }
+
+    /*.toolbar-container*/
+    hr,
+    #toolbar-type-controls,
+    .domain,
+    .close-button {
+        display: none !important;
+    }
+
+    div.page>div>div>div>p {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        padding-right: 0 !important;
+        padding-left: 3px !important;
+        margin: 0 !important;
+    }
+
+    .moz-reader-content figure,
+    .moz-reader-content figure>img {
+        font-size: 0.75em !important;
+        line-height: 1.0em !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        justify-content: center;
+        align-items: center;
+        display: grid;
+    }
+
+
+    header>div {
+        display: none !important;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header>figure {
+        order: 12
+    }
+
+    div.reader-credits,
+    div.meta-data {
+        font-size: 1rem !important;
+    }
+
+    ::selection {
+        background-color: var(--text-selected-background);
+        color: var(--text-selected-foreground);
+    }
+
+}

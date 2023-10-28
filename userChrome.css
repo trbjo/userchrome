@@ -1,3 +1,5 @@
+@import url("colors.css");
+
 :root {
     --default-focusring-width: 0px !important;
     --tab-shadow-max-size: 0 !important;
@@ -8,65 +10,6 @@
     --tabpanel-background-color: #F9F9FB;
     --tab-attention-icon-color: var(--lwt-tab-attention-icon-color, rgb(42, 195, 162));
 }
-
-@media (prefers-color-scheme: dark) {
-    ::selection {
-        background: rgba(134, 121, 100, 0.4) !important;
-    }
-
-    :root {
-        --findbar-not-found: #7A2000;
-        --sidebar-color: #12161B;
-        --sidebar-hover: #1C2025;
-        --avoid-white-flash: #1D2021;
-        --active-tab-color: #1D2021;
-        --inactive-tab-color: #111314;
-        --urlbar-bg: #242424;
-        --selected-entry: #1D2021;
-        --accent: #15539E !important;
-        --box-shadow-color: #00000080 !important;
-        --border-color: #000000 !important;
-        --tab-separator-color: #58595A !important;
-        --selected-bg-start: #202426 !important;
-        --selected-bg-end: #202426 !important;
-        --findbar-start: #282828 !important;
-        --search-bar-input: #47494B;
-        --selected-fg-inactive: #938A82 !important;
-        --selected-fg-active: #fffbd8 !important;
-        --toolbar-bg: #454545 !important;
-    }
-
-
-}
-
-@media (prefers-color-scheme: light) {
-    ::selection {
-        background: #0366D625 !important;
-    }
-
-    :root {
-        --findbar-not-found: #FF8888;
-        --sidebar-hover: #E8E9E9;
-        --sidebar-color: #F3F3F3;
-        --avoid-white-flash: #F8F8F8;
-        --active-tab-color: #FFFFFF;
-        --inactive-tab-color: #E6E6E6;
-        --urlbar-bg: #FFFFFF;
-        --selected-entry: #DBDBDC;
-        --accent: #3584E4 !important;
-        --box-shadow-color: #00000040 !important;
-        --border-color: #D8D8D8;
-        --tab-separator-color: #B1B1B1;
-        --findbar-start: #EDEDED !important;
-        --selected-bg-start: #FAFAFA !important;
-        --selected-bg-end: #FFFFFF !important;
-        --search-bar-input: #E8E8E8;
-        --selected-fg-active: #000000;
-        --selected-fg-inactive: #4E4E4E;
-        --toolbar-bg: #d2d2d2;
-    }
-}
-
 
 tab:only-of-type,
 #tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"],
@@ -163,14 +106,6 @@ toolbaritem#ublock0_raymondhill_net-browser-action,
 toolbaritem#_c2c003ee-bd69-42a2-b0e9-6f34222cb046_-browser-action {
     position: fixed !important;
 }
-
-/*tab discard*/
-/*toolbarbutton#_c2c003ee-bd69-42a2-b0e9-6f34222cb046_-BAP {*/
-/*    position: fixed;*/
-/*    margin-top: -22px !important;*/
-/*    right: 27px !important;*/
-/*    top: 22px;*/
-/*}*/
 
 toolbarbutton#downloads-button {
     top: 22px;
