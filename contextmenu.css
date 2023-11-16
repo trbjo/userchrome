@@ -1,0 +1,28 @@
+#contentAreaContextMenu menugroup menuitem image,
+#contentAreaContextMenu .menu-right image {
+    visibility: visible;
+}
+
+menupopup>menuitem>label {
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+}
+
+/*#context-sep-sendpagetodevice,*/
+/*#context-sep-sendlinktodevice,*/
+
+#context-back,
+#context-reload,
+#context-forward,
+#context-navigation,
+#context-sep-navigation,
+#context-savelinktopocket,
+#context-stop,
+#context-copy,
+#context-sep-selectall,
+#context-selectall,
+#contentAreaContextMenu>menuseparator:nth-child(92),
+#context-inspect-a11y,
+#context-pocket {
+    display: none !important;
+}

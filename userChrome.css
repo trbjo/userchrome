@@ -1,6 +1,20 @@
 @import url("colors.css");
+@import url("ublock.css");
+@import url("urlbarview.css");
+@import url("findbar.css");
+@import url("urlbar.css");
+@import url("tabs.css");
+@import url("contextmenu.css");
+@import url("sidebar.css");
+
 
 :root {
+    --button-height: 27px;
+    --button-width: 38px;
+    --autocomplete-popup-highlight-background: var(--accent);
+    --autocomplete-popup-highlight-color: var(--accent);
+    --toolbarbutton-hover-background: none !important;
+    --toolbarbutton-active-background: none !important;
     --default-focusring-width: 0px !important;
     --tab-shadow-max-size: 0 !important;
     --tab-min-height: 0px !important;
@@ -11,289 +25,29 @@
     --tab-attention-icon-color: var(--lwt-tab-attention-icon-color, rgb(42, 195, 162));
 }
 
-tab:only-of-type,
-#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"],
+
 #unified-extensions-button,
 #toolbar-menubar,
-#urlbar-go-button,
-.urlbarView-row[label]::before,
 .titlebar-buttonbox.titlebar-color,
-.tab-close-button,
-.findbar-closebutton,
-.findbar-container>hbox>toolbarbutton,
-.tab-close-button,
 #PanelUI-button,
 #PanelUI-menu-button,
-#back-button,
-#forward-button,
 .titlebar-button.titlebar-close,
 .titlebar-spacer,
-box#sidebar-header,
 #private-browsing-indicator-with-label,
 #scrollbutton-up,
-#scrollbutton-down,
-#alltabs-button {
+#scrollbutton-down {
     display: none !important;
 }
 
-/* Remove icons from the main context menu
-i.e. hides ublock origin
-*/
-#contentAreaContextMenu menuitem image,
-#contentAreaContextMenu menu image {
-    visibility: hidden;
-}
-
-#contentAreaContextMenu menugroup menuitem image,
-#contentAreaContextMenu .menu-right image {
-    visibility: visible;
-}
-
-/*must have positive height to allow downloads panel to be shown*/
-#nav-bar {
-    min-height: 1px !important;
-    max-height: 1px !important;
-    margin-bottom: -1px !important;
-    box-shadow: none !important;
-}
-
-#TabsToolbar {
-    margin-right: 47px !important;
-}
-
-toolbarbutton#ublock0_raymondhill_net-BAP {
-    top: 22px;
-    position: fixed;
-    margin-top: -21px !important;
-    right: -2px !important;
-    padding-right: 5px !important;
-}
-
-.toolbarbutton-badge {
-    overflow: visible !important;
-    position: fixed !important;
-    text-shadow: 1px 1px 2px black !important;
-    background-color: transparent !important;
-    font-size: 10px !important;
-    font-weight: 500 !important;
-    padding: 0 !important;
-    color: #fff;
-    box-shadow: unset !important;
-    margin-right: 1px !important;
-    margin-top: 2px !important;
-}
-
-.toolbarbutton-badge::before,
-.toolbarbutton-badge::after {
-    position: fixed;
-    text-shadow: none !important;
-    font-size: 12px !important;
-    color: #800000 !important;
-    content: "●" !important;
-    z-index: -1 !important;
-}
-
-
-.toolbarbutton-badge::before {
-    right: 9px !important;
-}
-
-.toolbarbutton-badge::after {
-    right: 7px !important;
-}
-
-toolbaritem#ublock0_raymondhill_net-browser-action,
-toolbaritem#_c2c003ee-bd69-42a2-b0e9-6f34222cb046_-browser-action {
-    position: fixed !important;
-}
-
-toolbarbutton#downloads-button {
-    top: 22px;
-    position: fixed;
-    margin-top: -20px !important;
-    right: 21px !important;
-}
-
-
-toolbar .toolbarbutton-1>.toolbarbutton-badge-stack {
-    padding: 2px !important;
-    border-radius: 2px !important;
-}
-
-
-
-.tabbrowser-tab[fadein] {
-    max-width: 100vw !important
-}
-
-/*together with .urlbarView-row[label]::before unsets the firefx suggest label*/
-.urlbarView-row[label] {
-    margin-block-start: unset !important;
-}
-
-
-
-.tabbrowser-tab {
-    padding: 0 !important;
-}
-
-.tab-background:is([selected], [multiselected]) {
-    background: var(--active-tab-color) !important;
-}
-
-#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])>#tabbrowser-arrowscrollbox>.tabbrowser-tab[first-visible-unpinned-tab] {
-    margin-inline-start: 0px !important;
-}
-
-
-.tab-background {
-    background: var(--inactive-tab-color) !important;
-    border-radius: unset !important;
-    border-bottom: 1px solid var(--border-color) !important;
-    margin-block: unset !important;
-}
-
-.tab-background[selected=""] {
-    box-shadow: none !important;
-}
-
-.tab-content,
-tab {
-    max-height: 24px !important;
-    min-height: 24px !important;
-}
-
-.tab-background:not([selected=""])::after {
-    content: '';
-    border-right: 1px solid var(--tab-separator-color) !important;
-    height: 14px !important;
-    margin-bottom: 4px
-}
-
-tab[selected="true"]::before {
-    content: '';
-    outline: 1px solid var(--active-tab-color);
-    height: 22px !important;
-}
-
-
-.tab-label {
-    font-size: 12px;
-    font-weight: 500 !important;
-    color: var(--selected-fg-inactive);
-}
-
-.tabbrowser-tab[selected="true"] .tab-label {
-    color: var(--selected-fg-active);
-}
-
-.tab-secondary-label {
-    font-size: 9px !important;
-    margin-top: -6px !important;
-}
-
-#urlbar-container {
-    margin-right: auto !important;
-    margin-left: auto !important;
-}
-
-@media only screen and (max-width: 890px) {
-    #urlbar-container {
-        max-width: 90% !important;
-    }
-}
-
-@media only screen and (min-width: 890px) {
-    #urlbar-container {
-        max-width: 802px !important;
-    }
-}
-
-#urlbar-input-container {
-    height: 38px !important;
-}
-
-
-.urlbarView {
-    margin-inline: unset !important;
-    width: unset !important;
-    border-inline: unset !important;
-}
-
-/*# separator between urlbar input and results*/
-#urlbar[open]>.urlbarView>.urlbarView-body-outer>.urlbarView-body-inner {
-    border-top-width: 0 !important;
-    border-top: 0px solid var(--autocomplete-popup-separator-color);
-}
-
-
-/*needs to be aligned to navbar always, otherwise we can see the jump when we open it*/
-#urlbar[breakout][breakout-extend]>#urlbar-background {
-    animation-duration: 0s !important;
-}
-
-#urlbar[breakout],
-#urlbar {
-    top: 0 !important;
-}
-
-
-#urlbar>#urlbar-background {
-    border-width: 0 !important;
-    border-radius: 0 0 4px 4px !important;
-}
-
-@media (prefers-color-scheme: dark) {
-    #urlbar>#urlbar-background {
-        clip-path: inset(0px -30px -30px -30px);
-        box-shadow: 0 2px 18px rgba(0, 0, 0, 0.73) !important;
-        background: #25292B !important;
-    }
-}
-
-@media (prefers-color-scheme: light) {
-    #urlbar>#urlbar-background {
-        clip-path: inset(0px -30px -30px -30px);
-        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.33) !important;
-    }
-}
-
-.urlbarView-row {
-    border-radius: 0 !important;
-}
-
-.urlbarView-row-inner {
-    border-radius: 0 !important;
-    padding: 7px 14px !important;
-}
-
-.urlbarView-row:not([type="tip"], [type="dynamic"])[selected]>.urlbarView-row-inner,
-.urlbarView-row-inner[selected] {
-    background-color: var(--selected-entry) !important;
-}
-
-.urlbarView-url>strong,
-.urlbarView-title>strong {
-    font-weight: unset !important;
-}
-
-@media (prefers-color-scheme: light) {
-
-    .urlbarView-row:not([type="tip"], [type="dynamic"])[selected]>.urlbarView-row-inner,
-    .urlbarView-row-inner[selected] {
-        color: black !important;
-    }
-}
-
-
 
 #navigator-toolbox {
-    background: var(--inactive-tab-color) !important;
-    border-width: 0 !important;
+    background: var(--inactive-tab) !important;
+    border-width: 0px !important;
 }
 
+
 #titlebar {
-    box-shadow: inset 0px -1px var(--border-color) !important;
+    box-shadow: inset 0px -1px var(--lower-border) !important;
 }
 
 /*remember to set this key in about:config:*/
@@ -312,218 +66,14 @@ tabbrowser#content {
 }
 
 
-.urlbarView-results[wrap]>.urlbarView-row[has-url]>.urlbarView-row-inner>.urlbarView-url:-moz-locale-dir(ltr) {
-    padding-left: unset !important;
-}
 
-.urlbarView-results[wrap]>.urlbarView-row[has-url]>.urlbarView-row-inner>.urlbarView-url,
-.urlbarView-results[wrap]>.urlbarView-row[type="bestmatch"]>.urlbarView-row-inner>.urlbarView-row-body>.urlbarView-row-body-top>.urlbarView-url {
-    margin-top: 0px !important;
-}
-
-hbox [anonid="findbar-textbox-wrapper"] {
-    max-height: 21px;
-    min-height: 21px;
-    margin-top: 2px
-}
-
-/*.findbar-label*/
-.findbar-case-sensitive,
-.findbar-match-diacritics,
-.findbar-entire-word {
-    margin-top: 2px !important;
-    margin-bottom: 0px !important;
-    margin-right: 8px !important;
-    margin-left: 8px !important;
-}
-
-.findbar-container .findbar-button {
-    padding: 0px 6px !important;
-}
-
-.findbar-find-status {
-    position: fixed;
-    right: 0;
-    margin-top: 2px !important;
-    font-weight: 500 !important;
-    z-index: -20;
-}
-
-findbar:not(:focus-within) .findbar-find-status {
-    display: none !important;
-}
-
-.findbar-textbox[status="notfound"] {
-    background-color: var(--findbar-not-found) !important;
-}
-
-
-.findbar-textbox {
-    width: 12em !important;
-}
-
-.findbar-textbox:not(:focus) {
-    border-color: var(--border-color) !important;
-}
-
-
-findbar:not(:focus-within) {
-    z-index: -1;
-}
-
-findbar {
-    -moz-transition-property: none !important;
-    transition-property: none !important;
-    -moz-transform: none !important;
-    transform: none !important;
-    -moz-animation: none !important;
-    animation: none !important;
-    padding: 0 !important;
-    position: absolute;
-    width: 100%;
-    border-top: 0 !important;
-    border-bottom: 1px solid var(--border-color);
-    box-shadow: 0 3px 10px -7px #00000080 !important;
-    background: unset !important;
-    background-image: linear-gradient(to top, var(--selected-bg-start), var(--selected-bg-end)) !important;
-    min-height: 30px !important;
-    max-height: 30px !important;
-}
-
-.findbar-button {
-    /*-moz-appearance: button !important;*/
-    display: none !important;
-}
-
-
-/* Remove icons from the main context menu
-i.e. hides ublock origin
-*/
-#contentAreaContextMenu menuitem image,
-#contentAreaContextMenu menu image {
-    visibility: hidden;
-}
-
-#contentAreaContextMenu menugroup menuitem image,
-#contentAreaContextMenu .menu-right image {
-    visibility: visible;
-}
-
-menupopup>menuitem>label {
-    padding-top: 1px !important;
-    padding-bottom: 1px !important;
-}
-
-/*#context-sep-sendpagetodevice,*/
-/*#context-sep-sendlinktodevice,*/
-
-#context-back,
-#context-reload,
-#context-forward,
-#context-navigation,
-#context-sep-navigation,
-#context-savelinktopocket,
-#context-stop,
-#context-copy,
-#context-sep-selectall,
-#context-selectall,
-#contentAreaContextMenu>menuseparator:nth-child(92),
-#context-inspect-a11y,
-.urlbarView-row[type="tip"],
-#context-pocket {
-    display: none !important;
-}
 
 #statuspanel-label {
-    background-color: var(--active-tab-color) !important;
-    border-color: var(--border-color) !important;
+    background-color: var(--active-tab) !important;
+    border-color: var(--lower-border) !important;
     font-weight: 500 !important;
 }
 
-/*** Sidebar Color / Font Size Formatting ***/
-/* 14px black text */
-.sidebar-placesTree treechildren::-moz-tree-cell-text {
-    font-weight: 400 !important;
-    font-size: 12.5px !important;
-    /*color: #404040 !important;*/
-}
-
-treechildren:* {
-    background-color: red !important;
-}
-
-.sidebar-placesTree treechildren::-moz-tree-row(selected) {
-    border: 0px solid red !important;
-    color: black;
-}
-
-.sidebar-placesTree treechildren::-moz-tree-cell-text(selected) {
-    color: black !important;
-}
-
-/* Pale blue background on hover or selected */
-.sidebar-placesTree treechildren::-moz-tree-twisty(selected) {
-    color: black !important;
-}
-
-.sidebar-placesTree treechildren::-moz-tree-row(hover),
-.sidebar-placesTree treechildren::-moz-tree-row(selected) {
-    background-color: var(--sidebar-hover) !important;
-}
-
-image.textbox-search-sign {
-    display: none;
-}
-
-#sidebar-search-container {
-    min-height: 34px !important;
-    max-height: 34px !important;
-    position: relative;
-    padding: 6px 6px 0px 6px !important;
-}
-
-.sidebar-placesTreechildren::-moz-tree-image {
-    list-style-image: none !important;
-    margin-left: -20px !important;
-}
-
-.sidebar-placesTreechildren::-moz-tree-cell-text(container, queryFolder_menu________),
-.sidebar-placesTreechildren::-moz-tree-cell-text(container, queryFolder_toolbar_____),
-.sidebar-placesTreechildren::-moz-tree-cell-text(container, queryFolder_unfiled_____) {
-    color: transparent !important;
-    list-style-image: none !important;
-}
-
-treechildren::-moz-tree-twisty(container, queryFolder_toolbar_____) {
-    color: transparent;
-}
-
-hbox#sidebar-search-container {
-    position: absolute !important;
-    z-index: 10000 !important;
-    background-color: var(--sidebar-color) !important;
-}
-
-vbox#sidebar-box {
-    background-color: var(--sidebar-color) !important;
-}
-
-:root {
-    --sidebar-hover-width: 7px;
-    --sidebar-visible-width: 250px;
-}
-
-#sidebar-box:hover,
-#sidebar-box:hover #sidebar {
-    opacity: 1 !important;
-}
-
-/* #sidebar-splitter styles the divider between the sidebar and the rest of the browser. */
-#sidebar-splitter {
-    max-width: 1px !important;
-    border-left: 1px solid #00ff0000 !important;
-    border-right: 1px solid var(--sidebar-border-color) !important;
-}
 
 /*login modal*/
 :not(.content-prompt-dialog)>.dialogOverlay>.dialogBox:not(.spotlightBox) {
@@ -534,46 +84,7 @@ vbox#sidebar-box {
     border-radius: 0 0px 8px 8px !important;
 }
 
-#search-box {
-    appearance: none !important;
-    background-color: Field;
-    border-radius: 4px !important;
-    border: 2px solid Field !important;
-    max-height: 26px !important;
-}
 
-
-
-#search-box:focus-within {
-    border-color: var(--accent) !important;
-}
-
-vbox#sidebar-box[hidden="true"] {
-    display: block !important;
-    position: fixed;
-    height: 100% !important;
-    left: -300px;
-    animation: slide 0.5s forwards;
-    transition: top 1s linear;
-    animation-delay: 2s;
-}
-
-#sidebar-splitter {
-    display: none !important;
-    /*display: block !important;*/
-}
-
-vbox#sidebar-box {
-    width: 300px !important;
-    border-right: 1px solid var(--border-color);
-    position: fixed !important;
-    height: 100% !important;
-    left: 0px;
-    transition: top 1s linear;
-    animation: slide 0.5s backwards;
-    animation-delay: 2s;
-    z-index: 10 !important;
-}
 
 
 /*capture portal popup, among other things*/
@@ -607,4 +118,110 @@ div.container.infobar::before {
 
 .container {
     border-radius: 0 0 5px 5px !important;
+}
+
+
+.browser-toolbar:not(.titlebar-color) {
+    background-color: transparent !important;
+}
+
+
+
+/*ensures the buttons show on the bar*/
+/*    margin-top: 19px !important;*/
+#nav-bar-customization-target {
+    padding: 4px;
+    margin-top: 1px;
+}
+
+#nav-bar-customization-target>* {
+    margin: 0 4px !important;
+}
+
+
+/*makes the bookmarks toolbar shown, even in fullscreen, but hides the bookmarks. together with the overflow property, ensures that we can toggle the urlbar */
+#navigator-toolbox #PersonalToolbar,
+#navigator-toolbox[inFullscreen="true"] #PersonalToolbar {
+    order: -1 !important;
+    display: flex !important;
+    box-shadow: var(--toolbar-box-shadow) !important;
+    background-image: linear-gradient(to top, var(--main-bar-bottom), var(--main-bar-top)) !important;
+    visibility: unset !important;
+    z-index: 1;
+    margin-bottom: -39px !important;
+}
+
+#navigator-toolbox #PersonalToolbar[collapsed="true"],
+#navigator-toolbox[inFullscreen="true"] #PersonalToolbar[collapsed="true"] {
+    height: 0 !important;
+}
+
+#navigator-toolbox #PersonalToolbar:not([collapsed="true"]) {
+    height: 39px !important;
+    border-bottom: 1px solid var(--upper-border) !important;
+}
+
+#nav-bar {
+    order: 0 !important;
+    display: flex;
+    overflow: visible !important;
+    min-height: 0px !important;
+    max-height: 0px !important;
+    box-shadow: none !important;
+    z-index: 2;
+}
+
+#titlebar {
+    order: 1 !important;
+    display: flex !important;
+    margin-right: -1px !important;
+    margin-top: 39px;
+}
+
+
+
+#personal-toolbar-empty,
+#personal-bookmarks {
+    display: none !important;
+}
+
+
+#urlbar:not([open],[focused])>#urlbar-background {
+    background: linear-gradient(to top, var(--button-bottom), var(--button-top)) padding-box,
+        linear-gradient(to top, var(--button-lower-border), var(--button-upper-border)) border-box !important;
+}
+
+#urlbar:not([open],[focused])>#urlbar-background,
+#nav-bar-customization-target > *:not(#urlbar-container) {
+    background: linear-gradient(to top, var(--button-bottom), var(--button-top)) padding-box,
+        linear-gradient(to top, var(--button-lower-border), var(--button-upper-border)) border-box;
+    border: 1px solid transparent !important;
+    border-radius: 5px !important;
+    box-sizing: border-box !important;
+    min-height: var(--button-height) !important;
+    max-height: var(--button-height) !important;
+    height: var(--button-height) !important;
+}
+
+#urlbar:not([breakout-extend="true"])>#urlbar-background {
+    min-height: var(--button-height) !important;
+    max-height: var(--button-height) !important;
+    height: var(--button-height) !important;
+}
+
+
+#nav-bar-customization-target > *:not(#urlbar-container) {
+    padding-inline-start: 0 !important;
+    min-width: var(--button-width) !important;
+    max-width: var(--button-width) !important;
+    width: var(--button-width) !important;
+}
+
+#nav-bar-customization-target>*:not(#urlbar-container):active,
+#nav-bar-customization-target > *:not(#urlbar-container)[checked="true"] {
+    filter: brightness(0.8);
+}
+
+#nav-bar-customization-target > *:hover:not(#urlbar-container):not([disabled],:active,[checked]) {
+    filter: brightness(1.05);
 }

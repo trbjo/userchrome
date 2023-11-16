@@ -1,0 +1,69 @@
+:root {
+    --urlbarView-row-gutter: 3px;
+}
+
+.urlbarView-row[type="tip"],
+.urlbarView-row[label]::before {
+    display: none !important;
+}
+
+/*together with .urlbarView-row[label]::before unsets the firefx suggest label*/
+.urlbarView-row[label] {
+    margin-block-start: unset !important;
+}
+
+/*# separator between urlbar input and results*/
+#urlbar[open]>.urlbarView>.urlbarView-body-outer>.urlbarView-body-inner {
+    border-top-width: 0 !important;
+    border-top: 0px solid var(--autocomplete-popup-separator-color);
+}
+
+.urlbarView-results {
+    padding-block: 2px !important;
+}
+
+.urlbarView-results[wrap]>.urlbarView-row[has-url]>.urlbarView-row-inner>.urlbarView-url,
+.urlbarView-results[wrap]>.urlbarView-row[type="bestmatch"]>.urlbarView-row-inner>.urlbarView-row-body>.urlbarView-row-body-top>.urlbarView-url {
+    margin-top: 0px !important;
+}
+
+.urlbarView-results[wrap]>.urlbarView-row[has-url]>.urlbarView-row-inner>.urlbarView-url:-moz-locale-dir(ltr) {
+    padding-left: unset !important;
+}
+
+.urlbarView {
+    margin-inline: unset !important;
+    width: unset !important;
+    border-inline: unset !important;
+}
+
+.urlbarView-row {
+    border-style: solid !important;
+    border-color: transparent !important;
+    border-top-width: 4px !important;
+    border-bottom-width: 4px !important;
+    border-left-width: 0 !important;
+    border-right-width: 0 !important;
+    border-radius: 0 !important;
+}
+
+.urlbarView-row-inner {
+    border-radius: 0 !important;
+    padding: 0px 14px !important;
+}
+
+.urlbarView-url>strong,
+.urlbarView-title>strong {
+    font-weight: unset !important;
+}
+
+#urlbar:is([focused="true"], [open]),
+#searchbar:focus-within {
+    color: var(--active-tab-fg) !important;
+}
+
+
+
+html#main-window body toolbox#navigator-toolbox toolbar#nav-bar.browser-toolbar hbox#nav-bar-customization-target.customization-target toolbaritem#urlbar-container.chromeclass-location hbox#urlbar:is([focused="true"], [open]) div#urlbar-results.urlbarView-results .urlbarView-row[selected] span.urlbarView-title {
+    color: white !important;
+}

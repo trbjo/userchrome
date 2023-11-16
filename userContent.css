@@ -51,6 +51,18 @@ p[data-attrs] {
     display: none !important;
 }
 
+@media (prefers-color-scheme: light) {
+    :root {
+        --page-not-found-bg: #f8f8f8;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --page-not-found-bg: #1D2021;
+    }
+}
+
 
 /*a[href$="share"] {*/
 /*  display: none !important;*/

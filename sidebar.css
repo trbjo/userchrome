@@ -1,0 +1,106 @@
+/*** Sidebar Color / Font Size Formatting ***/
+/* 14px black text */
+.sidebar-placesTree treechildren::-moz-tree-cell-text {
+    font-weight: 400 !important;
+    font-size: 12.5px !important;
+    /*color: #404040 !important;*/
+}
+
+.sidebar-placesTree treechildren::-moz-tree-row(selected) {
+    border: 0px solid red !important;
+    color: black;
+}
+
+.sidebar-placesTree treechildren::-moz-tree-cell-text(selected) {
+    color: black !important;
+}
+
+/* Pale blue background on hover or selected */
+.sidebar-placesTree treechildren::-moz-tree-twisty(selected) {
+    color: black !important;
+}
+
+.sidebar-placesTree treechildren::-moz-tree-row(hover),
+.sidebar-placesTree treechildren::-moz-tree-row(selected) {
+    background-color: var(--sidebar-hover) !important;
+}
+
+box#sidebar-header,
+image.textbox-search-sign {
+    display: none;
+}
+
+#sidebar-search-container {
+    min-height: 34px !important;
+    max-height: 34px !important;
+    position: relative;
+    padding: 6px 6px 0px 6px !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-image {
+    list-style-image: none !important;
+    margin-left: -20px !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-cell-text(container, queryFolder_menu________),
+.sidebar-placesTreechildren::-moz-tree-cell-text(container, queryFolder_toolbar_____),
+.sidebar-placesTreechildren::-moz-tree-cell-text(container, queryFolder_unfiled_____) {
+    color: transparent !important;
+    list-style-image: none !important;
+}
+
+treechildren::-moz-tree-twisty(container, queryFolder_toolbar_____) {
+    color: transparent;
+}
+
+hbox#sidebar-search-container {
+    background-color: var(--sidebar-color) !important;
+}
+
+vbox#sidebar-box {
+    background-color: var(--sidebar-color) !important;
+    min-width: 0 !important;
+    transition: width 0.15s ease-out; /* Transition effect */
+}
+
+vbox#sidebar-box[hidden="true"] {
+    width: 0px !important;; /* Bring the sidebar into view */
+    display: flex !important;
+}
+
+:root {
+    --sidebar-hover-width: 7px;
+    --sidebar-visible-width: 250px;
+}
+
+#sidebar-box:hover,
+#sidebar-box:hover #sidebar {
+    opacity: 1 !important;
+}
+
+/* #sidebar-splitter styles the divider between the sidebar and the rest of the browser. */
+#sidebar-splitter {
+    max-width: 3px !important;
+    min-width: 3px !important;
+    background: transparent !important;
+    border-right: 1px solid var(--upper-border) !important;
+    width: 3px !important;
+}
+
+
+#search-box {
+    appearance: none !important;
+    background-color: Field;
+    border-radius: 4px !important;
+    border: 2px solid Field !important;
+    max-height: 26px !important;
+}
+
+#sidebar-search-container {
+    width: 100% !important;
+}
+
+
+#search-box:focus-within {
+    border-color: var(--accent) !important;
+}

@@ -1,0 +1,46 @@
+.toolbarbutton-badge:hover,
+.toolbarbutton-badge {
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: transparent !important;
+    font-size: 13px !important;
+    padding: 0 !important;
+    color: #EEEEEC;
+    text-shadow:
+        0.5px 1px 1px #000,
+        -0.5px -0.5px 1px #000  !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    margin-inline-end: 0 !important;
+    min-width: unset !important;
+    max-width: unset !important;
+    line-height: unset !important;
+    text-align: center !important;
+    align-self: unset !important;
+    justify-self: unset !important;
+    z-index: 1;
+    position: relative !important;
+    overflow: visible !important;
+}
+
+.toolbarbutton-badge::before {
+    text-shadow: none !important;
+    font-size: 15px !important;
+    color: #800000 !important;
+    content: "●" !important;
+    right: 18px;
+    width: 0 !important;
+    height: 0 !important;
+    z-index: -1 !important;
+    display: block;
+}
+
+
+/* Remove icons from the main context menu
+i.e. hides ublock origin
+*/
+#contentAreaContextMenu menuitem image,
+#contentAreaContextMenu menu image {
+    visibility: hidden;
+}
