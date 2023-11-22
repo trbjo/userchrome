@@ -1,0 +1,6 @@
+@-moz-document url-prefix("about:preferences") {
+    vbox#contentBlockingCategories, #contentBlockingDescription,#contentBlockingLearnMore
+    {
+        display: none !important;
+    }
+}

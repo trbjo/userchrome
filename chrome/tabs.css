@@ -1,0 +1,119 @@
+#tabs-newtab-button,
+#new-tab-button {
+    height: 0px !important;
+    position: relative;
+    display: inline-block !important;
+}
+
+#tabs-newtab-button::after,
+#new-tab-button::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: var(--tab-height) !important;
+}
+
+/*otherwise makes it 0.5 pixels tall*/
+#TabsToolbar .toolbarbutton-1 {
+    margin: 0 !important;
+}
+
+tab:only-of-type,
+#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"],
+.tab-close-button,
+#alltabs-button {
+    display: none;
+}
+
+tab {
+    margin-left: -1px !important;
+}
+
+.tabbrowser-tab[fadein] {
+    max-width: 100vw !important;
+}
+
+.tabbrowser-tab {
+    padding: 0 !important;
+}
+
+.tab-background:is([selected], [multiselected]) {
+    background: var(--active-tab) !important;
+}
+
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])>#tabbrowser-arrowscrollbox>.tabbrowser-tab[first-visible-unpinned-tab] {
+    margin-inline-start: 0px !important;
+}
+
+
+.tab-background {
+    box-shadow: none !important;
+    box-shadow: none !important;
+/*    border-top: 1px solid var(--upper-border) !important;*/
+    margin-block: unset !important;
+}
+
+
+/*border between tabs and personaltoolbar*/
+#TabsToolbar-customization-target {
+      box-shadow: var(--upper-border) 0px 1px 0px 0px inset;
+}
+
+/*shadow over inactive tabs*/
+#TabsToolbar {
+    background: var(--inactive-tab) !important;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 8px 0px inset;
+}
+
+
+.tab-background[selected=""] {
+    border-width: 0px !important;
+}
+
+.tab-content,
+tab {
+    max-height: var(--tab-height) !important;
+    min-height: var(--tab-height) !important;
+}
+
+.tab-background::before {
+    left: 0 !important;
+}
+
+.tab-background::after {
+    right: 0 !important;
+}
+
+
+
+.tab-background::before,
+.tab-background::after {
+    content: '';
+    position: absolute !important;
+    height: calc(var(--tab-height) - 0px) !important;
+    background-color: var(--tab-separator) !important;
+    width: 1px !important;
+}
+
+.tab-background:is([selected], [multiselected])::before,
+.tab-background:is([selected], [multiselected])::after {
+    background-color: var(--upper-border) !important;
+}
+
+
+.tab-label {
+    font-size: 13px;
+    font-weight: 500 !important;
+    color: var(--inactive-tab-fg);
+}
+
+.tabbrowser-tab[selected="true"] .tab-label {
+    color: var(--active-tab-fg);
+}
+
+.tab-secondary-label {
+    font-size: 9px !important;
+    margin-top: -5px !important;
+}

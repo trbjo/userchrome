@@ -1,0 +1,29 @@
+#nav-bar-customization-target {
+    padding: 6px;
+}
+
+#nav-bar-customization-target>*:not(#urlbar-container) {
+    margin-inline: 4px !important;
+    background: linear-gradient(to top, var(--button-bottom), var(--button-top)) padding-box,
+        linear-gradient(to top, var(--button-lower-border), var(--button-upper-border)) border-box;
+    border: 1px solid transparent !important;
+    border-radius: 5px !important;
+    box-sizing: border-box !important;
+    min-height: var(--button-height) !important;
+    max-height: var(--button-height) !important;
+    height: var(--button-height) !important;
+    min-width: var(--button-width) !important;
+    max-width: var(--button-width) !important;
+    width: var(--button-width) !important;
+    padding-inline: 0 !important;
+    padding: 0 !important;
+}
+
+#nav-bar-customization-target>*:hover:not(#urlbar-container):not([disabled], :active, [checked]) {
+    filter: brightness(1.05);
+}
+
+#nav-bar-customization-target>*:not(#urlbar-container):active,
+#nav-bar-customization-target>*:not(#urlbar-container)[checked="true"] {
+    filter: brightness(0.8);
+}

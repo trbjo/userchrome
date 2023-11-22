@@ -1,0 +1,111 @@
+#tracking-protection-icon-container,
+#urlbar-go-button {
+    display: none !important;
+}
+
+#nav-bar-customization-target>#urlbar-container {
+    margin-right: auto !important;
+    margin-left: auto !important;
+    min-height: var(--button-height) !important;
+    max-height: var(--button-height) !important;
+    height: var(--button-height) !important;
+    max-width: 720px;
+    position: relative;
+}
+
+#urlbar {
+    top: 0 !important;
+    font-weight: 500 !important;
+    margin-inline: auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+}
+
+#urlbar[breakout-extend="true"] {
+    position: fixed !important;
+    width: 730px !important;
+    max-width: 95% !important;
+    padding: 5px 0 3px 0 !important;
+    top: 0 !important;
+}
+
+#urlbar[breakout-extend="true"]>#urlbar-input-container {
+    padding: 0 5px !important;
+}
+
+#urlbar>#urlbar-input-container {
+    border: 2px solid transparent !important;
+    padding: 0px !important;
+    height: var(--button-height) !important;
+}
+
+#urlbar:not([breakout-extend="true"]) #urlbar-background {
+    height: var(--button-height) !important;
+}
+
+#urlbar>#urlbar-background {
+    box-shadow: none !important;
+    border-color: transparent !important;
+}
+
+
+#urlbar[breakout-extend="true"]>#urlbar-background {
+    background: var(--urlbar-bg) !important;
+    box-shadow: var(--urlbar-box-shadow) !important;
+    border-width: 0 !important;
+    border-radius: 0 0 4px 4px !important;
+    outline: 1px solid var(--urlbar-border);
+    clip-path: inset(0px -30px -30px -30px);
+}
+
+#urlbar[textoverflow="right"]>#urlbar-input-container>.urlbar-input-box>#urlbar-input {
+    mask-image: linear-gradient(to left, transparent, black 3ch) !important;
+}
+
+#urlbar[textoverflow="left"]>#urlbar-input-container>.urlbar-input-box>#urlbar-input {
+    mask-image: linear-gradient(to right, transparent, black 3ch) !important;
+}
+
+#urlbar[textoverflow="both"]>#urlbar-input-container>.urlbar-input-box>#urlbar-input {
+    mask-image: linear-gradient(to right, transparent, black 3ch, black calc(100% - 3ch), transparent);
+}
+
+#urlbar:not([focused="true"], [breakout-extend="true"])>#urlbar-background {
+    background: linear-gradient(to top, var(--button-bottom), var(--button-top)) padding-box,
+        linear-gradient(to top, var(--button-lower-border), var(--button-upper-border)) border-box !important;
+}
+
+
+
+
+/*needs to be aligned to navbar always, otherwise we can see the jump when we open it*/
+#urlbar[breakout][breakout-extend]>#urlbar-background {
+    animation-duration: 0s !important;
+}
+
+
+
+.bookmark-item[dragover-into="true"] {
+    background: var(--accent) !important;
+    color: var(--accent) !important;
+}
+
+.urlbarView-row {
+    &[selected] {
+        background-color: var(--accent) !important;
+        color: var(--autocomplete-popup-highlight-color);
+    }
+}
+
+/*items inside the urlbar, e.g. lock icon*/
+#notification-popup-box {
+    height: unset !important;
+}
+
+#page-action-buttons>* {
+    height: 100% !important;
+    align-items: center !important;
+    /*the following should follow .identity-box-button*/
+    padding-inline: var(--urlbar-icon-padding) !important;
+    border-radius: var(--urlbar-icon-border-radius) !important;
+}

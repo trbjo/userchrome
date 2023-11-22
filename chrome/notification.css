@@ -1,0 +1,40 @@
+#tab-notification-deck {
+    order: 4 !important;
+    z-index: 10 !important;
+    position: fixed !important;
+    top: 0px;
+    left: 50%;
+    width: auto;
+    transform: translateX(-50%);
+}
+
+.notificationbox-stack {
+overflow: visible !important;
+background-color: transparent !important;
+
+}
+
+
+/*hide left color ribbon*/
+div.container.infobar::before {
+    display: none !important;
+}
+
+.container.infobar {
+    border-radius: 0 0 5px 5px !important;
+}
+
+
+/*capture portal popup, among other things*/
+:root[inFullscreen] .global-notificationbox {
+    visibility: inherit !important;
+}
+
+
+notification-message {
+    box-shadow: 0px 3px 10px 0px #00000080;
+}
+
+.close.ghost-button.notification-close {
+    margin: auto 5px !important;
+}

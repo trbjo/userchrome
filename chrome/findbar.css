@@ -1,7 +1,6 @@
 .findbar-button,
 .findbar-closebutton,
-.findbar-container>hbox>toolbarbutton
-{
+.findbar-container>hbox>toolbarbutton {
     display: none !important;
 }
 
@@ -25,14 +24,6 @@ hbox [anonid="findbar-textbox-wrapper"] {
     padding: 0px 6px !important;
 }
 
-.findbar-find-status {
-    position: fixed;
-    right: 0;
-    margin-top: 2px !important;
-    font-weight: 500 !important;
-    z-index: -20;
-}
-
 findbar:not(:focus-within) .findbar-find-status {
     display: none !important;
 }
@@ -54,9 +45,11 @@ findbar:not(:focus-within) .findbar-find-status {
 findbar:not(:focus-within) {
     z-index: -1;
 }
+
 .checkbox-check:not([checked="true"]) {
     background-color: var(--text-field) !important;
 }
+
 .checkbox-check {
     border-radius: 3px !important;
 }
@@ -73,9 +66,8 @@ findbar {
     width: 100%;
     border-top: 0 !important;
     border-bottom: 1px solid var(--lower-border);
-    box-shadow: var(--toolbar-box-shadow) !important;
+/*    box-shadow: var(--toolbar-box-shadow) !important;*/
     background: var(--active-tab) !important;
     min-height: 30px !important;
     max-height: 30px !important;
 }
-

@@ -5,11 +5,15 @@
     white-space: nowrap;
     background-color: transparent !important;
     font-size: 13px !important;
+    font-weight: 500 !important;
     padding: 0 !important;
-    color: #EEEEEC;
+    color: #FFFFFF;
     text-shadow:
-        0.5px 1px 1px #000,
-        -0.5px -0.5px 1px #000  !important;
+        -0px -0px 0px #000,
+        -0.5px -0.5px 0px #000,
+        0.5px -0.5px 0px #000,
+        0.5px 0.5px 0px #000,
+        -0.5px 0.5px 0px #000 !important;
     box-shadow: none !important;
     margin: 0 !important;
     margin-inline-end: 0 !important;
@@ -29,11 +33,17 @@
     font-size: 15px !important;
     color: #800000 !important;
     content: "●" !important;
-    right: 18px;
-    width: 0 !important;
-    height: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
     z-index: -1 !important;
     display: block;
+    position: absolute !important;
+    margin: auto !important;
+}
+
+
+#ublock0_raymondhill_net-browser-action image.toolbarbutton-icon {
+    margin: auto !important;
 }
 
 

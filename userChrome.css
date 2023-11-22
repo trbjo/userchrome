@@ -1,29 +1,15 @@
-@import url("colors.css");
-@import url("ublock.css");
-@import url("urlbarview.css");
-@import url("findbar.css");
-@import url("urlbar.css");
-@import url("tabs.css");
-@import url("contextmenu.css");
-@import url("sidebar.css");
-
-
-:root {
-    --button-height: 27px;
-    --button-width: 38px;
-    --autocomplete-popup-highlight-background: var(--accent);
-    --autocomplete-popup-highlight-color: var(--accent);
-    --toolbarbutton-hover-background: none !important;
-    --toolbarbutton-active-background: none !important;
-    --default-focusring-width: 0px !important;
-    --tab-shadow-max-size: 0 !important;
-    --tab-min-height: 0px !important;
-    --inline-tab-padding: 5px;
-    --tab-border-radius: 0px !important;
-    --tab-block-margin: 0px;
-    --tabpanel-background-color: #F9F9FB;
-    --tab-attention-icon-color: var(--lwt-tab-attention-icon-color, rgb(42, 195, 162));
-}
+@import url("chrome/constants.css");
+@import url("chrome/navigator-toolbox.css");
+@import url("chrome/ublock.css");
+@import url("chrome/urlbarview.css");
+/*@import url("chrome/urlbar-margins.css");*/
+@import url("chrome/findbar.css");
+@import url("chrome/nav-bar.css");
+@import url("chrome/urlbar.css");
+@import url("chrome/tabs.css");
+@import url("chrome/contextmenu.css");
+@import url("chrome/sidebar.css");
+@import url("chrome/notification.css");
 
 
 #unified-extensions-button,
@@ -39,16 +25,6 @@
     display: none !important;
 }
 
-
-#navigator-toolbox {
-    background: var(--inactive-tab) !important;
-    border-width: 0px !important;
-}
-
-
-#titlebar {
-    box-shadow: inset 0px -1px var(--lower-border) !important;
-}
 
 /*remember to set this key in about:config:*/
 /*browser.display.background_color.dark*/
@@ -69,7 +45,6 @@ tabbrowser#content {
 
 
 #statuspanel-label {
-    background-color: var(--active-tab) !important;
     border-color: var(--lower-border) !important;
     font-weight: 500 !important;
 }
@@ -85,143 +60,6 @@ tabbrowser#content {
 }
 
 
-
-
-/*capture portal popup, among other things*/
-:root[inFullscreen] .global-notificationbox {
-    visibility: inherit !important;
-}
-
-.notificationbox-stack.global-notificationbox {
-    position: relative;
-    top: 0;
-    max-height: 0 !important;
-}
-
-vbox.notificationbox-stack {
-    min-height: 0;
-    max-height: 0;
-}
-
-.notificationbox-stack {
-    overflow: unset !important;
-}
-
-notification-message {
-    margin: auto !important;
-    box-shadow: 0px 3px 10px 0px #00000080;
-}
-
-div.container.infobar::before {
-    display: none !important;
-}
-
-.container {
-    border-radius: 0 0 5px 5px !important;
-}
-
-
 .browser-toolbar:not(.titlebar-color) {
     background-color: transparent !important;
-}
-
-
-
-/*ensures the buttons show on the bar*/
-/*    margin-top: 19px !important;*/
-#nav-bar-customization-target {
-    padding: 4px;
-    margin-top: 1px;
-}
-
-#nav-bar-customization-target>* {
-    margin: 0 4px !important;
-}
-
-
-/*makes the bookmarks toolbar shown, even in fullscreen, but hides the bookmarks. together with the overflow property, ensures that we can toggle the urlbar */
-#navigator-toolbox #PersonalToolbar,
-#navigator-toolbox[inFullscreen="true"] #PersonalToolbar {
-    order: -1 !important;
-    display: flex !important;
-    box-shadow: var(--toolbar-box-shadow) !important;
-    background-image: linear-gradient(to top, var(--main-bar-bottom), var(--main-bar-top)) !important;
-    visibility: unset !important;
-    z-index: 1;
-    margin-bottom: -39px !important;
-}
-
-#navigator-toolbox #PersonalToolbar[collapsed="true"],
-#navigator-toolbox[inFullscreen="true"] #PersonalToolbar[collapsed="true"] {
-    height: 0 !important;
-}
-
-#navigator-toolbox #PersonalToolbar:not([collapsed="true"]) {
-    height: 39px !important;
-    border-bottom: 1px solid var(--upper-border) !important;
-}
-
-#nav-bar {
-    order: 0 !important;
-    display: flex;
-    overflow: visible !important;
-    min-height: 0px !important;
-    max-height: 0px !important;
-    box-shadow: none !important;
-    z-index: 2;
-}
-
-#titlebar {
-    order: 1 !important;
-    display: flex !important;
-    margin-right: -1px !important;
-    margin-top: 39px;
-}
-
-
-
-#personal-toolbar-empty,
-#personal-bookmarks {
-    display: none !important;
-}
-
-
-#urlbar:not([open],[focused])>#urlbar-background {
-    background: linear-gradient(to top, var(--button-bottom), var(--button-top)) padding-box,
-        linear-gradient(to top, var(--button-lower-border), var(--button-upper-border)) border-box !important;
-}
-
-#urlbar:not([open],[focused])>#urlbar-background,
-#nav-bar-customization-target > *:not(#urlbar-container) {
-    background: linear-gradient(to top, var(--button-bottom), var(--button-top)) padding-box,
-        linear-gradient(to top, var(--button-lower-border), var(--button-upper-border)) border-box;
-    border: 1px solid transparent !important;
-    border-radius: 5px !important;
-    box-sizing: border-box !important;
-    min-height: var(--button-height) !important;
-    max-height: var(--button-height) !important;
-    height: var(--button-height) !important;
-}
-
-#urlbar:not([breakout-extend="true"])>#urlbar-background {
-    min-height: var(--button-height) !important;
-    max-height: var(--button-height) !important;
-    height: var(--button-height) !important;
-}
-
-
-#nav-bar-customization-target > *:not(#urlbar-container) {
-    padding-inline-start: 0 !important;
-    min-width: var(--button-width) !important;
-    max-width: var(--button-width) !important;
-    width: var(--button-width) !important;
-}
-
-#nav-bar-customization-target>*:not(#urlbar-container):active,
-#nav-bar-customization-target > *:not(#urlbar-container)[checked="true"] {
-    filter: brightness(0.8);
-}
-
-#nav-bar-customization-target > *:hover:not(#urlbar-container):not([disabled],:active,[checked]) {
-    filter: brightness(1.05);
 }
