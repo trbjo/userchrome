@@ -2,9 +2,7 @@
 /// Requires: Firefox-Install-Directory/defaults/pref/enable-UserChrome.js
 
 let { classes: Cc, interfaces: Ci, manager: Cm, utils: Cu } = Components;
-
 const Services = globalThis.Services || Components.utils.import("resource://gre/modules/Services.jsm").Services;
-
 const { E10SUtils } = ChromeUtils.import("resource://gre/modules/E10SUtils.jsm");
 
 let xP = Services.prefs, xD = xP.getDefaultBranch(null), xZ = void 0, xS = 'string', xN = 'number', xB = 'boolean', xPref = {
@@ -53,50 +51,39 @@ let UserChrome_js = {
       init: function () {
         var { document, gBrowser } = window;
         let tabContainer = gBrowser.tabContainer;
-        const divider = "|||";
+        const divider = "=|=";
         const windowSUFFIX = "Mozilla Firefox";
 
-        document.globalActivePIDs = new Set();
-        document.globalINActivePIDs = new Set();
+        function updatePIDsAndSetTitle() {
+          let activePIDs = new Set();
+          let runningPIDs = new Set();
+          let inActivePIDs = new Set();
+          let allTabs = gBrowser.visibleTabs;
 
-
-        function collectAllPIDs() {
-          let allPids = new Set();
-          var allTabs = tabContainer._allTabs;
           for (var i = 0; i < allTabs.length; i++) {
             tab = allTabs[i];
             let { linkedBrowser } = tab;
             var tabPids = E10SUtils.getBrowserPids(linkedBrowser, true);
-            tabPids.forEach(pid => allPids.add(pid));
+            if (tab.soundPlaying) {
+              tabPids.forEach(pid => runningPIDs.add(pid));
+            } else if (tab.selected === true || tab.hasAttribute("busy")) {
+              tabPids.forEach(pid => activePIDs.add(pid));
+            } else {
+              tabPids.forEach(pid => inActivePIDs.add(pid));
+            }
           };
-          return allPids
-        }
 
-        function pidsForTabEvent(event) {
-          const tab = event.target;
-          let { linkedBrowser } = tab;
-          var tabPids = E10SUtils.getBrowserPids(linkedBrowser, true);
-          return new Set(tabPids)
-        }
+          // some pids are in both:
+          activePIDs.forEach(pid => inActivePIDs.delete(pid));
+          runningPIDs.forEach(pid => inActivePIDs.delete(pid));
 
-        function updatePIDsInState(event) {
-          selected = event.target.selected === true;
-          if (!selected) {
-            // we are in the middle of an update and just return
-            return
-          }
-          let activePIDs = pidsForTabEvent(event);
-          document.globalActivePIDs = activePIDs;
-
-          let allPIDs = collectAllPIDs();
-          activePIDs.forEach(pid => allPIDs.delete(pid));
-          document.globalINActivePIDs = allPIDs;
-        };
-
-        function setTitle() {
-          let titleString = Array.from(document.globalActivePIDs).join(",");
+          let titleString = divider;
+          titleString += Array.from(runningPIDs).join(",");
           titleString += divider;
-          titleString += Array.from(document.globalINActivePIDs).join(",");
+          titleString += Array.from(activePIDs).join(",");
+          titleString += divider;
+          titleString += Array.from(inActivePIDs).join(",");
+          titleString += divider;
           document.title = titleString;
         }
 
@@ -105,34 +92,29 @@ let UserChrome_js = {
         // Callback function to execute when mutations are observed
         const callback = (mutationList, observer) => {
           for (const mutation of mutationList) {
-            if (mutation.type === "childList") {
-              let text = mutation.target.innerText;
-              if (text.endsWith(windowSUFFIX)) {
-                setTitle();
-              }
+            let text = mutation.target.innerText;
+            if (text.endsWith(windowSUFFIX)) {
+              updatePIDsAndSetTitle();
             }
           }
         };
 
-
-
-        // Create an observer instance linked to the callback function
-
         function logEvent(event) {
+          console.log("////////////////////////////////////")
           console.log(event)
           console.log(event.type, event.target)
+          console.log("////////////////////////////////////")
         }
 
         function updateStateAndSetTitle(event) {
-          // logEvent(event);
-          updatePIDsInState(event);
-          setTitle();
+          updatePIDsAndSetTitle();
         }
 
         const listeners = [
           // "TabSelect",
           // "TabClose",
           "TabAttrModified",
+          "SSTabRestored",
           // "TabHide",
           // "TabShow",
           // TabOpen,
@@ -140,6 +122,7 @@ let UserChrome_js = {
           // "TabUnpinned",
           // "transitionend",
         ]
+        // window.addEventListener("deactivate", lol);
 
         listeners.forEach(event => {
           tabContainer.addEventListener(event, updateStateAndSetTitle, false);
