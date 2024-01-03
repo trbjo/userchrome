@@ -1,13 +1,39 @@
 #nav-bar-customization-target {
-    padding: 6px;
+    padding: 6px 0px !important;
 }
 
-#nav-bar-customization-target>*:not(#urlbar-container) {
-    margin-inline: 4px !important;
+toolbarspring {
+    flex: 1 !important;
+    max-width: 100% !important;
+}
+
+#unified-extensions-button {
+    z-index: -11;
+    height: 0 !important;
+    width: 0 !important;
+    padding: 0 !important;
+    margin: 0px !important;
+}
+
+
+#nav-bar-customization-target>*:not(#urlbar-container, toolbarspring, #unified-extensions-button) {
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+}
+
+#nav-bar-customization-target>*:not(#urlbar-container, toolbarspring, #unified-extensions-button):last-child {
+    margin-right: 6px !important;
+}
+
+#nav-bar-customization-target>*:not(#urlbar-container, toolbarspring, #unified-extensions-button):first-child {
+    margin-left: 6px !important;
+}
+
+#nav-bar-customization-target>*:not(#urlbar-container, toolbarspring, #unified-extensions-button) {
     background: linear-gradient(to top, var(--button-bottom), var(--button-top)) padding-box,
         linear-gradient(to top, var(--button-lower-border), var(--button-upper-border)) border-box;
-    border: 1px solid transparent !important;
-    border-radius: 5px !important;
+    border: var(--border-width) solid transparent !important;
+    border-radius: var(--nav-bar-border-radius) !important;
     box-sizing: border-box !important;
     min-height: var(--button-height) !important;
     max-height: var(--button-height) !important;
@@ -15,7 +41,9 @@
     min-width: var(--button-width) !important;
     max-width: var(--button-width) !important;
     width: var(--button-width) !important;
-    padding-inline: 0 !important;
+
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
     padding: 0 !important;
 }
 

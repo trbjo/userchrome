@@ -3,6 +3,7 @@
     height: 0px !important;
     position: relative;
     display: inline-block !important;
+    padding-left: 2px !important;
 }
 
 #tabs-newtab-button::after,
@@ -28,7 +29,7 @@ tab:only-of-type,
 }
 
 tab {
-    margin-left: -1px !important;
+    margin-left: 0px !important;
 }
 
 .tabbrowser-tab[fadein] {
@@ -51,14 +52,13 @@ tab {
 .tab-background {
     box-shadow: none !important;
     box-shadow: none !important;
-/*    border-top: 1px solid var(--upper-border) !important;*/
     margin-block: unset !important;
 }
 
 
 /*border between tabs and personaltoolbar*/
 #TabsToolbar-customization-target {
-      box-shadow: var(--upper-border) 0px 1px 0px 0px inset;
+      box-shadow: var(--upper-border) 0px var(--border-width) 0px 0px inset;
 }
 
 /*shadow over inactive tabs*/
@@ -78,23 +78,24 @@ tab {
     min-height: var(--tab-height) !important;
 }
 
-.tab-background::before {
-    left: 0 !important;
-}
-
 .tab-background::after {
     right: 0 !important;
+    margin-right: calc(-1 * var(--border-width)) !important;
+}
+
+#tabbrowser-arrowscrollbox {
+    margin-left: calc(-1 * var(--border-width)) !important;
 }
 
 
-
+#tabbrowser-arrowscrollbox-periphery::before,
 .tab-background::before,
 .tab-background::after {
     content: '';
     position: absolute !important;
-    height: calc(var(--tab-height) - 0px) !important;
-    background-color: var(--tab-separator) !important;
-    width: 1px !important;
+    height: var(--tab-height) !important;
+    background-color: var(--tab-separator);
+    width: var(--border-width) !important;
 }
 
 .tab-background:is([selected], [multiselected])::before,

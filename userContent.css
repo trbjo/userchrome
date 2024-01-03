@@ -22,7 +22,9 @@
 @import url("content/aws.css");
 @import url("content/realpython.com.css");
 @import url("content/github.com.css");
+
 @import url("content/about_preferences.css");
+@import url("content/about_newtab.css");
 @import url("content/reader.css");
 
 @media (prefers-color-scheme: light) {

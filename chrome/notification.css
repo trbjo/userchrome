@@ -9,9 +9,8 @@
 }
 
 .notificationbox-stack {
-overflow: visible !important;
-background-color: transparent !important;
-
+    overflow: visible !important;
+    background-color: transparent !important;
 }
 
 
@@ -21,7 +20,8 @@ div.container.infobar::before {
 }
 
 .container.infobar {
-    border-radius: 0 0 5px 5px !important;
+    background: var(--active-tab) !important;
+    border-radius: 0 !important;
 }
 
 
@@ -31,10 +31,19 @@ div.container.infobar::before {
 }
 
 
-notification-message {
-    box-shadow: 0px 3px 10px 0px #00000080;
-}
 
 .close.ghost-button.notification-close {
+    appearance: button !important;
     margin: auto 5px !important;
+}
+
+notification-message {
+    box-shadow: none !important;
+    margin: 0 !important;
+    /*    in fact border:;*/
+    background: transparent !important;
+}
+
+button.notification-button.small-button {
+    appearance: button !important;
 }

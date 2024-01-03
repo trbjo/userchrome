@@ -96,14 +96,6 @@
         font-size: 1.4em !important;
     }
 
-    body.serif p {
-        font-size: 20px !important;
-    }
-
-    body.sans-serif p {
-        font-size: 1rem !important;
-    }
-
     body {
         hyphens: auto;
         overflow-wrap: break-word;

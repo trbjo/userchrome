@@ -1,7 +1,4 @@
-:root {
-    --urlbarView-row-gutter: 3px;
-}
-
+.urlbarView-button-menu,
 .urlbarView-row[type="tip"],
 .urlbarView-row[label]::before {
     display: none !important;

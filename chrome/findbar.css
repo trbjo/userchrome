@@ -54,19 +54,21 @@ findbar:not(:focus-within) {
     border-radius: 3px !important;
 }
 
+.findbar-container {
+    transition: none !important;
+}
+
 findbar {
-    -moz-transition-property: none !important;
     transition-property: none !important;
-    -moz-transform: none !important;
-    transform: none !important;
-    -moz-animation: none !important;
-    animation: none !important;
+    transition-duration: none !important;
+    transition-timing-function: none !important;
+
     padding: 0 !important;
     position: absolute;
     width: 100%;
     border-top: 0 !important;
-    border-bottom: 1px solid var(--lower-border);
-/*    box-shadow: var(--toolbar-box-shadow) !important;*/
+    border-bottom: var(--border-width) solid var(--lower-border);
+    box-shadow: var(--toolbar-box-shadow) !important;
     background: var(--active-tab) !important;
     min-height: 30px !important;
     max-height: 30px !important;

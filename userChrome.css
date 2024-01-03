@@ -2,7 +2,6 @@
 @import url("chrome/navigator-toolbox.css");
 @import url("chrome/ublock.css");
 @import url("chrome/urlbarview.css");
-/*@import url("chrome/urlbar-margins.css");*/
 @import url("chrome/findbar.css");
 @import url("chrome/nav-bar.css");
 @import url("chrome/urlbar.css");
@@ -12,7 +11,6 @@
 @import url("chrome/notification.css");
 
 
-#unified-extensions-button,
 #toolbar-menubar,
 .titlebar-buttonbox.titlebar-color,
 #PanelUI-button,

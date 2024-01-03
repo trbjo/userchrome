@@ -1,0 +1,12 @@
+@-moz-document url-prefix("about:newtab") {
+    /*    dummy {}*/
+
+    .top-site-outer .tile .icon-wrapper.letter-fallback::before {
+     top: 0px !important;
+    }
+
+    .top-site-outer .tile .icon-wrapper {
+    width: 70px !important;
+    height: 70px !important;
+    }
+}

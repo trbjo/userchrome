@@ -5,7 +5,7 @@
 
 #navigator-toolbox {
     margin-top: -1px;
-    border-bottom: 1px solid var(--lower-border) !important;
+    border-bottom: var(--border-width) solid var(--lower-border) !important;
     background: var(--inactive-tab) !important;
     overflow: hidden;
 }
@@ -18,7 +18,6 @@
     order: -1 !important;
     display: flex !important;
     background-image: linear-gradient(to top, var(--main-bar-bottom), var(--main-bar-top)) !important;
-
 }
 
 /*can it be negative here*/

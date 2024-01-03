@@ -1,5 +1,10 @@
 :root {
+    --border-width: 1px !important;
+    --urlbarView-row-gutter: 3px;
     --urlbar-icon-padding: 5px !important;
+    --toolbarbutton-border-radius: 4px !important;
+    --nav-bar-border-radius: calc(var(--toolbarbutton-border-radius) + 1px) !important;
+    --nav-bar-horizontal-padding: 8px !important;
     --identity-box-margin-inline: var(--urlbar-icon-padding) !important;
 
     --urlbar-max-width: 720px !important;
@@ -9,10 +14,12 @@
         --urlbar-padding: var(--urlbar-minimum-padding) !important;
         --urlbar-open-max-width: calc(var(--urlbar-max-width) + 2 * var(--urlbar-padding));
     }
+
     #urlbar[breakout-extend="true"] {
         --urlbar-padding: 8px !important;
         --urlbar-open-max-width: calc(var(--urlbar-max-width) + 2 * var(--urlbar-padding) - 2 * var(--urlbar-minimum-padding));
     }
+
     --tab-height: 27px;
     --button-height: 27px;
     --nav-bar-padding: 6px;
@@ -104,8 +111,8 @@
         /* main*/
         --main-bar-top: #f6f6f6;
         --main-bar-bottom: #dbdbdb;
-        --toolbar-box-shadow: 0 2px 12px rgba(0, 255, 0, 0.9);
         --urlbar-box-shadow: 0 2px 18px rgba(0, 0, 0, 0.43) !important;
+        --toolbar-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.13) !important;
 
         /*tabs*/
         --active-tab: var(--main-bar-bottom);
@@ -121,15 +128,15 @@
         /*borders*/
         --upper-border: #909090;
         --lower-border: #909090;
-        --tab-separator: var(--lower-border);
+        --tab-separator: #808080;
 
         /*buttons*/
         --button-top-hover: #ffffff;
         --button-top: #ffffff;
         --button-bottom: #eaeaea;
 
-        --button-upper-border: #d4d4d4;
-        --button-lower-border: #b8b8b8;
+        --button-upper-border: #dedede;
+        --button-lower-border: #c0c0c0;
 
         --findbar-not-found: #FF8888;
 

@@ -4,8 +4,6 @@
 }
 
 #nav-bar-customization-target>#urlbar-container {
-    margin-right: auto !important;
-    margin-left: auto !important;
     min-height: var(--button-height) !important;
     max-height: var(--button-height) !important;
     height: var(--button-height) !important;
@@ -43,6 +41,11 @@
     height: var(--button-height) !important;
 }
 
+#urlbar-background,
+#searchbar {
+    border-radius: var(--nav-bar-border-radius) !important;
+}
+
 #urlbar>#urlbar-background {
     box-shadow: none !important;
     border-color: transparent !important;
@@ -54,7 +57,7 @@
     box-shadow: var(--urlbar-box-shadow) !important;
     border-width: 0 !important;
     border-radius: 0 0 4px 4px !important;
-    outline: 1px solid var(--urlbar-border);
+    outline: var(--border-width) solid var(--urlbar-border);
     clip-path: inset(0px -30px -30px -30px);
 }
 
@@ -71,6 +74,7 @@
 }
 
 #urlbar:not([focused="true"], [breakout-extend="true"])>#urlbar-background {
+    border-width: var(--border-width)  !important;
     background: linear-gradient(to top, var(--button-bottom), var(--button-top)) padding-box,
         linear-gradient(to top, var(--button-lower-border), var(--button-upper-border)) border-box !important;
 }
@@ -104,6 +108,7 @@
 
 #page-action-buttons>* {
     height: 100% !important;
+    width: unset !important;
     align-items: center !important;
     /*the following should follow .identity-box-button*/
     padding-inline: var(--urlbar-icon-padding) !important;
