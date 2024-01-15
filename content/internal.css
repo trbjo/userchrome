@@ -32,6 +32,10 @@ fxview-category-navigation {
     width: 100% !important;
 }
 
+.main-container {
+    margin: 0 !important;
+}
+
 .sticky-container {
     position: relative !important;
 }
