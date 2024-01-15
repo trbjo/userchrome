@@ -28,7 +28,7 @@ tab:only-of-type,
     display: none;
 }
 
-tab {
+tab:not([pinned]) {
     margin-left: 0px !important;
 }
 

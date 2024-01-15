@@ -1,14 +1,17 @@
+
 /*@import url("content/dn-se.css");*/
 /*@import url("content/transmission.css");*/
 @import url("content/html.duckduckgo.css");
 @import url("content/discord.css");
 @import url("content/duckduckgo.css");
+
 @import url("content/microsoft-dev-info.css");
 @import url("content/read-the-docs.css");
 @import url("content/stack.css");
 @import url("content/philosophy-stack.css");
 @import url("content/weekendavisen.css");
 @import url("content/dr.css");
+@import url("content/internal.css");
 /*@import url("content/wiki.css");*/
 @import url("content/slack.css");
 @import url("content/betterexplained.css");
@@ -71,19 +74,6 @@ p[data-attrs] {
 /*  display: none !important;*/
 /*}*/
 
-@-moz-document url("about:home"),
-url-prefix("about:httpsonlyerror"),
-url-prefix("about:neterror"),
-url("about:downloads"),
-url("about:blank"),
-url("about:newtab"),
-url("about:privatebrowsing"),
-url('about:support'),
-url('about:preferences') {
-    * {
-        user-select: none !important;
-    }
-}
 
 @-moz-document url("about:home"),
 url("about:downloads"),

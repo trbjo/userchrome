@@ -11,6 +11,41 @@
 @import url("chrome/notification.css");
 
 
+@media screen and (min-width: 1400px) and (max-width: 1600px) {
+    :root[inFullscreen] {
+        width: 1560px !important;
+        min-width: 1560px !important;
+        max-width: 1560px !important;
+        height: 1040px !important;
+        min-height: 1040px !important;
+        max-height: 1040px !important;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 1399px) {
+    :root[inFullscreen] {
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        height: 100% !important;
+        min-height: 100% !important;
+        max-height: 100% !important;
+    }
+}
+
+@media screen and (min-width: 1800px) and (max-width: 2000px) {
+    :root[inFullscreen] {
+        width: 1920px !important;
+        min-width: 1920px !important;
+        max-width: 1920px !important;
+        height: 1080px !important;
+        min-height: 1080px !important;
+        max-height: 1080px !important;
+    }
+}
+
+
+
 #toolbar-menubar,
 .titlebar-buttonbox.titlebar-color,
 #PanelUI-button,
