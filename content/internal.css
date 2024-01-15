@@ -1,0 +1,39 @@
+@-moz-document url(about:home),
+url(about:httpsonlyerror),
+url(about:neterror),
+url(about:downloads),
+url(about:blank),
+url(about:newtab),
+url(about:privatebrowsing),
+url(about:support),
+url(about:preferences){
+
+* {
+    user-select: none !important;
+}
+}
+
+
+@-moz-document url(about:firefoxview-next#history){
+:root {
+    --fxview-margin-top: 10px !important;
+}
+
+/*sidebar*/
+nav {
+    display: none !important;
+}
+
+.sticky-container {
+    position: relative !important;
+}
+
+.page-header {
+    display: none !important;
+}
+
+.main-container {
+    margin: 0 !important;
+}
+
+}
