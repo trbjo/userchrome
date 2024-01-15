@@ -19,9 +19,17 @@ url(about:preferences){
     --fxview-margin-top: 10px !important;
 }
 
+body {
+    display: unset !important;
+}
+
 /*sidebar*/
-nav {
+fxview-category-navigation {
     display: none !important;
+}
+
+#pages {
+    width: 100% !important;
 }
 
 .sticky-container {
@@ -30,10 +38,6 @@ nav {
 
 .page-header {
     display: none !important;
-}
-
-.main-container {
-    margin: 0 !important;
 }
 
 }
