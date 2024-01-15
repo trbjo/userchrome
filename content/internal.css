@@ -33,7 +33,8 @@ fxview-category-navigation {
 }
 
 .main-container {
-    margin: 0 !important;
+    max-width: 1600px !important;
+    margin: 0 auto !important;
 }
 
 .sticky-container {
