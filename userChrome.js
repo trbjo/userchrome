@@ -1,4 +1,12 @@
 let { classes: Cc, interfaces: Ci, manager: Cm, utils: Cu } = Components;
+
+/* set new tab page */
+try {
+  Cu.import("resource:///modules/AboutNewTab.jsm");
+  var newTabURL = "about:firefoxview-next#history";
+  AboutNewTab.newTabURL = newTabURL;
+} catch (e) { Cu.reportError(e); } // report errors in the Browser Console
+
 const Services = globalThis.Services || Components.utils.import("resource://gre/modules/Services.jsm").Services;
 const { E10SUtils } = ChromeUtils.import("resource://gre/modules/E10SUtils.jsm");
 const { Downloads } = ChromeUtils.importESModule("resource://gre/modules/Downloads.sys.mjs");

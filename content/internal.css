@@ -15,8 +15,16 @@ url(about:preferences){
 
 
 @-moz-document url(about:firefoxview-next#history){
+@media (prefers-color-scheme: dark) {
+
+    :root {
+        --newtab-background-color: var(--page-not-found-bg) !important;
+        --newtab-background-color-secondary: #20272D !important;
+    }
+}
+
 :root {
-    --fxview-margin-top: 10px !important;
+    --fxview-margin-top: 0px !important;
 }
 
 body {
@@ -42,6 +50,10 @@ fxview-category-navigation {
 }
 
 .page-header {
+    display: none !important;
+}
+
+.show-all-history-footer {
     display: none !important;
 }
 
