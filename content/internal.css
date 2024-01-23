@@ -53,8 +53,17 @@ fxview-category-navigation {
     display: none !important;
 }
 
+cards-container.import-history-banner,
+view-recentbrowsing,
+view-opentabs,
+view-recentlyclosed,
+view-syncedtabs,
 .show-all-history-footer {
     display: none !important;
 }
 
+/*view-opentabsimport-history-banner*/
+body #pages>.main-container>named-deck>view-history:first-child {
+    display: none !important;
+}
 }
