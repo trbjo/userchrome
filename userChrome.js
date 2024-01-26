@@ -167,7 +167,7 @@ let UserChrome_js = {
       var tabMightChangePID = false;
       for (let tab of tabs) {
         var tabPids = getTabPids(tab);
-        if (tab.hasAttribute("busy")) {
+        if (tab.hasAttribute("busy") || tab.hasAttribute("pinned")) {
           tabPids.forEach(pid => runningPIDs.add(pid));
           tabMightChangePID = true;
         } else if ((tab.soundPlaying && !tab.hasAttribute("soundplaying-scheduledremoval")) || tab.pictureinpicture === true) {
@@ -296,8 +296,8 @@ let UserChrome_js = {
       // "TabHide",
       // "TabShow",
       // "TabOpen",
-      // "TabPinned",
-      // "TabUnpinned",
+      "TabPinned",
+      "TabUnpinned",
       // "transitionend",
     ]
     listeners.forEach(event => {
