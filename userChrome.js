@@ -27,7 +27,7 @@ let xP = Services.prefs, xD = xP.getDefaultBranch(null), xZ = void 0, xS = 'stri
   set: function (e, t, r = !1) { let n = r ? xD : xP, s = typeof t; return (xS == s ? n.setStringPref : xN == s ? n.setIntPref : xB == s ? n.setBoolPref : xZ)(e, t) || t },
   lock: function (e, t) { this.old[e] = this.get(e, !0), xP.prefIsLocked(e) && xP.unlockPref(e), this.set(e, t, !0), xP.lockPref(e) },
   unlock: function (e) { xP.unlockPref(e); let t = this.old[e]; null == t ? xP.deleteBranch(e) : this.set(e, t, !0) },
-  addListener: function (e, t) { return this.o = function (e, r, n) { return t(xPref.get(n), n) }, xP.addObserver(e, this.o), { p: e, o: this.o } },
+  addListener: function (e, t) { return this.o = function (_e, _r, n) { return t(xPref.get(n), n) }, xP.addObserver(e, this.o), { p: e, o: this.o } },
   removeListener: function (e) { xP.removeObserver(e.p, e.o) }
 }; /// uncomment to use minified xPref.jsm
 
@@ -236,7 +236,6 @@ let UserChrome_js = {
     }
 
     if (winType !== "chrome://browser/content/browser.xhtml") {
-      console.log(evt)
       return
     }
 
@@ -257,7 +256,7 @@ let UserChrome_js = {
     const { document, gBrowser } = window;
     let tabContainer = gBrowser.tabContainer;
 
-    const titleCallback = (mutationList, observer) => {
+    const titleCallback = (mutationList, _observer) => {
       const windowSUFFIX = "Mozilla Firefox";
       for (const mutation of mutationList) {
         let text = mutation.target.innerText;
